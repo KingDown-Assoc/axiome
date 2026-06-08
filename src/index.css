@@ -25,6 +25,7 @@
 }
 
 * { box-sizing: border-box; }
+button { color: inherit; }
 html, body, #root { height: 100%; }
 body {
   margin: 0;
@@ -100,7 +101,7 @@ code { font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
 .suggest-card { text-align: left; background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--domain); border-radius: var(--radius); padding: 14px 15px; cursor: pointer; display: flex; flex-direction: column; gap: 5px; transition: transform .12s, border-color .15s; }
 .suggest-card:hover { transform: translateY(-2px); border-color: var(--line-2); }
 .suggest-meta { font-size: 11px; color: var(--domain); text-transform: uppercase; letter-spacing: .06em; }
-.suggest-title { font-size: 16px; font-weight: 600; }
+.suggest-title { font-size: 16px; font-weight: 600; color: var(--text); }
 .suggest-tag { font-size: 13px; color: var(--muted); }
 .suggest-go { margin-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--accent); }
 .ov-domain { margin: 18px 0; border-left: 2px solid var(--domain); padding-left: 14px; }
@@ -109,7 +110,7 @@ code { font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
 .ov-card { text-align: left; background: var(--panel); border: 1px solid var(--line); border-radius: 11px; padding: 11px 13px; cursor: pointer; display: flex; flex-direction: column; gap: 3px; transition: border-color .15s; }
 .ov-card:hover { border-color: var(--line-2); }
 .ov-card.is-done { border-color: #1f5a44; }
-.ov-card-t { font-weight: 600; font-size: 14.5px; }
+.ov-card-t { font-weight: 600; font-size: 14.5px; color: var(--text); }
 .ov-card-s { font-size: 12.5px; color: var(--muted); }
 .ov-done { font-size: 11.5px; color: var(--green); display: inline-flex; align-items: center; gap: 5px; margin-top: 3px; }
 
