@@ -1,7 +1,7 @@
 services:
   maths:
     build: .
-    image: maths-kingdown:latest
+    image: axiome:latest
     container_name: maths
     restart: unless-stopped
     # Lié à 127.0.0.1 : seul Apache (httpd) y accède, le conteneur n'est pas exposé publiquement.

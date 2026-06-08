@@ -1,5 +1,5 @@
 /* ============================================================
-   Maths — stylesheet (dark, accessible, understated theme).
+   Axiome — stylesheet (dark + light themes, accessible, understated).
    Per-field colors come in via the --domain CSS variable.
    ============================================================ */
 :root {
@@ -267,7 +267,7 @@ code { font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
 .odo-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .odo-digit {
   width: 64px; height: 84px; display: grid; place-items: center;
-  font-size: 54px; font-weight: 800; color: #fff;
+  font-size: 54px; font-weight: 800; color: var(--text);
   background: linear-gradient(180deg, var(--panel-2), var(--bg));
   border: 2px solid var(--odo, var(--line-2)); border-radius: 12px;
   box-shadow: inset 0 9px 14px rgba(0,0,0,.45), inset 0 -9px 14px rgba(0,0,0,.45);
@@ -283,3 +283,44 @@ code { font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
 .odo-readout b { color: var(--accent); font-size: 26px; margin-left: 4px; }
 .odo-flash { min-height: 18px; font-size: 13px; font-weight: 600; color: var(--amber); opacity: 0; transition: opacity .2s; text-align: center; }
 .odo-flash.on { opacity: 1; }
+
+
+/* ---------- Theme toggle (topbar) ---------- */
+.theme-toggle {
+  display: inline-grid; place-items: center; width: 34px; height: 34px;
+  background: none; border: 1px solid var(--line); color: var(--muted);
+  border-radius: 9px; cursor: pointer; transition: color .15s, border-color .15s;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--line-2); }
+
+/* ---------- Light theme ---------- */
+:root[data-theme="light"] {
+  --bg: #f5f8fc;
+  --bg-2: #eaf0f8;
+  --panel: #ffffff;
+  --panel-2: #eef3fa;
+  --line: #dbe3ef;
+  --line-2: #c3cedf;
+  --text: #16202e;
+  --muted: #54627a;
+  --faint: #7a8aa3;
+  --accent: #0e8da6;
+  --amber: #b3720c;
+  --green: #138a63;
+  --pink: #c43d83;
+}
+:root[data-theme="light"] body {
+  background: radial-gradient(1200px 600px at 80% -10%, #e8f0ff 0%, var(--bg) 55%) fixed;
+}
+:root[data-theme="light"] .topbar { background: rgba(255, 255, 255, .82); }
+:root[data-theme="light"] code { background: #eef2f8; }
+:root[data-theme="light"] .level-pill.is-active,
+:root[data-theme="light"] .lesson-item.is-active { background: #e4eefb; }
+:root[data-theme="light"] .keyidea { background: #e8f7f0; border-color: #b6e3cf; }
+:root[data-theme="light"] .why { background: #fdf4e3; border-color: #ecd9ad; }
+:root[data-theme="light"] .chip-draft { background: #fdf4e3; border-color: #ecd9ad; }
+:root[data-theme="light"] .solution { background: #e9f6f0; border-color: #b6e3cf; }
+:root[data-theme="light"] .practice-input { background: #ffffff; }
+:root[data-theme="light"] .frac .seg,
+:root[data-theme="light"] .tf-cell,
+:root[data-theme="light"] .pat-next { background: #eef3fa; }

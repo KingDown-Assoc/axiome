@@ -2,7 +2,7 @@
 module.exports = function (t, { ssr }) {
   const app = ssr.renderApp();
   t("the app renders server-side without crashing", typeof app === "string" && app.length > 300, app && app.length);
-  t('the name "Maths" appears', app.includes("Maths"));
+  t('the name "Axiome" appears', app.includes("Axiome"));
 
   const lesson = ssr.renderLesson(ssr.sampleLessonId);
   t("a (high-school) lesson renders", typeof lesson === "string" && lesson.length > 300);

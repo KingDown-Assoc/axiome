@@ -1,4 +1,4 @@
-// App root: wires navigation, lesson and home; tracks progress (localStorage) and the suggested next step.
+// App root: wires navigation, lesson and home; tracks progress + theme (localStorage) and the suggested next step.
 import React, { useEffect, useMemo, useState } from "react";
 import { LESSONS } from "./content/index.js";
 import { buildIndex } from "./core/registry.js";
@@ -13,6 +13,17 @@ const STORE = "maths:completed";
 function loadCompleted() {
   if (typeof window === "undefined") return new Set();
   try { return new Set(JSON.parse(localStorage.getItem(STORE) || "[]")); } catch (e) { return new Set(); }
+}
+
+const THEME_KEY = "maths:theme";
+function loadTheme() {
+  if (typeof window === "undefined") return "dark";
+  try {
+    const saved = localStorage.getItem(THEME_KEY);
+    if (saved === "light" || saved === "dark") return saved;
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) return "light";
+  } catch (e) {}
+  return "dark";
 }
 
 function Home({ index, level, suggestions, completed, onOpen }) {
@@ -77,16 +88,23 @@ function Home({ index, level, suggestions, completed, onOpen }) {
 
 export default function App() {
   const index = useMemo(() => buildIndex(LESSONS), []);
-  const firstLevel = index.levelsPresent[0] ? index.levelsPresent[0].id : "earlyyears";
+  const firstLevel = index.levelsPresent[0] ? index.levelsPresent[0].id : "preschool";
   const [level, setLevel] = useState(firstLevel);
   const [selectedId, setSelectedId] = useState(null);
   const [completed, setCompleted] = useState(loadCompleted);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(loadTheme);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     try { localStorage.setItem(STORE, JSON.stringify([...completed])); } catch (e) {}
   }, [completed]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+  }, [theme]);
 
   const suggestions = useMemo(() => nextSuggestions(completed, index.lessons, 3), [completed, index]);
   const nextIds = useMemo(() => new Set(suggestions.map((s) => s.id)), [suggestions]);
@@ -102,9 +120,17 @@ export default function App() {
         <button className="burger" onClick={() => setMenuOpen((o) => !o)} aria-label="Ouvrir le menu"><Icon name="Menu" size={20} /></button>
         <div className="brand" onClick={() => setSelectedId(null)} role="button" tabIndex={0}>
           <span className="brand-mark">∑</span>
-          <span className="brand-text"><b>Maths</b><i>de la préparation au CP au doctorat</i></span>
+          <span className="brand-text"><b>Axiome</b><i>de la préparation au CP au doctorat</i></span>
         </div>
         <div className="prog" title="Leçons terminées"><Icon name="GraduationCap" size={16} /> {completed.size}/{index.lessons.length}</div>
+        <button
+          className="theme-toggle"
+          onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
+          aria-label="Basculer le thème clair / sombre"
+          title="Thème clair / sombre"
+        >
+          <Icon name={theme === "dark" ? "Sun" : "Moon"} size={18} />
+        </button>
       </header>
 
       <div className="layout">
