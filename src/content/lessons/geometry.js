@@ -1,5 +1,5 @@
 // Field "Geometry" — PRESCHOOL module (shapes, space) + one middle-school lesson (transition).
-import { pick } from "../../core/exercises.js";
+import { randint, pick } from "../../core/exercises.js";
 const shapes = {
   id: "geometry.preschool.shapes",
   level: "preschool", domain: "geometry",
@@ -110,4 +110,54 @@ const pythagoras = {
   ],
 };
 
-export default [shapes, positionLesson, pythagoras];
+// — Grid coordinates (preschool) —
+const gridLocation = {
+  id: "geometry.preschool.grid",
+  level: "preschool", domain: "geometry",
+  title: "Se repérer sur un quadrillage",
+  prereqs: ["geometry.preschool.position", "numbers.preschool.count"],
+  tagline: "Trouver une case avec sa colonne et sa ligne.",
+  intuition:
+    "Un quadrillage, c'est une grille de cases, comme sur une feuille à carreaux ou à la bataille navale. Pour dire **où** se trouve une case, on donne deux repères : la **colonne** (on compte de gauche à droite) et la **ligne** (on compte de haut en bas). Avec ces deux nombres, on retrouve toujours la bonne case.",
+  depths: {
+    discovery:
+      "On lit une case en deux temps :\n\n1. la **colonne** — on compte les cases de gauche → droite ;\n2. la **ligne** — on compte les cases de haut → bas.\n\nLa case « colonne $2$, ligne $1$ » est la $2^e$ case de la rangée du haut.",
+    standard:
+      "L'ordre compte : on dit toujours la colonne **puis** la ligne. « Colonne $3$, ligne $2$ » et « colonne $2$, ligne $3$ » ne désignent pas la même case.\n\nDeux cases sont **voisines** quand elles se touchent par un côté : leur colonne ou leur ligne change de $1$.",
+    advanced:
+      "Donner deux nombres pour repérer un point, c'est l'idée des **coordonnées** : plus tard, le couple $(x\\,;y)$ repérera un point dans le plan, avec un axe horizontal et un axe vertical.",
+  },
+  keyIdea: "Une case se repère par sa **colonne** (← →) puis sa **ligne** (↑ ↓).",
+  why:
+    "Pourquoi deux nombres, et pas un seul ? Parce qu'un seul ne suffit pas à se repérer sur une surface : il faut dire à la fois de combien on avance et de combien on descend. C'est ce qui évite de se tromper de case.",
+  widgets: [
+    { kind: "geometry", params: {
+      height: 240,
+      points: [{ id: "p", x: 60, y: 60, label: "●" }],
+      readout: (pos) => { const p = pos.p || { x: 0, y: 0 }; const col = Math.floor(p.x / 40) + 1; const row = Math.floor(p.y / 40) + 1; return `Tu es sur la colonne ${col}, ligne ${row}.`; },
+    }, caption: "Déplace le point : on lit sa colonne, puis sa ligne." },
+  ],
+  examples: [
+    { title: "Trouver une case", steps: [
+      { p: "On cherche la case « colonne $3$, ligne $2$ »." },
+      { p: "Je compte 3 cases vers la droite, puis 2 cases vers le bas." },
+      { p: "C'est la bonne case." },
+    ] },
+    { title: "Nommer une case", steps: [
+      { p: "Un jeton est sur la $2^e$ colonne et la $1^{re}$ ligne." },
+      { p: "On dit : « colonne $2$, ligne $1$ »." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Pour nommer une case sur un quadrillage, par quoi commence-t-on ?", solution: "Par la **colonne** (de gauche à droite), puis la ligne." },
+    { tier: "warmup", prompt: "Où se trouve la case « colonne 1, ligne 1 » ?", solution: "Tout en **haut à gauche**." },
+    { tier: "application", prompt: "Une fourmi est colonne $2$, ligne $3$. Elle descend d'une case. Où arrive-t-elle ?", solution: "La ligne augmente de 1 → colonne $2$, **ligne $4$**." },
+    { tier: "challenge", prompt: "« Colonne 3, ligne 2 » et « colonne 2, ligne 3 » : est-ce la même case ?", solution: "**Non** : changer l'ordre colonne-ligne change la case." },
+    { tier: "exam", prompt: "Un trésor est colonne $4$, ligne $2$. Tu es colonne $4$, ligne $5$. Combien de cases monter ?", solution: "De la ligne $5$ à la ligne $2$ : **3** cases vers le haut." },
+  ],
+  practice: [
+    { tier: "warmup", label: "Compter les cases", make: (r) => { const c = randint(r, 2, 3); const l = randint(r, 2, 3); return { prompt: `Un quadrillage a ${c} colonnes et ${l} lignes. Combien de cases en tout ?`, answer: c * l, solution: `On compte toutes les cases : ${c * l}.` }; } },
+  ],
+};
+
+export default [shapes, positionLesson, gridLocation, pythagoras];
