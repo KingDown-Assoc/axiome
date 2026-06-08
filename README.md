@@ -1,6 +1,6 @@
-# Maths
+# Axiome
 
-**Maths** est une plateforme interactive, en français, pour **apprendre, comprendre et faire des mathématiques** — de la **préparation au CP** jusqu'au **doctorat**. On part toujours de zéro : une intuition imagée, puis le cours formel (définitions, théorèmes, formules), des schémas interactifs, et des dizaines d'exercices corrigés dont la difficulté monte tout doucement. Le but : une plateforme aussi exigeante (viser 20/20) qu'accessible — tout l'inverse de l'élitisme.
+**Axiome** est une plateforme interactive, en français, pour **apprendre, comprendre et faire des mathématiques** — de la **préparation au CP** jusqu'au **doctorat**. On part toujours de zéro : une intuition imagée, puis le cours formel (définitions, théorèmes, formules), des schémas interactifs, et des dizaines d'exercices corrigés dont la difficulté monte tout doucement. Le but : une plateforme aussi exigeante (viser 20/20) qu'accessible — tout l'inverse de l'élitisme.
 
 C'est une application web statique (**React + Vite**), servie par **Apache** dans un conteneur **Docker**.
 
@@ -85,6 +85,6 @@ Par défaut, le conteneur est lié à `127.0.0.1:4242` (non exposé publiquement
 
 # IA / LLM
 
-Ce projet a été généré par IA.
+Ce projet a été généré par Claude. Le dev web et l'UI, c'est pas trop mon truc.
 
 Pull requests par IA acceptées.

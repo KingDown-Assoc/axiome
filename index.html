@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0a0e17" />
-    <meta name="description" content="Maths — apprendre, comprendre et faire des mathématiques, de la préparation au CP jusqu'au doctorat. Cours, exemples, schémas et des dizaines d'exercices corrigés à difficulté progressive." />
+    <meta name="description" content="Axiome — apprendre, comprendre et faire des mathématiques, de la préparation au CP jusqu'au doctorat. Cours, exemples, schémas et des dizaines d'exercices corrigés à difficulté progressive." />
     <link rel="icon" href="/favicon.svg" />
-    <title>Maths</title>
+    <title>Axiome</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("maths:theme");
+          if (t !== "light" && t !== "dark")
+            t = (window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches) ? "light" : "dark";
+          document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

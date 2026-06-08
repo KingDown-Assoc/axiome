@@ -1,6 +1,6 @@
 "use strict";
 /*
- * Test runner — Maths skeleton.
+ * Test runner — Axiome skeleton.
  *  1) bundles the React-free surface (src/api.js) and the SSR entry (src/ssr.jsx) for Node, via esbuild;
  *  2) discovers test/*.test.cjs, passing each { api, ssr } + an assertion helper t(name, ok, info?);
  *  3) exits with code != 0 if any test fails.
@@ -47,7 +47,7 @@ for (const f of files) {
   console.log(`  ${sf === 0 ? "\u2714" : "\u2717"} ${label.padEnd(14)} ${sp}/${sp + sf}`);
 }
 
-console.log(`\nMaths — skeleton: ${pass} passed, ${fail} failed.`);
+console.log(`\nAxiome — skeleton: ${pass} passed, ${fail} failed.`);
 if (fail) {
   console.log("\nFailure details:");
   for (const x of fails) console.log("  \u2717 " + x);
