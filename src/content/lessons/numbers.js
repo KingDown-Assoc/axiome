@@ -342,17 +342,18 @@ const tensAndOnes = {
   depths: {
     discovery: "Après 10, on continue : 11, 12… 19, 20. 23, c'est 2 dizaines et 3 unités.",
     standard: "Au-delà de 10, on s'appuie sur les **dizaines** : 20 = 2 dizaines, 30 = 3 dizaines. Un nombre à deux chiffres se lit « tant de dizaines et tant d'unités » — c'est la porte d'entrée vers la numération du CP.",
-    advanced: "Écrire $23 = 2\\times 10 + 3$ rend visible la **base dix** : la position d'un chiffre fixe sa valeur (les dizaines pèsent $10$, les unités $1$). Cette idée, étendue, donne l'écriture de tous les entiers — et, changée de base, l'écriture binaire des ordinateurs.",
+    advanced: "Quand on écrit **23**, c'est la **place** du chiffre qui dit sa valeur : le **2** est du côté des dizaines (il vaut $20$) et le **3** du côté des unités (il vaut $3$). Range les nombres en deux colonnes — dizaines à gauche, unités à droite — et tu lis leur valeur d'un coup d'œil. C'est le tout début de la numération.",
   },
   keyIdea: "Un nombre à deux chiffres = des **dizaines** + des **unités** ($23 = 20 + 3$).",
   why:
     "Pourquoi 23 et 32 ne sont-ils pas le même nombre, avec les mêmes chiffres ? Parce que la **place** compte : dans 23, le 2 est dans la colonne des dizaines (il vaut 20) ; dans 32, c'est le 3 qui vaut 30. Le même chiffre vaut différemment selon où il est posé.",
   widgets: [
-    { kind: "numberline", params: { mode: "line", max: 20, value: 14 }, caption: "Continue à avancer après 10 : la comptine ne s'arrête pas." },
+    { kind: "odometer", params: { value: 13 }, caption: "Bouge les roues : 13, c'est 1 dizaine et 3 unités. À 9, les unités reviennent à 0 et une dizaine s'ajoute." },
+    { kind: "numberline", params: { mode: "line", max: 20, value: 14 }, caption: "Et la comptine continue après 10, sans s'arrêter." },
   ],
   examples: [
     { title: "Lire le nombre 23", steps: [
-      { p: "Deux dizaines : $2 \\times 10 = 20$." },
+      { p: "Deux paquets de dix : $10$ et encore $10$, donc $20$." },
       { p: "Trois unités : $+3$." },
       { p: "Total : **23** = vingt-trois." },
     ] },
@@ -365,7 +366,7 @@ const tensAndOnes = {
   ],
   practice: [
     { tier: "application", label: "Le nombre suivant (après 10)", make: (r) => { const x = randint(r, 10, 29); return { prompt: `Quel nombre vient juste après ${x} ?`, answer: x + 1, solution: `$${x} + 1 = ${x + 1}$.` }; } },
-    { tier: "challenge", label: "Dizaines et unités", make: (r) => { const d = randint(r, 1, 3), u = randint(r, 0, 9); return { prompt: `J'ai ${d} dizaine${d > 1 ? "s" : ""} et ${u} unité${u > 1 ? "s" : ""}. Quel nombre ?`, answer: d * 10 + u, solution: `$${d} \\times 10 + ${u} = ${d * 10 + u}$.` }; } },
+    { tier: "challenge", label: "Dizaines et unités", make: (r) => { const d = randint(r, 1, 3), u = randint(r, 0, 9); return { prompt: `J'ai ${d} dizaine${d > 1 ? "s" : ""} et ${u} unité${u > 1 ? "s" : ""}. Quel nombre ?`, answer: d * 10 + u, solution: `${d} dizaine${d > 1 ? "s" : ""} font ${d * 10}, et ${u} de plus : ${d * 10 + u}.` }; } },
   ],
 };
 
@@ -403,8 +404,104 @@ const columnAddition = {
   ],
 };
 
+// — Doubles & halves (preschool) —
+const doubles = {
+  id: "numbers.preschool.doubles",
+  level: "preschool", domain: "numbers",
+  title: "Les doubles et les moitiés",
+  prereqs: ["numbers.preschool.add-subtract"],
+  tagline: "Ajouter un nombre à lui-même, et partager en deux parts égales.",
+  intuition:
+    "Un double, c'est quand on a deux fois la même chose : $2$ et encore $2$, ça fait $4$. Ta paire de chaussures est un double : un pied, puis l'autre pied.\n\nLa moitié, c'est l'inverse : on partage en deux parts égales. Si tu partages $4$ bonbons entre deux enfants, chacun en a $2$.",
+  depths: {
+    discovery:
+      "Le double d'un nombre, c'est ce nombre **plus lui-même**.\n\nDouble de $1$ → $1+1=2$. Double de $2$ → $2+2=4$. Double de $3$ → $3+3=6$.\n\nPour la moitié, on coupe en **deux parts égales**. La moitié de $4$, c'est $2$ (car $2+2=4$).",
+    standard:
+      "Les doubles avancent de deux en deux : $2, 4, 6, 8, 10$. Ce sont les **nombres pairs**.\n\nLa moitié ne tombe juste que si le nombre est pair : la moitié de $6$ est $3$, mais $5$ ne se partage pas en deux parts égales entières (il reste $1$ tout seul).",
+    advanced:
+      "Range les doubles l'un sous l'autre : $1+1, 2+2, 3+3$… leurs résultats $2, 4, 6, 8, 10$ forment l'escalier des **nombres pairs** (on saute une marche à chaque fois). Plus tard, ces « paquets tout pareils » porteront un nom — mais l'idée est déjà là : deux fois la même quantité.",
+  },
+  keyIdea: "Double = le nombre + lui-même. Moitié = partagé en deux parts égales.",
+  why:
+    "Pourquoi les doubles sont-ils utiles ? Parce qu'ils servent de **points d'appui** pour calculer vite : si tu sais que $4+4=8$, tu trouves $4+5$ en ajoutant juste $1$ → $9$.",
+  widgets: [
+    { kind: "numberline", params: { mode: "counters", count: 3 }, caption: "Pose des jetons, puis pose la même quantité à nouveau : ensemble, ça fait le double." },
+  ],
+  examples: [
+    { title: "Le double de 3", steps: [
+      { p: "On part de $3$." },
+      { p: "On ajoute encore $3$.", tex: "3+3=6" },
+      { p: "Le double de $3$ est $6$." },
+    ] },
+    { title: "La moitié de 8", steps: [
+      { p: "On partage $8$ en deux parts égales." },
+      { p: "Chaque part vaut $4$.", tex: "4+4=8" },
+      { p: "La moitié de $8$ est $4$." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Quel est le double de $2$ ?", solution: "$2+2=$ **4**." },
+    { tier: "warmup", prompt: "Quel est le double de $5$ ?", solution: "$5+5=$ **10**." },
+    { tier: "application", prompt: "Partage $6$ fraises entre deux enfants. Combien chacun ?", solution: "La moitié de $6$ : **3** chacun." },
+    { tier: "challenge", prompt: "Tu sais que $4+4=8$. Combien font $4+5$ ?", solution: "Un de plus que $8$ → **9**." },
+    { tier: "exam", prompt: "Le double d'un nombre vaut $10$. Quel est ce nombre ?", solution: "La moitié de $10$ → **5** (car $5+5=10$)." },
+  ],
+  practice: [
+    { tier: "warmup", label: "Trouver un double", make: (r) => { const n = randint(r, 1, 5); return { prompt: `Quel est le double de ${n} ?`, answer: 2 * n, solution: `${n} + ${n} = ${2 * n}.` }; } },
+    { tier: "application", label: "Trouver une moitié", make: (r) => { const k = randint(r, 1, 5); const n = 2 * k; return { prompt: `Quelle est la moitié de ${n} ?`, answer: k, solution: `On partage ${n} en deux : ${k} et ${k}. Moitié = ${k}.` }; } },
+  ],
+};
+
+// — Crossing a ten while counting (preschool) —
+const crossingTen = {
+  id: "numbers.preschool.crossing-ten",
+  level: "preschool", domain: "numbers",
+  title: "Passer la dizaine en comptant",
+  prereqs: ["numbers.preschool.tens-and-ones"],
+  tagline: "Après 9 vient 10, après 19 vient 20 : une nouvelle dizaine se forme.",
+  intuition:
+    "Quand on compte et qu'on arrive à **9**, le nombre d'après n'a plus un seul chiffre : c'est **10**, une dizaine toute neuve. Pareil après 19 → 20, après 29 → 30.\n\nImagine un compteur à deux roues : la roue des **unités** tourne $0, 1, 2, …, 9$ ; en dépassant 9 elle **revient à 0** et pousse la roue des **dizaines** d'un cran.",
+  depths: {
+    discovery:
+      "On compte : 7, 8, **9**… et après ? Les unités ne peuvent pas aller plus loin que 9 : on remplit **une dizaine** et on repart à 0 → **10**.\n\nDe 10, on continue : 11, 12… 19, puis **20**.",
+    standard:
+      "Chaque fois qu'on passe un nombre qui finit par 9 (9, 19, 29…), une dizaine de plus se forme et les unités repartent de 0. C'est toujours le **même geste**, un cran plus haut.",
+    advanced:
+      "Compter, c'est ajouter $1$ encore et encore. Le « retour à 0 des unités + une dizaine en plus » est exactement ce que fait un **compteur de kilomètres** — et, bien plus tard, ce sera la **retenue** d'une addition posée.",
+  },
+  keyIdea: "Quand les unités dépassent 9, elles repartent à 0 et **une dizaine** s'ajoute.",
+  why:
+    "Pourquoi 10 s'écrit-il avec deux chiffres ? Parce qu'on n'a que dix chiffres (de $0$ à $9$). Une fois les dix premiers utilisés, on note les paquets de dix à gauche et ce qui reste à droite : c'est ça, passer la dizaine.",
+  widgets: [
+    { kind: "odometer", params: { value: 9 }, caption: "Clique sur ▲ au-dessus des unités : à 9, elles reviennent à 0 et les dizaines avancent de 1." },
+  ],
+  examples: [
+    { title: "Après 9", steps: [
+      { p: "On est à 9, on ajoute 1." },
+      { p: "Les unités sont pleines : elles repartent à 0…" },
+      { p: "…et une dizaine apparaît : **10**." },
+    ] },
+    { title: "Après 19", steps: [
+      { p: "On est à 19, on ajoute 1." },
+      { p: "Les unités passent de 9 à 0, les dizaines de 1 à 2." },
+      { p: "On obtient **20**." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Quel nombre vient juste après 9 ?", solution: "**10** (une dizaine, zéro unité)." },
+    { tier: "warmup", prompt: "Quel nombre vient juste après 19 ?", solution: "**20**." },
+    { tier: "application", prompt: "Sur le compteur, les unités passent de 9 à 0. Qu'arrive-t-il aux dizaines ?", solution: "Elles **avancent de 1** (une dizaine de plus)." },
+    { tier: "challenge", prompt: "Quel nombre vient juste après 29 ?", solution: "**30**." },
+    { tier: "exam", prompt: "On est à 39. Combien faut-il ajouter pour atteindre 40 ?", solution: "**1** : $39 + 1 = 40$." },
+  ],
+  practice: [
+    { tier: "warmup", label: "Compter encore un", make: (r) => { const x = randint(r, 10, 28); return { prompt: `Quel nombre vient juste après ${x} ?`, answer: x + 1, solution: `${x}, puis ${x + 1}.` }; } },
+    { tier: "application", label: "Passer la dizaine", make: (r) => { const t = randint(r, 0, 8); const x = t * 10 + 9; return { prompt: `Quel nombre vient juste après ${x} ?`, answer: x + 1, solution: `Les unités reviennent à 0 et une dizaine s'ajoute → ${x + 1}.` }; } },
+  ],
+};
+
 export default [
   recognizeQuantities, numberSequence, countObjects, digits, compareNumbers, orderNumbers,
-  decompose, addSubtract, complements, tensAndOnes,
+  decompose, addSubtract, complements, tensAndOnes, crossingTen, doubles,
   columnAddition,
 ];

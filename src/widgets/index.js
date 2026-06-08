@@ -6,6 +6,7 @@ import NumberLine from "./NumberLine.jsx";
 import TenFrame from "./TenFrame.jsx";
 import Shapes from "./Shapes.jsx";
 import Pattern from "./Pattern.jsx";
+import Odometer from "./Odometer.jsx";
 
 export const WIDGETS = {
   plotter: Plotter,
@@ -14,4 +15,5 @@ export const WIDGETS = {
   tenframe: TenFrame,
   shapes: Shapes,
   pattern: Pattern,
+  odometer: Odometer,
 };

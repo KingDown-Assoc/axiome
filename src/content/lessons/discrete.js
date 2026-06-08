@@ -1,5 +1,5 @@
 // Field "Combinatorics & discrete maths" — starts in PRESCHOOL with patterns (organized sequences).
-import { pick } from "../../core/exercises.js";
+import { randint, pick } from "../../core/exercises.js";
 
 const patterns = {
   id: "discrete.preschool.patterns",
@@ -37,4 +37,46 @@ const patterns = {
   ],
 };
 
-export default [patterns];
+// — Sorting & classifying (preschool) —
+const sorting = {
+  id: "discrete.preschool.sorting",
+  level: "preschool", domain: "discrete",
+  title: "Trier et classer",
+  tagline: "Regrouper ce qui se ressemble selon une règle.",
+  intuition:
+    "Trier, c'est faire des **paquets** en suivant une règle : tous les objets rouges ensemble, tous les bleus ensemble. On peut classer selon la **couleur**, la **forme**, la **taille**…\n\nLa même collection peut se trier de plusieurs façons : tout dépend de la règle choisie.",
+  depths: {
+    discovery:
+      "Pour trier, on choisit un **critère** (une règle) : par exemple la couleur. Puis on met ensemble tout ce qui a la même couleur.\n\nUne chaussette rouge va avec les rouges, une bleue avec les bleues.",
+    standard:
+      "On peut trier la **même** collection de plusieurs manières : par couleur, par forme, ou par taille — le résultat change selon le critère.\n\nUn objet va dans un paquet **seulement si** il respecte la règle.",
+    advanced:
+      "Trier selon une règle, c'est répartir une collection en **catégories** qui ne se mélangent pas : l'idée des *ensembles*, où chaque élément est dedans ou dehors selon une propriété.",
+  },
+  keyIdea: "Trier = faire des paquets selon une **règle** (couleur, forme, taille…).",
+  why:
+    "Pourquoi trier ? Parce que ça aide à **compter** et à **comparer** : une fois les jetons rangés par couleur, on voit tout de suite s'il y a plus de rouges ou de bleus. Ranger, c'est déjà raisonner.",
+  examples: [
+    { title: "Trier par couleur", steps: [
+      { p: "On a des billes rouges et bleues mélangées." },
+      { p: "Règle choisie : la couleur." },
+      { p: "On fait deux paquets : les rouges, les bleues." },
+    ] },
+    { title: "Changer de règle", steps: [
+      { p: "Mêmes billes, nouvelle règle : la taille." },
+      { p: "On fait deux paquets : les grosses, les petites." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Pour trier des objets, que choisit-on d'abord ?", solution: "Une **règle** (un critère) : couleur, forme, taille…" },
+    { tier: "warmup", prompt: "On trie par couleur. Où va un carré rouge : avec les rouges, ou avec les ronds ?", solution: "Avec les **rouges** — la règle, c'est la couleur." },
+    { tier: "application", prompt: "Tu as 3 jetons rouges et 2 bleus. En triant par couleur, combien de paquets ?", solution: "**2** paquets : un de rouges, un de bleus." },
+    { tier: "challenge", prompt: "Peut-on trier les mêmes objets de deux façons différentes ?", solution: "**Oui** : par couleur, par forme, par taille… le critère change le tri." },
+    { tier: "exam", prompt: "Dans un paquet « formes rondes », un triangle a-t-il sa place ?", solution: "**Non** : un triangle n'est pas rond, il ne respecte pas la règle." },
+  ],
+  practice: [
+    { tier: "warmup", label: "Compter dans un paquet", make: (r) => { const red = randint(r, 2, 5); const blue = randint(r, 1, 4); return { prompt: `Tu as ${red} jetons rouges et ${blue} bleus. En triant par couleur, combien de jetons dans le paquet rouge ?`, answer: red, solution: `Le paquet rouge contient les ${red} jetons rouges.` }; } },
+  ],
+};
+
+export default [patterns, sorting];

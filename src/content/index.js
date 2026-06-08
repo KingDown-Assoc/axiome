@@ -5,5 +5,6 @@ import geometry from "./lessons/geometry.js";
 import analysis from "./lessons/analysis.js";
 import applied from "./lessons/applied.js";
 import discrete from "./lessons/discrete.js";
+import logic from "./lessons/logic.js";
 
-export const LESSONS = [...numbers, ...algebra, ...geometry, ...analysis, ...applied, ...discrete];
+export const LESSONS = [...numbers, ...algebra, ...geometry, ...analysis, ...applied, ...discrete, ...logic];
