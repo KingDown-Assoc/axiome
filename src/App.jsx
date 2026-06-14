@@ -1,5 +1,5 @@
 // App root: wires navigation, lesson and home; tracks progress + theme (localStorage) and the suggested next step.
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { LESSONS } from "./content/index.js";
 import { buildIndex } from "./core/registry.js";
 import { nextSuggestions } from "./core/prereq.js";
@@ -7,6 +7,7 @@ import { LEVELS } from "./core/levels.js";
 import { DOMAINS, DOMAIN_BY_ID } from "./core/domains.js";
 import { yearGroupsOfLevel, groupByDomain } from "./core/curriculum.js";
 import Nav from "./components/Nav.jsx";
+import Search from "./components/Search.jsx";
 import Lesson from "./components/Lesson.jsx";
 import Progress from "./components/Progress.jsx";
 import Icon from "./components/Icon.jsx";
@@ -113,6 +114,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState(loadTheme);
   const [showProgress, setShowProgress] = useState(false);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -125,6 +127,17 @@ export default function App() {
     try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
   }, [theme]);
 
+  useEffect(() => {
+    if (typeof window === "undefined" || !headerRef.current) return;
+    const el = headerRef.current;
+    const set = () => document.documentElement.style.setProperty("--topbar-h", el.offsetHeight + "px");
+    set();
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(set) : null;
+    if (ro) ro.observe(el);
+    window.addEventListener("resize", set);
+    return () => { if (ro) ro.disconnect(); window.removeEventListener("resize", set); };
+  }, []);
+
   const suggestions = useMemo(() => nextSuggestions(completed, index.lessons, 3), [completed, index]);
   const nextIds = useMemo(() => new Set(suggestions.map((s) => s.id)), [suggestions]);
 
@@ -135,15 +148,17 @@ export default function App() {
   const resetAll = () => setCompleted(new Set());
   const open = (id) => { setSelectedId(id); setMenuOpen(false); setShowProgress(false); if (typeof window !== "undefined") window.scrollTo(0, 0); };
   const goLevel = (id) => { setLevel(id); setSelectedId(null); setShowProgress(false); };
+  const openFromSearch = (id) => { const l = index.byId[id]; if (l) setLevel(l.level); open(id); };
 
   return (
     <div className="app">
-      <header className="topbar">
+      <header className="topbar" ref={headerRef}>
         <button className="burger" onClick={() => setMenuOpen((o) => !o)} aria-label="Ouvrir le menu"><Icon name="Menu" size={20} /></button>
         <div className="brand" onClick={() => { setSelectedId(null); setShowProgress(false); }} role="button" tabIndex={0}>
           <span className="brand-mark">∑</span>
           <span className="brand-text"><b>Axiome</b><i>de la préparation au CP au doctorat</i></span>
         </div>
+        <Search index={index} onOpen={openFromSearch} />
         <button className="prog" onClick={() => { setSelectedId(null); setShowProgress(true); }} title="Progression & validation — valider ou réinitialiser des blocs entiers"><Icon name="GraduationCap" size={16} /> {completed.size}/{index.lessons.length}</button>
         <button
           className="theme-toggle"
