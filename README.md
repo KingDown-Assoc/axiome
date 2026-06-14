@@ -1,6 +1,6 @@
 # Axiome
 
-**Axiome** est une plateforme interactive, en français, pour **apprendre, comprendre et faire des mathématiques** — de la **préparation au CP** jusqu'au **doctorat**. On part toujours de zéro : une intuition imagée, puis le cours formel (définitions, théorèmes, formules), des schémas interactifs, et des dizaines d'exercices corrigés dont la difficulté monte tout doucement. Le but : une plateforme aussi exigeante (viser 20/20) qu'accessible — tout l'inverse de l'élitisme.
+**Axiome** est une plateforme interactive, en français, pour **apprendre, comprendre et faire des mathématiques** — de la **préparation au CP** jusqu'au **doctorat**. On part toujours de zéro : une intuition imagée, puis le cours formel (définitions, théorèmes, formules), des schémas interactifs, et des dizaines d'exercices corrigés dont la difficulté monte tout doucement. Le but : une plateforme aussi exigeante (viser 20/20) qu'accessible — tout l'inverse de l'élitisme. Chaque niveau scolaire est aligné sur les **programmes officiels** (Bulletin officiel de l'Éducation nationale) et la pédagogie s'inspire de la **méthode de Singapour** : toutes ces références sont réunies dans [`docs/`](#fondements).
 
 C'est une application web statique (**React + Vite**), servie par **Apache** dans un conteneur **Docker**.
 
@@ -21,7 +21,37 @@ C'est une application web statique (**React + Vite**), servie par **Apache** dan
 - **Conçu pour grandir.** Moteur de rendu **générique** + contenu en **modules de données** + **registre de champs** : ajouter une leçon ou un champ entier = ajouter de la donnée, sans toucher au moteur.
 - Interface sombre, responsive (desktop + mobile).
 
-> Le contenu s'étoffe niveau par niveau ; le module **Éveil / préparation au CP** est le premier servi.
+> Le contenu couvre tous les niveaux, de l'**éveil** au **doctorat**, et continue de s'enrichir leçon par leçon — chaque niveau scolaire restant calé sur le programme officiel correspondant.
+
+## Fondements
+
+Axiome ne sort pas de nulle part : **tout son contenu s'appuie sur un corpus de références officielles**, rassemblé dans [`docs/`](docs/) et versionné avec le code. Deux piliers.
+
+### La méthode de Singapour
+
+`docs/methodes/singapour/` contient le *Primary Mathematics Syllabus* (P1 → P6) du ministère de l'Éducation de Singapour. C'est l'inspiration pédagogique d'Axiome : un enseignement centré sur la **résolution de problèmes** et une montée **du concret vers l'abstrait**. Cette progression se retrouve directement dans les **trois profondeurs** de chaque cours :
+
+- **Découverte** — manipuler, « avec les mains » (concret) ;
+- **Standard** — se représenter, « en image » (imagé) ;
+- **Avancé** — formaliser, « dans la tête » (abstrait).
+
+C'est aussi ce qui justifie la progression « ultra douce » : on part toujours d'une intuition concrète avant d'aller vers la formule.
+
+### Les programmes officiels français
+
+`docs/programmes/` rassemble les **programmes du Bulletin officiel** (Éducation nationale) et leurs **documents d'accompagnement**, classés par cycle. Ils fixent, pour chaque niveau, les notions enseignées, leur ordre et les attendus — c'est la colonne vertébrale du contenu scolaire d'Axiome.
+
+| Dossier | Niveau Axiome | Contenu |
+| --- | --- | --- |
+| `cycle-1-maternelle/` | Éveil | programme du cycle 1, livrets d'accompagnement (avant 4 ans, à partir de 4 ans, à partir de 5 ans), guide « construire le nombre à l'école maternelle », séquence « construire la bande numérique jusqu'à 10 » |
+| `cycle-2-cp-ce1-ce2/` | Primaire (CP–CE2) | programme du cycle 2 + livrets d'accompagnement CP, CE1, CE2 |
+| `cycle-3-cm1-cm2-6e/` | Primaire / Collège | programme du cycle 3 + livret d'accompagnement 6ᵉ |
+| `cycle-4-5e-4e-3e/` | Collège | programme du cycle 4 + guide « résolution de problèmes au collège » |
+| `lycee-gt/` | Lycée | seconde générale et technologique, spécialité maths (1ʳᵉ et terminale), maths complémentaires, maths expertes, maths dans l'enseignement scientifique, voie technologique |
+| `pro/` | Lycée professionnel | programmes de mathématiques de la voie professionnelle |
+| `licence/` | Licence et au-delà | programmes de prépa MPSI/MP2I et MP/MPI, et programme de l'**agrégation** externe de mathématiques (sessions 2025 et 2026) |
+
+Concrètement, chaque leçon d'un niveau scolaire est **calée sur les notions et la progression du programme correspondant**. Les niveaux **master** et **doctorat**, qui n'ont pas de programme national, prolongent cet édifice vers les standards de la recherche : cours fondamentaux de M1/M2, puis problèmes ouverts (les sept problèmes du millénaire) et séminaires avancés (portes de recherche).
 
 ## Développement
 
@@ -76,6 +106,9 @@ Par défaut, le conteneur est lié à `127.0.0.1:4242` (non exposé publiquement
 │   ├── api.js          # surface « sans React » (testable hors navigateur)
 │   └── index.css       # styles
 ├── test/               # tests (contenu, logique, rendu SSR)
+├── docs/               # les sources : méthode de Singapour + programmes officiels (par cycle)
+│   ├── methodes/singapour/   # Primary Mathematics Syllabus (P1 → P6)
+│   └── programmes/           # maternelle, cycles 2–4, lycée GT, pro, prépa/licence/agrégation
 ├── public/             # favicon
 ├── deploy/             # exemple de reverse proxy
 ├── Dockerfile
@@ -85,6 +118,6 @@ Par défaut, le conteneur est lié à `127.0.0.1:4242` (non exposé publiquement
 
 # IA / LLM
 
-Ce projet a été généré par Claude. Le dev web et l'UI, c'est pas trop mon truc.
+Ce projet a été généré par Claude.
 
 Pull requests par IA acceptées.
