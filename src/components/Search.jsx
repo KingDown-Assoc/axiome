@@ -56,6 +56,7 @@ export default function Search({ index, onOpen, limit = 12 }) {
           aria-label="Rechercher une leçon"
           autoComplete="off"
           spellCheck={false}
+          maxLength={24}
           role="combobox"
           aria-expanded={showList}
           onFocus={() => setOpen(true)}
