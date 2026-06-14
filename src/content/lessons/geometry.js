@@ -4,13 +4,13 @@ const shapes = {
   id: "geometry.preschool.shapes",
   level: "preschool", domain: "geometry",
   title: "Reconnaître les formes",
-  tagline: "Cercle, carré, triangle, rectangle : les voir et les nommer.",
+  tagline: "Disque, carré, triangle, rectangle : les voir et les nommer.",
   prereqs: [],
   intuition:
-    "Les objets ont des formes. Une assiette, une roue : c'est **rond** (un cercle). Une fenêtre : souvent un **carré** ou un **rectangle**. Un toit, une part de pizza : un **triangle**.\n\nPour reconnaître une forme, on regarde ses **côtés** (les bords droits) et ses **coins** (les pointes).",
+    "Les objets ont des formes. Une assiette, une roue : c'est **rond** — en maths, on dit un **disque**. Une fenêtre : souvent un **carré** ou un **rectangle**. Un toit, une part de pizza : un **triangle**.\n\nPour reconnaître une forme, on regarde ses **côtés** (les bords droits) et ses **coins** (les pointes).",
   depths: {
-    discovery: "Cercle = tout rond, sans coin. Triangle = 3 côtés. Carré et rectangle = 4 côtés et des coins droits.",
-    standard: "On classe les formes planes par le **nombre de côtés** et la nature des **angles**. Le carré a 4 côtés égaux et 4 angles droits ; le rectangle a aussi 4 angles droits mais des côtés deux à deux égaux ; le cercle n'a ni côté ni coin.",
+    discovery: "Disque = tout rond, sans coin. Triangle = 3 côtés. Carré et rectangle = 4 côtés et des coins droits.",
+    standard: "On classe les formes planes par le **nombre de côtés** et la nature des **angles**. Le carré a 4 côtés égaux et 4 angles droits ; le rectangle a aussi 4 angles droits mais des côtés deux à deux égaux ; le disque n'a ni côté ni coin.\n\nEt attention à l'orientation : un carré posé **sur la pointe** est toujours un carré — tourner une forme ne la change pas.",
     advanced: "Les figures à côtés droits sont des **polygones** (triangle = 3 côtés, quadrilatère = 4…). Le carré est un cas très particulier de rectangle, lui-même un parallélogramme : on entre dans une **classification** emboîtée, idée centrale de toute la géométrie.",
   },
   keyIdea: "On reconnaît une forme à ses **côtés** et ses **coins**.",
@@ -26,13 +26,14 @@ const shapes = {
     ] },
   ],
   exercises: [
-    { tier: "discovery", prompt: "Quelle forme n'a aucun coin ?", solution: "Le **cercle**." },
+    { tier: "discovery", prompt: "Quelle forme n'a aucun coin ?", solution: "Le **disque**." },
+    { tier: "application", prompt: "Je tourne un carré pour le poser sur la pointe. Est-ce encore un carré ?", solution: "**Oui** : tourner une forme ne la change pas — ses 4 côtés égaux et ses 4 coins droits sont toujours là." },
     { tier: "warmup", prompt: "Combien de côtés a un carré ?", solution: "**4**." },
     { tier: "challenge", prompt: "Une forme a 3 côtés et 3 coins. Laquelle ?", solution: "Un **triangle**." },
     { tier: "exam", prompt: "Pourquoi peut-on dire qu'un carré est un rectangle particulier ?", solution: "Le rectangle a 4 angles droits ; le carré aussi, **et** ses 4 côtés sont égaux. Le carré est donc un rectangle « spécial »." },
   ],
   practice: [
-    { tier: "application", label: "Compter les côtés", make: (r) => { const data = [["un triangle", 3], ["un carré", 4], ["un rectangle", 4], ["un cercle", 0]]; const [nom, n] = data[Math.floor(r() * data.length)]; return { prompt: `Combien de côtés a ${nom} ?`, answer: n, solution: n === 0 ? `${nom} n'a **aucun** côté droit.` : `${nom} a **${n}** côtés.` }; } },
+    { tier: "application", label: "Compter les côtés", make: (r) => { const data = [["un triangle", 3], ["un carré", 4], ["un rectangle", 4], ["un disque", 0]]; const [nom, n] = data[Math.floor(r() * data.length)]; return { prompt: `Combien de côtés a ${nom} ?`, answer: n, solution: n === 0 ? `${nom} n'a **aucun** côté droit.` : `${nom} a **${n}** côtés.` }; } },
   ],
 };
 
@@ -160,4 +161,110 @@ const gridLocation = {
   ],
 };
 
-export default [shapes, positionLesson, gridLocation, pythagoras];
+const solids = {
+  id: "geometry.preschool.solids",
+  level: "preschool", domain: "geometry",
+  title: "Reconnaître les solides",
+  tagline: "Cube, boule, cylindre, cône : les objets qui tiennent dans la main.",
+  prereqs: ["geometry.preschool.shapes"],
+  intuition:
+    "Une forme dessinée sur une feuille est **plate**. Mais les vrais objets, eux, ont du **volume** : on peut les tenir dans la main, les poser, les faire rouler. Ce sont des **solides**.\n\nUn dé est un **cube**, une boîte de chaussures est un **pavé**, un ballon est une **boule**, une boîte de conserve est un **cylindre**, un chapeau de fête est un **cône**, et les monuments d'Égypte sont des **pyramides**.",
+  depths: {
+    discovery:
+      "**Avec les mains** : six solides à connaître — le **cube** (un dé), le **pavé** (une boîte de chaussures), la **boule** (toute ronde), le **cylindre** (une boîte de conserve), le **cône** (un chapeau de fête) et la **pyramide** (des faces en triangle, une pointe).",
+    standard:
+      "**En image** : un solide a des **faces** (ses côtés plats), des **arêtes** (les bords) et des **sommets** (les coins). Trempe une face dans la peinture et tamponne : le cube laisse un **carré**, le pavé un **rectangle**, le cylindre posé debout un **disque** — l'**empreinte** d'un solide est une forme plate !\n\nUn solide **roule** s'il a une partie ronde (boule, cylindre, cône). Le cube, le pavé et la pyramide n'ont que des faces plates : ils ne roulent pas.",
+    advanced:
+      "**Dans la tête** : un solide est un objet de l'**espace** (trois dimensions). Cube, pavé et pyramide n'ont que des faces plates : ce sont des **polyèdres**. Et méfiance — une même empreinte peut venir de **plusieurs** solides : le cylindre et le cône laissent tous deux un **disque**. L'empreinte ne dit pas tout ; plus tard, on comptera sommets, arêtes et faces, toujours liés entre eux.",
+  },
+  keyIdea: "Un solide a un **volume** : on peut le tenir. Ses faces plates sont des **formes** qu'on connaît déjà.",
+  why:
+    "Pourquoi une boule roule-t-elle et pas un cube ? Parce que la boule est **ronde partout** : elle ne s'appuie jamais sur un côté plat. Le cube, lui, se pose sur une **face plate** et reste immobile. C'est la présence (ou non) d'une partie ronde qui décide.",
+  widgets: [
+    { kind: "solids", params: {}, caption: "Touche chaque solide pour le nommer et voir à quoi il ressemble." },
+  ],
+  examples: [
+    { title: "Ça roule ou pas ?", steps: [
+      { p: "Le cube n'a que des faces **plates** → il se pose et ne roule pas." },
+      { p: "La boule est **ronde partout** → elle roule dans tous les sens." },
+    ] },
+    { title: "La face d'un cube", steps: [
+      { p: "Je regarde une face du dé : c'est un **carré**." },
+      { p: "Un solide est donc fait de formes plates qu'on connaît." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Quel solide est tout rond et roule dans tous les sens ?", solution: "La **boule**." },
+    { tier: "warmup", prompt: "À quel solide ressemble une boîte de conserve ?", solution: "Un **cylindre**." },
+    { tier: "application", prompt: "Combien de faces a un cube ?", solution: "**6** faces, toutes carrées (comme un dé)." },
+    { tier: "application", prompt: "À quel solide ressemble une boîte de chaussures ?", solution: "Un **pavé** : 6 faces en rectangle." },
+    { tier: "challenge", prompt: "Pourquoi un cube ne roule-t-il pas ?", solution: "Il n'a que des faces **plates** : il s'appuie sur une face et reste immobile, sans partie ronde." },
+    { tier: "challenge", prompt: "Je trempe une face d'un pavé dans la peinture et je tamponne. Quelle forme apparaît ?", solution: "Un **rectangle** : l'empreinte d'une face plate est une forme plane." },
+    { tier: "exam", prompt: "La face d'un cube, c'est quelle forme plate ?", solution: "Un **carré** — on retrouve les formes de la leçon précédente." },
+    { tier: "exam", prompt: "Je vois une empreinte en forme de disque. Quels solides ont pu la laisser ?", solution: "Le **cylindre** ou le **cône** (posés sur leur face ronde) : une même empreinte peut venir de plusieurs solides." },
+  ],
+  practice: [
+    { tier: "warmup", label: "Ça roule ?", make: (r) => {
+      const data = [["un cube", "non"], ["un pavé", "non"], ["une boule", "oui"], ["un cylindre", "oui"], ["un cône", "oui"], ["une pyramide", "non"]];
+      const [nom, ans] = data[Math.floor(r() * data.length)];
+      return {
+        prompt: `Est-ce que ${nom} roule ? (oui / non)`,
+        answer: ans,
+        check: { type: "exact" },
+        solution: ans === "oui" ? `Oui : ${nom} a une partie **ronde**.` : `Non : ${nom} n'a que des faces **plates**.`,
+      };
+    } },
+  ],
+};
+
+// — Reproducing assemblies: puzzles, pavings, constructions (programme: reproduire des assemblages) —
+const assemble = {
+  id: "geometry.preschool.assemble",
+  level: "preschool", domain: "geometry",
+  title: "Assembler des formes",
+  tagline: "Reproduire un modèle : un puzzle, un pavage, une construction.",
+  prereqs: ["geometry.preschool.shapes"],
+  intuition:
+    "Avec quelques formes, on fabrique des **images** : un carré, un triangle posé dessus — et voilà une **maison**. Reproduire un modèle, c'est un jeu de puzzle : trouver **quelles** pièces il faut, **où** les poser, et dans **quel sens**.\n\nLe secret des puzzles : si une pièce ne rentre pas, on a le droit de la **tourner** et de la **retourner**.",
+  depths: {
+    discovery:
+      "**Avec les mains** : encastrer, empiler, poser des pièces sur un modèle. Si ça ne rentre pas : je **tourne** la pièce, je la **retourne**, j'essaie une autre place.",
+    standard:
+      "**En image** : pour reproduire un modèle, je le lis pièce par pièce — *quelle* forme, *où*, dans *quel sens*. Je commence par une pièce facile à repérer (le toit !) puis je complète autour. À la fin, je **compare** au modèle : rien ne manque, rien ne dépasse.",
+    advanced:
+      "**Dans la tête** : une même figure peut se construire de **plusieurs façons** — deux triangles collés font un carré, ou un grand triangle. Et le modèle n'est pas toujours à la taille de mes pièces : ce qui compte, c'est la **disposition des formes**, pas la taille. C'est aussi l'âge où l'on commence à tracer ses propres figures **à la règle**.",
+  },
+  keyIdea: "Reproduire un assemblage = trouver **quelles** pièces, **où**, et dans **quel sens** — quitte à tourner et retourner.",
+  why:
+    "Pourquoi a-t-on le droit de tourner les pièces ? Parce qu'une forme reste **la même** dans toutes les orientations — l'invariance vue avec les formes. C'est elle qui autorise tous les essais du puzzle : on peut manipuler sans rien casser.",
+  widgets: [
+    { kind: "assembly", params: { figure: "house" }, caption: "Touche chaque pièce de la maison : de quelles formes est-elle faite ?" },
+    { kind: "assembly", params: { figure: "rocket" }, caption: "Et cette fusée ? Compte ses pièces et nomme chaque forme." },
+  ],
+  examples: [
+    { title: "Lire la maison", steps: [
+      { p: "Je repère la pièce la plus simple : le toit est un **triangle**." },
+      { p: "Dessous, le mur est un **carré** ; la porte, un **rectangle**." },
+      { p: "3 pièces, chacune à sa place : le modèle est lu, je peux le reproduire." },
+    ] },
+    { title: "Deux triangles, deux figures", steps: [
+      { p: "Je colle deux triangles identiques par leur grand côté : un **carré** !" },
+      { p: "Je les colle autrement : un **grand triangle**. Mêmes pièces, autre assemblage." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Une pièce de puzzle ne rentre pas. Qu'ai-je le droit de faire ?", solution: "La **tourner** et la **retourner** : une forme ne change pas quand on la manipule." },
+    { tier: "warmup", prompt: "Une maison dessinée : un carré, un triangle posé dessus, un rectangle pour la porte. Combien de pièces ?", solution: "**3** pièces : carré, triangle, rectangle." },
+    { tier: "application", prompt: "Mon modèle a 5 pièces ; j'en ai déjà posé 3. Combien en reste-t-il à poser ?", solution: "**2** : je compare au modèle pour voir ce qui manque." },
+    { tier: "challenge", prompt: "Avec deux triangles identiques, quelles figures peut-on assembler ?", solution: "Collés par le grand côté : un **carré**. Autrement : un **grand triangle**. Mêmes pièces, plusieurs figures !" },
+    { tier: "exam", prompt: "Le modèle est dessiné en petit, mes pièces sont grandes. Puis-je quand même le reproduire ?", solution: "**Oui** : ce qui compte, c'est quelles formes s'assemblent et comment — pas la taille du modèle." },
+  ],
+  practice: [
+    { tier: "warmup", label: "Compter les pièces", make: (r) => {
+      const t = randint(r, 1, 4), c = randint(r, 1, 4);
+      return { prompt: `Mon assemblage contient ${t} triangle(s) et ${c} carré(s). Combien de pièces en tout ?`, answer: t + c, solution: `${t} et ${c}, ça fait **${t + c}** pièces.` };
+    } },
+  ],
+};
+
+export default [shapes, solids, assemble, positionLesson, gridLocation, pythagoras];

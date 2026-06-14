@@ -1,9 +1,9 @@
 {
-  "name": "maths-kingdown",
+  "name": "axiome",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Maths — plateforme d'apprentissage des mathématiques, de la préparation au CP au doctorat. Accessible, progressive, exhaustive.",
+  "description": "Axiome — plateforme d'apprentissage des mathématiques, de la préparation au CP au doctorat. Accessible, progressive, exhaustive.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

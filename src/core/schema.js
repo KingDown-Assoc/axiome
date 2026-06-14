@@ -5,6 +5,7 @@
 //   id: string            // globally unique, e.g. "numbers.preschool.count"
 //   level: string         // a LEVELS id
 //   domain: string        // a DOMAINS id
+//   year?: string         // school-year tag ("cp", "ce1", …) — added at import time (content/index.js)
 //   title: string         // shown to learners — in French
 //   prereqs?: string[]    // ids of lessons to see first
 //   draft?: boolean       // provisional content ("demo" badge)

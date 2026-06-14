@@ -324,3 +324,62 @@ code { font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
 :root[data-theme="light"] .frac .seg,
 :root[data-theme="light"] .tf-cell,
 :root[data-theme="light"] .pat-next { background: #eef3fa; }
+
+/* ---------- Progress management (validate / reset blocks) ---------- */
+button.prog { background: none; border: 0; cursor: pointer; padding: 5px 9px; border-radius: var(--radius-sm); }
+button.prog:hover { color: var(--text); background: var(--panel-2); }
+.progress-page { max-width: var(--maxw); margin: 0 auto; padding: 6px 0 60px; }
+.pg-head h1 { display: flex; align-items: center; gap: 10px; font-size: 24px; margin: 8px 0; }
+.pg-head p { color: var(--muted); max-width: 660px; margin: 0 0 14px; line-height: 1.55; }
+.pg-btn {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 500;
+  padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line-2);
+  background: var(--panel); color: var(--text); cursor: pointer; white-space: nowrap;
+}
+.pg-btn:hover:not(:disabled) { border-color: var(--accent); }
+.pg-btn:disabled { opacity: .35; cursor: default; }
+.pg-btn-danger { color: #ff9090; border-color: rgba(255, 112, 112, .35); }
+.pg-btn-danger:hover:not(:disabled) { border-color: #ff9090; background: rgba(255, 112, 112, .08); }
+:root[data-theme="light"] .pg-btn-danger { color: #b13a2e; border-color: rgba(177, 58, 46, .4); }
+:root[data-theme="light"] .pg-btn-danger:hover:not(:disabled) { background: rgba(177, 58, 46, .07); }
+.pg-actions { display: inline-flex; gap: 7px; margin-left: auto; flex: none; }
+.pg-count { color: var(--faint); font-size: 12.5px; font-variant-numeric: tabular-nums; flex: none; min-width: 52px; text-align: right; }
+.pbar {
+  display: inline-block; flex: 1 1 90px; min-width: 60px; max-width: 220px; height: 7px;
+  border-radius: 99px; background: var(--panel-2); border: 1px solid var(--line); overflow: hidden;
+}
+.pbar-fill { display: block; height: 100%; background: var(--domain, var(--green)); border-radius: 99px; transition: width .25s ease; }
+.pbar-wide { display: block; max-width: none; margin: 6px 0 12px; }
+.pg-cycle { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 16px 18px 10px; margin: 18px 0; }
+.pg-cycle-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+.pg-cycle-head h2 { margin: 0; font-size: 18px; }
+.pg-sub { color: var(--faint); font-size: 12.5px; }
+.pg-year { border-top: 1px solid var(--line); }
+.pg-year summary { display: flex; align-items: center; gap: 10px; padding: 10px 2px; cursor: pointer; list-style: none; flex-wrap: wrap; }
+.pg-year summary::-webkit-details-marker { display: none; }
+.pg-chev { display: inline-flex; color: var(--faint); flex: none; transition: transform .15s ease; }
+.pg-year[open] > summary .pg-chev { transform: rotate(90deg); }
+.pg-year-label { font-weight: 600; min-width: 88px; }
+.pg-modules { list-style: none; margin: 0 0 10px; padding: 0 0 0 24px; }
+.pg-module { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-top: 1px dashed var(--line); flex-wrap: wrap; }
+.pg-mod-label { display: inline-flex; align-items: center; gap: 7px; min-width: 215px; font-size: 13.5px; }
+.pg-mod-label svg { color: var(--domain, var(--muted)); flex: none; }
+.pg-foot { color: var(--faint); font-size: 12.5px; margin-top: 16px; max-width: 640px; line-height: 1.5; }
+@media (max-width: 740px) {
+  .pg-actions { margin-left: 0; width: 100%; justify-content: flex-end; }
+  .pg-mod-label { min-width: 0; }
+  .pg-count { min-width: 0; }
+}
+
+/* ---------- Year groups in nav & level overview ---------- */
+.nav-year { border-top: 1px solid var(--line); margin-top: 4px; }
+.nav-year > summary { display: flex; align-items: center; gap: 8px; padding: 9px 2px 7px; cursor: pointer; list-style: none; }
+.nav-year > summary::-webkit-details-marker { display: none; }
+details[open] > summary .pg-chev { transform: rotate(90deg); }
+.ny-label { font-weight: 650; font-size: 13.5px; }
+.ny-sub { color: var(--faint); font-size: 11.5px; }
+.ny-count { margin-left: auto; color: var(--faint); font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.nav-year > .domain-group { margin-left: 6px; }
+.ov-year { margin: 26px 0 6px; }
+.ov-year-head { display: flex; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--line-2); padding-bottom: 7px; margin-bottom: 12px; }
+.ov-year-t { margin: 0; font-size: 17px; }
