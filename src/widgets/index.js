@@ -7,6 +7,9 @@ import TenFrame from "./TenFrame.jsx";
 import Shapes from "./Shapes.jsx";
 import Pattern from "./Pattern.jsx";
 import Odometer from "./Odometer.jsx";
+import Solids from "./Solids.jsx";
+import Assembly from "./Assembly.jsx";
+import BarModel from "./BarModel.jsx";
 
 export const WIDGETS = {
   plotter: Plotter,
@@ -16,4 +19,7 @@ export const WIDGETS = {
   shapes: Shapes,
   pattern: Pattern,
   odometer: Odometer,
+  solids: Solids,
+  assembly: Assembly,
+  barmodel: BarModel,
 };

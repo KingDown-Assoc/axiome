@@ -1,5 +1,5 @@
 // Field "Logic & foundations" — starts in PRESCHOOL with same/different (the first yes/no reasoning).
-import { pick } from "../../core/exercises.js";
+import { pick, randint } from "../../core/exercises.js";
 
 const sameDifferent = {
   id: "logic.preschool.same-different",
@@ -57,4 +57,55 @@ const sameDifferent = {
   ],
 };
 
-export default [sameDifferent];
+const trueFalse = {
+  id: "logic.preschool.true-false",
+  level: "preschool", domain: "logic",
+  title: "Vrai ou faux : tous, quelques, aucun",
+  tagline: "Décider si une phrase sur un groupe est vraie, avec les mots tous, quelques, aucun.",
+  prereqs: ["logic.preschool.same-different"],
+  intuition:
+    "Une phrase peut être **vraie** ou **fausse**. « Le ciel est bleu » : vrai. « Les poissons volent » : faux.\n\nQuand la phrase parle d'un **groupe**, trois petits mots changent tout : **tous** (tout le monde, sans exception), **quelques** (au moins un, mais pas tous), **aucun** (pas un seul).",
+  depths: {
+    discovery:
+      "Pour parler d'un groupe, on a trois mots :\n\n- **tous** → tout le monde, chaque objet ;\n- **quelques** → au moins un, mais pas forcément tous ;\n- **aucun** → personne, pas un seul.\n\nEt une phrase est toujours soit **vraie**, soit **fausse**.",
+    standard:
+      "Pour vérifier « **tous** les ronds sont rouges », il suffit de trouver **un seul** rond d'une autre couleur pour que ce soit **faux** : c'est un **contre-exemple**.\n\n« **Aucun** rond n'est rouge » est vrai seulement si on n'en trouve **pas un seul** de rouge. « **Quelques** ronds sont rouges » est vrai dès qu'on en trouve **au moins un**.",
+    advanced:
+      "Ces mots sont les **quantificateurs** : « tous » (pour chaque), « quelques » (il en existe au moins un), « aucun » (il n'en existe pas). « Tous » et « aucun » sont **fragiles** : un seul cas suffit à les mettre en défaut. C'est exactement la **preuve par contre-exemple**, un outil qu'on utilise dans toutes les mathématiques.",
+  },
+  keyIdea: "« Tous » et « aucun » tombent dès **un seul** contre-exemple ; « quelques » tient dès **un seul** exemple.",
+  why:
+    "Pourquoi une seule bille bleue rend-elle « toutes les billes sont rouges » fausse ? Parce que « tous » ne tolère **aucune** exception : une seule suffit à casser la phrase. C'est pour ça qu'on dit qu'« un contre-exemple suffit » — une idée minuscule mais redoutablement puissante.",
+  examples: [
+    { title: "Tous ?", steps: [
+      { p: "Trois ronds, tous rouges → « tous les ronds sont rouges » est **vrai**." },
+      { p: "Si un seul devient bleu → la phrase devient **fausse** (un contre-exemple suffit)." },
+    ] },
+    { title: "Quelques / aucun", steps: [
+      { p: "Deux ronds rouges et un rond bleu." },
+      { p: "« Quelques ronds sont bleus » → **vrai** (il y en a un)." },
+      { p: "« Aucun rond n'est bleu » → **faux**." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Le mot « aucun » veut dire combien ?", solution: "**Pas un seul** (zéro)." },
+    { tier: "warmup", prompt: "5 billes, toutes rouges. « Toutes les billes sont rouges » : vrai ou faux ?", solution: "**Vrai**." },
+    { tier: "application", prompt: "4 billes : 3 rouges et 1 bleue. « Toutes les billes sont rouges » : vrai ou faux ?", solution: "**Faux** : la bille bleue est un contre-exemple." },
+    { tier: "challenge", prompt: "Combien de contre-exemples suffisent pour rendre une phrase en « tous… » fausse ?", solution: "**Un seul** suffit." },
+    { tier: "exam", prompt: "3 billes, toutes rouges. Des deux phrases « quelques billes sont bleues » et « aucune bille n'est bleue », laquelle est vraie ?", solution: "« **Aucune** bille n'est bleue » est vraie ; « quelques » est fausse (il n'y en a pas une seule)." },
+  ],
+  practice: [
+    { tier: "application", label: "Vrai ou faux ?", make: (r) => {
+      const red = randint(r, 2, 4), blue = randint(r, 0, 2);
+      const ans = blue === 0 ? "vrai" : "faux";
+      return {
+        prompt: `${red + blue} billes : ${red} rouge(s) et ${blue} bleue(s). « Toutes les billes sont rouges » : vrai ou faux ?`,
+        answer: ans,
+        check: { type: "exact" },
+        solution: blue === 0 ? "Aucune autre couleur → **vrai**." : `Il y a ${blue} bille(s) bleue(s) (un contre-exemple) → **faux**.`,
+      };
+    } },
+  ],
+};
+
+export default [sameDifferent, trueFalse];

@@ -12,9 +12,9 @@ const recognizeQuantities = {
   intuition:
     "Quand tu vois deux yeux, tu ne comptes pas « un, deux » : tu vois **deux**, tout de suite. Pareil pour les points d'un dé. Cette reconnaissance immédiate marche bien jusqu'à 3 ou 4.\n\nAu-delà, l'astuce des grands : on **groupe**. Cinq points, c'est souvent vu comme « 4 et encore 1 », ou « 3 et 2 ». On reconnaît des petits paquets, puis on les assemble.",
   depths: {
-    discovery: "1, 2, 3 se reconnaissent d'un seul regard. Pour 4 ou 5, on voit des petits paquets.",
-    standard: "Reconnaître une quantité sans compter s'appelle le **subitizing**. Il est fiable jusqu'à 3–4 objets ; au-delà, on s'appuie sur des regroupements (les constellations du dé, les doigts) pour aller plus vite que le comptage un-à-un.",
-    advanced: "C'est la première rencontre avec l'idée de **cardinal** : une collection « porte » un nombre, indépendamment de la façon dont ses objets sont disposés. Voir $5$ comme $4+1$ ou $3+2$ est déjà une décomposition — la graine de toute l'arithmétique additive.",
+    discovery: "**Avec les mains** : pose 3 jetons sur la table — tu *vois* trois, sans compter. 1, 2, 3 se reconnaissent d'un seul regard ; pour 4 ou 5, on voit des petits paquets.",
+    standard: "**En image** : reconnaître une quantité sans compter s'appelle le **subitizing**. Il est fiable jusqu'à 3–4 objets ; au-delà, on s'appuie sur des images de nombres — constellations du dé, doigts levés — pour aller plus vite que le comptage un-à-un.",
+    advanced: "**Dans la tête** : c'est la première rencontre avec l'idée de **cardinal** : une collection « porte » un nombre, indépendamment de la façon dont ses objets sont disposés. Voir $5$ comme $4+1$ ou $3+2$ est déjà une décomposition — la graine de toute l'arithmétique additive.",
   },
   keyIdea: "Reconnaître **sans compter** : 1, 2, 3 d'un coup ; au-delà, on groupe.",
   why:
@@ -47,9 +47,9 @@ const numberSequence = {
   intuition:
     "Les nombres ont un ordre fixe : un, deux, trois, quatre… toujours le même. C'est comme une chanson qu'on apprend par cœur.\n\nQuand tu connais bien la chanson, tu peux répondre à : « quel nombre vient **juste après** 6 ? » (sept) ou « **juste avant** 9 ? » (huit), sans repartir de un.",
   depths: {
-    discovery: "Les nombres se disent toujours dans le même ordre. Après 6 vient 7 ; avant 9 vient 8.",
-    standard: "Réciter la **comptine numérique** dans l'ordre est une compétence à part entière. Maîtriser « le nombre d'après » (le successeur) et « le nombre d'avant » (le prédécesseur) prépare l'addition et la soustraction de 1.",
-    advanced: "Chaque nombre a un **successeur** unique : c'est l'idée qui fonde $\\mathbb{N}$. « Commencer à $0$, et toujours pouvoir ajouter $1$ » est, formalisé, l'axiome qui engendre tous les entiers (Peano). La comptine est la version chantée de cet axiome.",
+    discovery: "**Avec les mains** : je récite en levant un doigt à chaque mot — les nombres se disent toujours dans le même ordre. Après 6 vient 7 ; avant 9 vient 8.",
+    standard: "**En image** : posée sur la bande numérique, la comptine se *voit* — chaque mot a sa case. Et elle grandit : **jusqu'à trente**, **à rebours** de dix à un (le décomptage), **de deux en deux** jusqu'à vingt, et **en partant de n'importe quel nombre** (pour surcompter). Maîtriser « le nombre d'après » (le successeur) et « le nombre d'avant » (le prédécesseur) prépare l'addition et la soustraction de 1.",
+    advanced: "**Dans la tête** : chaque nombre a un **successeur** unique : c'est l'idée qui fonde $\\mathbb{N}$. « Commencer à $0$, et toujours pouvoir ajouter $1$ » est, formalisé, l'axiome qui engendre tous les entiers (Peano). La comptine est la version chantée de cet axiome.",
   },
   keyIdea: "Chaque nombre a **un suivant** (+1) et **un précédent** (−1).",
   why:
@@ -66,7 +66,10 @@ const numberSequence = {
   exercises: [
     { tier: "discovery", prompt: "Quel nombre vient juste après 3 ?", solution: "**4**." },
     { tier: "warmup", prompt: "Quel nombre vient juste avant 5 ?", solution: "**4**." },
-    { tier: "challenge", prompt: "Récite à rebours de 5 jusqu'à 1.", solution: "5, 4, 3, 2, 1." },
+    { tier: "application", prompt: "Compte de 2 en 2, en partant de 2, jusqu'à 10.", solution: "2, 4, 6, 8, 10." },
+    { tier: "application", prompt: "Compte de 2 en 2, en partant de 1, jusqu'à 9.", solution: "1, 3, 5, 7, 9." },
+    { tier: "challenge", prompt: "Récite à rebours de 10 jusqu'à 1.", solution: "10, 9, 8, 7, 6, 5, 4, 3, 2, 1 — c'est le **décomptage**." },
+    { tier: "challenge", prompt: "Continue la comptine : 27, 28…", solution: "**29, 30** : après vingt-huit viennent vingt-neuf, puis trente." },
     { tier: "exam", prompt: "Entre 7 et 9, quel nombre se cache ?", solution: "**8** (c'est le suivant de 7 et le précédent de 9)." },
   ],
   practice: [
@@ -83,9 +86,9 @@ const countObjects = {
   intuition:
     "Compter, c'est dire la comptine en touchant un objet à chaque nombre. Le tout dernier nombre que tu dis, c'est *combien il y en a*.\n\nAstuce : range les objets en ligne et pose le doigt sur chacun. Comme ça tu n'oublies personne et tu ne comptes personne deux fois.",
   depths: {
-    discovery: "Un objet = un nombre dit. Le **dernier** mot, c'est la quantité.",
-    standard: "Le comptage relie la comptine et les objets par une correspondance « un pour un ». Le dernier nombre énoncé donne le **cardinal** (la quantité) — c'est le principe cardinal.",
-    advanced: "Dénombrer une collection finie, c'est exhiber une bijection avec un segment $\\{1,\\dots,n\\}$ de $\\mathbb{N}$ ; l'entier $n$ est le cardinal. Que le résultat ne dépende pas de l'ordre du comptage est déjà un petit théorème.",
+    discovery: "**Avec les mains** : je touche chaque objet en disant un mot de la comptine — un objet = un nombre dit. Le **dernier** mot, c'est la quantité.",
+    standard: "**En image** : le comptage relie la comptine et les objets par une correspondance « un pour un ». Le dernier nombre énoncé donne le **cardinal** (la quantité) — c'est le principe cardinal.\n\nEncore faut-il **parcourir** la collection en passant par chaque objet **une et une seule fois** : je déplace les objets déjà comptés, je les pointe ou je les marque — les comptés d'un côté, les autres de l'autre.",
+    advanced: "**Dans la tête** : dénombrer une collection finie, c'est exhiber une bijection avec un segment $\\{1,\\dots,n\\}$ de $\\mathbb{N}$ ; l'entier $n$ est le cardinal. Que le résultat ne dépende pas de l'ordre du comptage est déjà un petit théorème.",
   },
   keyIdea: "Le **dernier nombre dit** = la quantité totale.",
   why:
@@ -102,6 +105,8 @@ const countObjects = {
   exercises: [
     { tier: "discovery", prompt: "Il y a ★ ★ ★. Combien d'étoiles ?", solution: "Un, deux, trois → **3**." },
     { tier: "application", prompt: "J'ai compté des billes ; le dernier nombre dit était « huit ». Combien de billes ?", solution: "Le dernier nombre dit donne la quantité → **8**." },
+    { tier: "application", prompt: "Les jetons sont éparpillés sur la table. Quelle astuce pour n'en compter aucun deux fois ?", solution: "**Séparer** : je pousse de côté chaque jeton déjà compté — les comptés d'un côté, les autres de l'autre." },
+    { tier: "challenge", prompt: "Une boîte à œufs fermée a 12 fentes. Comment glisser un jeton, et un seul, dans chaque fente, sans en oublier ?", solution: "Je suis un **chemin** qui passe par chaque fente **une et une seule fois** — par exemple ligne par ligne — et je repère où j'en suis." },
     { tier: "exam", prompt: "Léa compte 5 jetons, puis en ajoute 2 en continuant de compter. Combien en a-t-elle ?", solution: "Elle repart de 5 : six, sept → **7**." },
   ],
   practice: [
@@ -118,9 +123,9 @@ const digits = {
   intuition:
     "Un même nombre a trois visages : le **mot** qu'on dit (« cinq »), la **quantité** qu'on voit (✋), et le **chiffre** qu'on écrit (5). Apprendre les chiffres, c'est savoir passer de l'un à l'autre.\n\nAvec dix signes seulement — 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 — on peut écrire tous les nombres du monde. C'est une invention géniale.",
   depths: {
-    discovery: "Chaque quantité a un signe : ✋ = 5. On apprend à lire et à écrire ces dix signes.",
-    standard: "Il y a dix **chiffres** (0 à 9). Il ne faut pas confondre *chiffre* (le signe) et *nombre* (la quantité) : 12 est un nombre écrit avec deux chiffres. Associer mot ↔ quantité ↔ chiffre, dans les deux sens, est la base.",
-    advanced: "Dix chiffres suffisent grâce à la **numération de position** : la place d'un chiffre lui donne sa valeur (puissances de $10$). Le $0$ y joue un rôle clé — marquer une place vide — ce qui en fait l'une des inventions mathématiques les plus puissantes.",
+    discovery: "**Avec les mains** : cinq doigts levés, et le signe « 5 » sur l'étiquette — chaque quantité a un signe. On apprend à lire et à écrire ces dix signes.",
+    standard: "**En image** : il y a dix **chiffres** (0 à 9). Il ne faut pas confondre *chiffre* (le signe) et *nombre* (la quantité) : 12 est un nombre écrit avec deux chiffres. Associer mot ↔ quantité ↔ chiffre, dans les deux sens, est la base.",
+    advanced: "**Dans la tête** : dix chiffres suffisent grâce à la **numération de position** : la place d'un chiffre lui donne sa valeur (puissances de $10$). Le $0$ y joue un rôle clé — marquer une place vide — ce qui en fait l'une des inventions mathématiques les plus puissantes.",
   },
   keyIdea: "**Chiffre** = un signe (il y en a 10). **Nombre** = une quantité.",
   why:
@@ -155,9 +160,9 @@ const compareNumbers = {
   intuition:
     "Pour savoir qui a le plus, on associe les objets deux par deux : un des tiens avec un des miens. Celui à qui il en reste « en trop » en a le plus. Si tout s'associe pile-poil, il y en a **autant**.",
   depths: {
-    discovery: "On range face à face. S'il en reste d'un côté → ce côté a le plus.",
-    standard: "Comparer deux quantités revient à les apparier. On note la relation avec les signes : $3 < 5$, $5 > 3$, $4 = 4$.",
-    advanced: "« Avoir au plus autant d'éléments » se définit par l'existence d'une **injection** d'une collection dans l'autre — l'appariement, qui fonde l'ordre sur les cardinaux et se prolonge, bien plus tard, aux ensembles infinis.",
+    discovery: "**Avec les mains** : je range les objets face à face, un contre un. S'il en reste d'un côté → ce côté a le plus.",
+    standard: "**En image** : comparer revient à apparier — ou à dénombrer chacune et à verbaliser : « quatre voitures, six vélos : il y a **plus** de vélos ». On note la relation avec les signes : $3 < 5$, $5 > 3$, $4 = 4$.",
+    advanced: "**Dans la tête** : « avoir au plus autant d'éléments » se définit par l'existence d'une **injection** d'une collection dans l'autre — l'appariement, qui fonde l'ordre sur les cardinaux et se prolonge, bien plus tard, aux ensembles infinis.",
   },
   keyIdea: "Le signe ouvre sa grande bouche vers le **plus grand** : $5 > 3$.",
   why:
@@ -190,9 +195,9 @@ const orderNumbers = {
   intuition:
     "Quand on compare deux à deux, on peut tout mettre en file : du plus petit au plus grand. C'est **ranger**.\n\nUne fois la file faite, chacun a une **place** : le premier, le deuxième, le troisième… Attention : « trois » (combien) et « troisième » (la place) ne disent pas la même chose.",
   depths: {
-    discovery: "On met les nombres en file, du plus petit au plus grand. Chacun a une place : 1er, 2e, 3e…",
-    standard: "Ordonner, c'est utiliser la comparaison entre **tous** les nombres à la fois. On distingue le **cardinal** (combien : trois) de l'**ordinal** (le rang : troisième).",
-    advanced: "L'ordre sur les entiers est **total** : deux nombres sont toujours comparables. C'est une *relation d'ordre* (réflexive, antisymétrique, transitive) — la même structure qu'on retrouvera partout, des réels aux ensembles ordonnés abstraits.",
+    discovery: "**Avec les mains** : je range les tours de cubes de la plus petite à la plus grande — les nombres se mettent en file. Chacun a une place : 1er, 2e, 3e…",
+    standard: "**En image** : ordonner, c'est utiliser la comparaison entre **tous** les nombres à la fois. On distingue le **cardinal** (combien : trois) de l'**ordinal** (le rang : troisième).",
+    advanced: "**Dans la tête** : l'ordre sur les entiers est **total** : deux nombres sont toujours comparables. C'est une *relation d'ordre* (réflexive, antisymétrique, transitive) — la même structure qu'on retrouvera partout, des réels aux ensembles ordonnés abstraits.",
   },
   keyIdea: "**Cardinal** = combien (trois). **Ordinal** = quel rang (troisième).",
   why:
@@ -226,9 +231,9 @@ const decompose = {
   intuition:
     "Un nombre peut se fabriquer de plusieurs façons. **5**, par exemple : 4 et 1, ou 3 et 2, ou 2 et 3, ou 1 et 4. C'est la « maison du 5 » : toutes les paires qui font 5.\n\nConnaître ces décompositions par cœur, c'est le secret pour calculer vite plus tard.",
   depths: {
-    discovery: "Un nombre = deux morceaux réunis. Ex. : 5 = 4 + 1 = 3 + 2.",
-    standard: "Décomposer, c'est écrire un nombre comme une **somme** de deux (ou plus) nombres plus petits. Les « maisons des nombres » listent toutes les décompositions d'un total fixé.",
-    advanced: "Compter le nombre de façons d'écrire $n$ comme une somme, c'est la théorie des **partitions** d'un entier — un sujet d'arithmétique encore vivant en recherche. À l'éveil, on en touche le tout premier étage.",
+    discovery: "**Avec les mains** : 5 jetons, deux paquets — et je verbalise : « cinq, c'est quatre et un ; cinq, c'est trois et deux ».",
+    standard: "**En image** : décomposer, c'est écrire un nombre comme une **somme** de plus petits. Les « maisons des nombres » et le dix-cadre montrent toutes les décompositions d'un total fixé — et l'**ordre ne compte pas** : 4 et 1, ou 1 et 4, c'est le même cinq.",
+    advanced: "**Dans la tête** : compter le nombre de façons d'écrire $n$ comme une somme, c'est la théorie des **partitions** d'un entier — un sujet d'arithmétique encore vivant en recherche. À l'éveil, on en touche le tout premier étage.",
   },
   keyIdea: "Plusieurs additions donnent le même total : $5 = 4+1 = 3+2$.",
   why:
@@ -262,9 +267,9 @@ const addSubtract = {
   intuition:
     "Ajouter, c'est avancer dans la comptine : 4 bonbons, j'en ajoute 3 → je continue « cinq, six, sept ». Retirer, c'est reculer : 8 bonbons, j'en mange 2 → « sept, six ».\n\nSur la droite numérique, ajouter = aller à droite, retirer = aller à gauche.",
   depths: {
-    discovery: "Ajouter = avancer dans les nombres. Retirer = reculer.",
-    standard: "Ajouter $b$ revient à avancer de $b$ crans ($+b$) ; retirer $b$, à reculer de $b$ ($-b$). Ce sont les deux premières opérations : l'**addition** et la **soustraction**.",
-    advanced: "Ajouter et retirer sont des opérations **inverses** : si $a + b = c$, alors $c - b = a$. Cette réversibilité est ce qui, plus tard, permet de « passer de l'autre côté » dans une équation.",
+    discovery: "**Avec les mains** : 4 bonbons, j'en ajoute 3 — je continue sur mes doigts : « cinq, six, sept ». Ajouter = avancer dans les nombres. Retirer = reculer.",
+    standard: "**En image** : le geste malin pour ajouter est le **surcomptage** : partir du **plus grand** et compter le reste sur ses doigts. Pour $4 + 5$ : « je mets **5 dans ma tête** et je compte 4 : six, sept, huit, **neuf** ». Ajouter $b$, c'est avancer de $b$ crans ($+b$) ; retirer $b$, reculer d'autant ($-b$) : l'**addition** et la **soustraction**.",
+    advanced: "**Dans la tête** : ajouter et retirer sont des opérations **inverses** : si $a + b = c$, alors $c - b = a$. Cette réversibilité est ce qui, plus tard, permet de « passer de l'autre côté » dans une équation.",
   },
   keyIdea: "Ajouter → on avance (+). Retirer → on recule (−).",
   why:
@@ -282,10 +287,15 @@ const addSubtract = {
       { p: "Je pars de 8 et je recule de 2 : 7, 6." },
       { p: "Donc $8 - 2 = 6$." },
     ] },
+    { title: "4 + 5 en surcomptant", steps: [
+      { p: "Je mets le plus grand, **5**, dans ma tête." },
+      { p: "Je compte 4 sur mes doigts : « six, sept, huit, neuf »." },
+      { p: "Donc $4 + 5 = 9$ — sans repartir de un !" },
+    ] },
   ],
   exercises: [
     { tier: "discovery", prompt: "Il y a 3 oiseaux, 1 arrive. Combien ?", solution: "$3 + 1 = $ **4**." },
-    { tier: "warmup", prompt: "Calcule $5 + 2$.", solution: "On avance de 2 depuis 5 → **7**." },
+    { tier: "warmup", prompt: "Calcule $5 + 2$.", solution: "Je mets **5 dans ma tête** et je compte 2 : « six, sept » → **7**." },
     { tier: "challenge", prompt: "Il y avait 7 bonbons, on en mange 3. Combien reste-t-il ?", solution: "$7 - 3 = $ **4**." },
     { tier: "exam", prompt: "J'ajoute 4 à un nombre et j'obtiens 9. Quel était ce nombre ?", solution: "On fait l'inverse : $9 - 4 = $ **5**." },
   ],
@@ -303,9 +313,9 @@ const complements = {
   intuition:
     "Tu as 7. Combien te manque-t-il pour avoir 10 ? Le cadre de dix le montre d'un coup : il reste 3 cases vides, donc **3**.\n\nLes compléments à 10 sont à connaître par cœur : 1 et 9, 2 et 8, 3 et 7, 4 et 6, 5 et 5. Ce sont les meilleurs amis du calcul.",
   depths: {
-    discovery: "Le complément, c'est « ce qu'il manque » pour atteindre un total. Pour 10 : 7 → il manque 3.",
-    standard: "Le **complément** de $a$ à $n$ est le nombre $b$ tel que $a + b = n$. Les compléments à 10 ($3+7$, $4+6$…) sont les briques du calcul mental rapide.",
-    advanced: "Chercher $b$ tel que $a + b = n$, c'est résoudre une mini-équation : $b = n - a$. Le complément est la **soustraction** vue « par en dessous » — et le passage de la dizaine s'appuie entièrement sur lui.",
+    discovery: "**Avec les mains** : 7 doigts levés… combien de couchés ? Le complément, c'est « ce qu'il manque » pour atteindre le total. Pour 10 : 7 → il manque 3.",
+    standard: "**En image** : sur le dix-cadre, cases pleines et cases vides racontent le complément. Le **complément** de $a$ à $n$ est le nombre $b$ tel que $a + b = n$ ; les compléments à 10 ($3+7$, $4+6$…) sont les briques du calcul mental rapide.",
+    advanced: "**Dans la tête** : chercher $b$ tel que $a + b = n$, c'est résoudre une mini-équation : $b = n - a$. Le complément est la **soustraction** vue « par en dessous » — et le passage de la dizaine s'appuie entièrement sur lui.",
   },
   keyIdea: "Compléter à 10 : 7 et **3**, 6 et **4**, 8 et **2**…",
   why:
@@ -340,9 +350,9 @@ const tensAndOnes = {
   intuition:
     "Après 10, la comptine continue pareil : onze, douze… puis « dix-sept, dix-huit, dix-neuf, **vingt** ». À partir de vingt, on entend même la structure : *vingt*-et-un, *vingt*-deux…\n\nUn nombre comme 23, c'est **2 paquets de dix et 3 tout seuls**. On commence à voir que les grands nombres sont faits de dizaines et d'unités.",
   depths: {
-    discovery: "Après 10, on continue : 11, 12… 19, 20. 23, c'est 2 dizaines et 3 unités.",
-    standard: "Au-delà de 10, on s'appuie sur les **dizaines** : 20 = 2 dizaines, 30 = 3 dizaines. Un nombre à deux chiffres se lit « tant de dizaines et tant d'unités » — c'est la porte d'entrée vers la numération du CP.",
-    advanced: "Quand on écrit **23**, c'est la **place** du chiffre qui dit sa valeur : le **2** est du côté des dizaines (il vaut $20$) et le **3** du côté des unités (il vaut $3$). Range les nombres en deux colonnes — dizaines à gauche, unités à droite — et tu lis leur valeur d'un coup d'œil. C'est le tout début de la numération.",
+    discovery: "**Avec les mains** : après 10, la comptine continue : 11, 12… 19, 20. Et on fait des **paquets de dix** : 23, c'est 2 paquets de dix et 3 tout seuls.",
+    standard: "**En image** : au-delà de 10, on s'appuie sur les **dizaines** : 20 = 2 dizaines, 30 = 3 dizaines. Un nombre à deux chiffres se lit « tant de dizaines et tant d'unités » — c'est la porte d'entrée vers la numération du CP.",
+    advanced: "**Dans la tête** : quand on écrit **23**, c'est la **place** du chiffre qui dit sa valeur : le **2** est du côté des dizaines (il vaut $20$) et le **3** du côté des unités (il vaut $3$). Range les nombres en deux colonnes — dizaines à gauche, unités à droite — et tu lis leur valeur d'un coup d'œil. C'est le tout début de la numération.",
   },
   keyIdea: "Un nombre à deux chiffres = des **dizaines** + des **unités** ($23 = 20 + 3$).",
   why:
@@ -371,38 +381,6 @@ const tensAndOnes = {
 };
 
 // — Transition to primary (kept from the skeleton) —
-const columnAddition = {
-  id: "numbers.primary.column-addition",
-  level: "primary", domain: "numbers",
-  title: "L'addition posée (avec retenue)",
-  tagline: "Additionner colonne par colonne en gérant la retenue.",
-  prereqs: ["numbers.preschool.complements", "numbers.preschool.tens-and-ones"],
-  intuition:
-    "Quand les nombres sont grands, on les pose l'un sous l'autre, bien alignés : unités sous unités, dizaines sous dizaines.\n\nOn additionne colonne par colonne, **de droite à gauche**. Si une colonne dépasse 9, on « garde » une dizaine pour la colonne suivante : c'est la **retenue** — exactement le complément à 10 qu'on a appris à l'éveil.",
-  depths: {
-    discovery: "On aligne, on additionne par colonnes de droite à gauche, et on reporte la retenue.",
-    standard: "L'addition posée s'appuie sur la numération de position. Quand la somme d'une colonne $\\geq 10$, on écrit le chiffre des unités et on reporte $1$ sur la colonne de gauche.",
-    advanced: "La retenue traduit le passage à la base dix : on somme les chiffres pondérés par des puissances de $10$, puis on « normalise » pour que chaque chiffre reste dans $\\{0,\\dots,9\\}$. C'est ce que fait un additionneur à propagation de retenue.",
-  },
-  keyIdea: "Une colonne à gauche vaut **dix fois** plus : 10 unités = 1 dizaine.",
-  why:
-    "Pourquoi reporter $1$ et pas $10$ ? Parce qu'une colonne plus à gauche vaut dix fois plus. $10$ unités, c'est $1$ dizaine : on remplace dix petites cases par une seule case de la colonne voisine.",
-  examples: [
-    { title: "Poser 27 + 48", steps: [
-      { p: "Unités : $7 + 8 = 15$ → j'écris **5**, je retiens **1**." },
-      { p: "Dizaines : $2 + 4 + 1 = 7$ → **75**." },
-    ] },
-  ],
-  exercises: [
-    { tier: "discovery", prompt: "Combien font 6 + 7 ?", solution: "$6 + 7 = 13$." },
-    { tier: "challenge", prompt: "Pose et calcule 38 + 47.", solution: "$8+7=15$ (5, retenue 1) ; $3+4+1=8$ → **85**." },
-    { tier: "exam", prompt: "Calcule 156 + 247.", solution: "$6+7=13$ (3, r1) ; $5+4+1=10$ (0, r1) ; $1+2+1=4$ → **403**." },
-  ],
-  practice: [
-    { tier: "warmup", label: "Petites additions", make: (r) => { const a = randint(r, 2, 9), b = randint(r, 2, 9); return { prompt: `Combien font ${a} + ${b} ?`, answer: a + b, solution: `$${a} + ${b} = ${a + b}$.` }; } },
-    { tier: "application", label: "Additions à deux chiffres", make: (r) => { const a = randint(r, 12, 89), b = randint(r, 12, 89); return { prompt: `Calcule ${a} + ${b}.`, answer: a + b, solution: `$${a} + ${b} = ${a + b}$.` }; } },
-  ],
-};
 
 // — Doubles & halves (preschool) —
 const doubles = {
@@ -415,11 +393,11 @@ const doubles = {
     "Un double, c'est quand on a deux fois la même chose : $2$ et encore $2$, ça fait $4$. Ta paire de chaussures est un double : un pied, puis l'autre pied.\n\nLa moitié, c'est l'inverse : on partage en deux parts égales. Si tu partages $4$ bonbons entre deux enfants, chacun en a $2$.",
   depths: {
     discovery:
-      "Le double d'un nombre, c'est ce nombre **plus lui-même**.\n\nDouble de $1$ → $1+1=2$. Double de $2$ → $2+2=4$. Double de $3$ → $3+3=6$.\n\nPour la moitié, on coupe en **deux parts égales**. La moitié de $4$, c'est $2$ (car $2+2=4$).",
+      "**Avec les mains** : deux mains pareilles, et je verbalise — « deux et deux font quatre ». Le double d'un nombre, c'est ce nombre **plus lui-même**.\n\nDouble de $1$ → $1+1=2$. Double de $2$ → $2+2=4$. Double de $3$ → $3+3=6$.\n\nPour la moitié, on coupe en **deux parts égales**. La moitié de $4$, c'est $2$ (car $2+2=4$).",
     standard:
-      "Les doubles avancent de deux en deux : $2, 4, 6, 8, 10$. Ce sont les **nombres pairs**.\n\nLa moitié ne tombe juste que si le nombre est pair : la moitié de $6$ est $3$, mais $5$ ne se partage pas en deux parts égales entières (il reste $1$ tout seul).",
+      "**En image** : les doubles avancent de deux en deux : $2, 4, 6, 8, 10$. Ce sont les **nombres pairs**.\n\nLa moitié ne tombe juste que si le nombre est pair : la moitié de $6$ est $3$, mais $5$ ne se partage pas en deux parts égales entières (il reste $1$ tout seul).",
     advanced:
-      "Range les doubles l'un sous l'autre : $1+1, 2+2, 3+3$… leurs résultats $2, 4, 6, 8, 10$ forment l'escalier des **nombres pairs** (on saute une marche à chaque fois). Plus tard, ces « paquets tout pareils » porteront un nom — mais l'idée est déjà là : deux fois la même quantité.",
+      "**Dans la tête** : range les doubles l'un sous l'autre : $1+1, 2+2, 3+3$… leurs résultats $2, 4, 6, 8, 10$ forment l'escalier des **nombres pairs** (on saute une marche à chaque fois). Plus tard, ces « paquets tout pareils » porteront un nom — mais l'idée est déjà là : deux fois la même quantité.",
   },
   keyIdea: "Double = le nombre + lui-même. Moitié = partagé en deux parts égales.",
   why:
@@ -463,11 +441,11 @@ const crossingTen = {
     "Quand on compte et qu'on arrive à **9**, le nombre d'après n'a plus un seul chiffre : c'est **10**, une dizaine toute neuve. Pareil après 19 → 20, après 29 → 30.\n\nImagine un compteur à deux roues : la roue des **unités** tourne $0, 1, 2, …, 9$ ; en dépassant 9 elle **revient à 0** et pousse la roue des **dizaines** d'un cran.",
   depths: {
     discovery:
-      "On compte : 7, 8, **9**… et après ? Les unités ne peuvent pas aller plus loin que 9 : on remplit **une dizaine** et on repart à 0 → **10**.\n\nDe 10, on continue : 11, 12… 19, puis **20**.",
+      "**Avec les mains** : dix doigts, tous levés — plein ! On compte : 7, 8, **9**… et après ? Les unités ne peuvent pas aller plus loin que 9 : on remplit **une dizaine** et on repart à 0 → **10**.\n\nDe 10, on continue : 11, 12… 19, puis **20**.",
     standard:
-      "Chaque fois qu'on passe un nombre qui finit par 9 (9, 19, 29…), une dizaine de plus se forme et les unités repartent de 0. C'est toujours le **même geste**, un cran plus haut.",
+      "**En image** : chaque fois qu'on passe un nombre qui finit par 9 (9, 19, 29…), une dizaine de plus se forme et les unités repartent de 0. C'est toujours le **même geste**, un cran plus haut.",
     advanced:
-      "Compter, c'est ajouter $1$ encore et encore. Le « retour à 0 des unités + une dizaine en plus » est exactement ce que fait un **compteur de kilomètres** — et, bien plus tard, ce sera la **retenue** d'une addition posée.",
+      "**Dans la tête** : compter, c'est ajouter $1$ encore et encore. Le « retour à 0 des unités + une dizaine en plus » est exactement ce que fait un **compteur de kilomètres** — et, bien plus tard, ce sera la **retenue** d'une addition posée.",
   },
   keyIdea: "Quand les unités dépassent 9, elles repartent à 0 et **une dizaine** s'ajoute.",
   why:
@@ -500,8 +478,196 @@ const crossingTen = {
   ],
 };
 
+// — Ordinal numbers: rank / position (preschool, programme cycle 1 — "exprimer un rang") —
+const rank = {
+  id: "numbers.preschool.rank",
+  level: "preschool", domain: "numbers",
+  title: "Le rang : premier, deuxième… dernier",
+  tagline: "Dire à quelle place se trouve quelqu'un dans une file.",
+  prereqs: ["numbers.preschool.count"],
+  intuition:
+    "Un nombre peut dire deux choses différentes. Il peut dire **combien** il y en a — « il y a 3 enfants ». Mais il peut aussi dire **à quelle place** se trouve quelqu'un — « le 3e enfant de la file ». Cette place s'appelle le **rang** : premier, deuxième, troisième… et tout au bout, le **dernier**.\n\nPour trouver le rang, on compte les places depuis le **début**.",
+  depths: {
+    discovery:
+      "**Avec les mains** : on se met en file — chacun a une place : **premier**, **deuxième**, **troisième**, et ainsi de suite jusqu'au **dernier**. Pour trouver le rang de quelqu'un, on compte les places depuis le début.",
+    standard:
+      "**En image** : le nombre a deux emplois. Dire **combien** (« 3 billes »), c'est le **cardinal**. Dire **à quelle place** (« la 3e bille »), c'est l'**ordinal**, le rang. Le rang dépend de l'endroit où l'on commence à compter et du sens dans lequel on avance.",
+    advanced:
+      "**Dans la tête** : c'est la **fonction ordinale** du nombre, à côté de sa fonction cardinale : le même nombre sert à compter une quantité **et** à repérer une position dans une suite. On la retrouve ensuite dans les listes, les rangs et tout ce qui est numéroté.",
+  },
+  keyIdea: "Un nombre dit **combien** (cardinal) ou **à quelle place** (ordinal). Le rang se compte depuis le début.",
+  why:
+    "Pourquoi « le 3e » n'est-il pas la même chose que « 3 enfants » ? Parce que « 3 enfants » compte un **groupe**, alors que « le 3e » désigne **un seul** enfant, à une place précise. Quantité et position sont deux idées différentes portées par le même mot-nombre.",
+  examples: [
+    { title: "Qui est deuxième ?", steps: [
+      { p: "Une file de 4 enfants." },
+      { p: "Je compte depuis le début : 1er, 2e… → le **2e** est le deuxième de la file." },
+    ] },
+    { title: "Premier et dernier", steps: [
+      { p: "Celui qui est en tête est le **premier**." },
+      { p: "Celui qui est tout au bout est le **dernier**." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Comment appelle-t-on celui qui est tout au bout de la file ?", solution: "Le **dernier**." },
+    { tier: "warmup", prompt: "Juste après le premier de la file vient le… ?", solution: "Le **deuxième**." },
+    { tier: "application", prompt: "5 enfants en file. Léa est la 3e. Combien d'enfants devant elle ?", solution: "**2** : le 1er et le 2e." },
+    { tier: "challenge", prompt: "« Il y a 4 billes » et « la 4e bille » : est-ce la même chose ?", solution: "**Non** : « 4 billes » dit combien (la quantité) ; « la 4e bille » dit la place (le rang)." },
+    { tier: "exam", prompt: "Dans une file de 5, si on compte depuis l'autre bout, le premier devient quel rang ?", solution: "Le **5e** : le rang change quand on change de sens ou de point de départ." },
+  ],
+  practice: [
+    { tier: "application", label: "Combien devant ?", make: (r) => { const n = randint(r, 3, 6); const pos = randint(r, 2, n); return { prompt: `Une file de ${n} enfants. L'enfant à la place ${pos} a combien d'enfants devant lui ?`, answer: pos - 1, solution: `Avant la place ${pos}, il y a ${pos - 1} enfant(s).` }; } },
+  ],
+};
+
+// — First word problems (preschool, programme cycle 1 — "utiliser les nombres pour résoudre des problèmes") —
+const firstProblems = {
+  id: "numbers.preschool.first-problems",
+  level: "preschool", domain: "numbers",
+  title: "Résoudre un petit problème",
+  tagline: "Comprendre une petite histoire de nombres et trouver la réponse.",
+  prereqs: ["numbers.preschool.add-subtract"],
+  intuition:
+    "Un problème, c'est une **petite histoire** qui se termine par une **question**. La réponse ne saute pas aux yeux : il faut réfléchir un peu.\n\nLa méthode : je me fais l'**image** de l'histoire (avec des jetons ou un dessin), je regarde si on **ajoute** ou si on **retire**, puis je donne la réponse.",
+  depths: {
+    discovery:
+      "**Avec les mains** : un problème raconte une histoire et pose une question. Pour répondre : je **joue** l'histoire avec des jetons, je vois si j'**ajoute** (on me donne) ou si je **retire** (on enlève), et je compte le résultat.",
+    standard:
+      "**En image** : la question dit ce qu'on cherche. « J'avais 3 bonbons, on m'en donne 2 » → on **réunit** → j'ajoute. « J'avais 5, j'en mange 2 » → il en **reste** moins → je retire. Ici, une seule étape suffit pour répondre.",
+    advanced:
+      "**Dans la tête** : résoudre, c'est d'abord **modéliser** — traduire l'histoire en une action sur les nombres, puis **calculer**. Gare aux histoires **piégeuses** : « Pierre a 3 billes *de moins* que Julie »… et pour trouver Julie, on **ajoute** ! Les mots ne décident pas de l'opération : c'est l'**image** de l'histoire qui décide. Ce sont déjà les étapes du CP : comprendre, modéliser, calculer, répondre.",
+  },
+  keyIdea: "Un problème = une histoire + une question. Je me fais l'image, je décide d'ajouter ou de retirer, puis je réponds.",
+  why:
+    "Pourquoi se faire l'image avant de calculer ? Parce que le calcul dépend de l'histoire : on **réunit** (ajouter) ou on **enlève** (retirer). Bien comprendre l'histoire, c'est déjà avoir fait la moitié du problème.",
+  examples: [
+    { title: "On m'en donne", steps: [
+      { p: "« J'ai 3 billes, on m'en donne 2. »" },
+      { p: "On réunit ce que j'ai et ce qu'on me donne → **5 billes**." },
+    ] },
+    { title: "On en enlève", steps: [
+      { p: "« Il y a 5 oiseaux, 2 s'envolent. »" },
+      { p: "Il en reste : je retire 2 → **3 oiseaux**." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Dans un problème, qu'est-ce qui dit ce qu'on cherche ?", solution: "La **question**." },
+    { tier: "warmup", prompt: "J'ai 2 pommes, on m'en donne 3. Combien en tout ?", solution: "**5**." },
+    { tier: "application", prompt: "Dans une boîte, je mets 3 cubes rouges, 1 cube bleu et 2 cubes verts. Combien de cubes dans la boîte ?", solution: "$3 + 1 + 2 = $ **6** : un tout fait de **trois** parties." },
+    { tier: "application", prompt: "Il y a 6 ballons, 2 éclatent. Combien en reste-t-il ?", solution: "**4**." },
+    { tier: "challenge", prompt: "« J'ai 4 bonbons, on m'en donne 2. » Faut-il ajouter ou retirer ? Pourquoi ?", solution: "**Ajouter** : on **réunit** ce que j'avais et ce qu'on me donne." },
+    { tier: "challenge", prompt: "Pierre a 5 billes. Julie a 3 billes de plus que Pierre. Combien Julie a-t-elle de billes ?", solution: "$5 + 3 = $ **8** : « de plus » et on ajoute — l'énoncé et le calcul vont dans le même sens." },
+    { tier: "exam", prompt: "Pierre a 5 billes. Il a 3 billes de moins que Julie. Combien Julie a-t-elle de billes ?", solution: "**8** ! L'énoncé dit « de moins »… mais c'est Pierre qui en a moins : Julie en a **plus**, donc $5 + 3 = 8$. Fais l'image avant de calculer." },
+    { tier: "exam", prompt: "Léa avait 3 billes ; après avoir joué, elle en a 5. Combien en a-t-elle gagné ?", solution: "**2** : il faut compléter de 3 jusqu'à 5." },
+  ],
+  practice: [
+    { tier: "application", label: "Petit problème", make: (r) => {
+      if (r() < 0.5) { const a = randint(r, 1, 5), b = randint(r, 1, 5); return { prompt: `J'ai ${a} jetons, on m'en donne ${b}. Combien en tout ?`, answer: a + b, solution: `On réunit : ${a} et ${b} → ${a + b}.` }; }
+      const a = randint(r, 3, 8), b = randint(r, 1, a - 1); return { prompt: `Il y a ${a} jetons, j'en retire ${b}. Combien en reste-t-il ?`, answer: a - b, solution: `Il en reste ${a - b}.` };
+    } },
+  ],
+};
+
+// — The number strip: numbers as positions, moves as operations (programme: bande numérique) —
+const numberStrip = {
+  id: "numbers.preschool.number-strip",
+  level: "preschool", domain: "numbers",
+  title: "La bande numérique",
+  tagline: "Chaque nombre a sa case : avancer, c'est ajouter ; reculer, c'est retirer.",
+  prereqs: ["numbers.preschool.rank", "numbers.preschool.add-subtract"],
+  intuition:
+    "Range les nombres en file, de gauche à droite, chacun dans **sa** case : 1, 2, 3… C'est la **bande numérique** — celle des jeux de l'oie !\n\nEn classe, on la construit pour de vrai : des boîtes à trésors alignées, avec sur chaque boîte le nombre écrit de plusieurs façons (points du dé, doigts, chiffre). Puis on la dessine. Puis on la garde **dans sa tête** : des mains, à l'image, au calcul.",
+  depths: {
+    discovery:
+      "**Avec les mains** : sur un jeu de l'oie, mon pion est sur une case ; je lance le dé et j'avance d'autant de cases, une par une. Chaque nombre a sa case, toujours à la même place.",
+    standard:
+      "**En image** : sur la bande de 1 à 10, avancer de 2 depuis la case 4, c'est surcompter « cinq, six » → case **6**. **Avancer = ajouter**, **reculer = retirer**. Et si la bande a un trou (5, ?, 7), le nombre caché est celui d'entre les deux : **6**.",
+    advanced:
+      "**Dans la tête** : sur la bande, deux voisins diffèrent toujours de **1** — les nombres sont régulièrement espacés. Un même calcul a donc deux histoires : $4 + 2$, c'est « réunir 4 et 2 » (des quantités) **ou** « partir de la case 4 et avancer de 2 » (des positions). Deux images, une seule opération. La bande deviendra la **droite numérique**, qui accueillera plus tard fractions et décimaux.",
+  },
+  keyIdea: "Sur la bande : **avancer = ajouter**, **reculer = retirer**. Deux voisins diffèrent toujours de 1.",
+  why:
+    "Pourquoi la bande aide-t-elle autant ? Parce qu'elle rend le nombre **visible comme une position** : on *voit* que 7 est après 5, on *voit* le chemin de 4 à 6. Quantité et position racontent la même histoire — et cette double lecture rend le calcul solide.",
+  widgets: [
+    { kind: "numberline", params: { mode: "line", max: 10, value: 4 }, caption: "Pose-toi sur une case, puis avance (ajoute) ou recule (retire) en comptant tes pas." },
+  ],
+  examples: [
+    { title: "Avancer de 2 depuis la case 4", steps: [
+      { p: "Je pose le doigt sur la case 4." },
+      { p: "J'avance en comptant : « cinq, six »." },
+      { p: "J'arrive case **6** — c'est $4 + 2$." },
+    ] },
+    { title: "La bande à trous", steps: [
+      { p: "La bande montre : 5, ?, 7." },
+      { p: "Entre 5 et 7 se cache **6** : d'une case à l'autre, on ajoute 1." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Sur la bande, la case 7 est-elle avant ou après la case 5 ?", solution: "**Après** : 7 vient plus loin que 5 quand on avance." },
+    { tier: "warmup", prompt: "Mon pion est sur la case 4 et j'avance de 2. Sur quelle case suis-je ?", solution: "Je surcompte « cinq, six » → case **6**." },
+    { tier: "application", prompt: "La bande montre : 5, ?, 7. Quel nombre manque ?", solution: "**6** : d'une case à la suivante, on ajoute toujours 1." },
+    { tier: "challenge", prompt: "Mon pion est sur la case 8 et je recule de 3. Sur quelle case ? Que veut dire « reculer » ?", solution: "« sept, six, cinq » → case **5**. Reculer, c'est **retirer**." },
+    { tier: "exam", prompt: "J'avance de 2 et j'arrive sur la case 9. De quelle case suis-je parti ?", solution: "Je refais le chemin **à l'envers** : je recule de 2 depuis 9 → case **7**." },
+  ],
+  practice: [
+    { tier: "application", label: "Avancer, reculer", make: (r) => {
+      const fwd = r() < 0.6;
+      if (fwd) { const a = randint(r, 1, 7), b = randint(r, 1, 3); return { prompt: `Pion sur la case ${a} : avance de ${b}. Quelle case ?`, answer: a + b, solution: `Je mets ${a} dans ma tête et je compte ${b} pas en avant : case **${a + b}**.` }; }
+      const a = randint(r, 4, 10), b = randint(r, 1, 3); return { prompt: `Pion sur la case ${a} : recule de ${b}. Quelle case ?`, answer: a - b, solution: `Reculer = retirer : case **${a - b}**.` };
+    } },
+  ],
+};
+
+// — Sharing & grouping: equal parts, leftovers (programme: problèmes de partage et de groupements) —
+const share = {
+  id: "numbers.preschool.share",
+  level: "preschool", domain: "numbers",
+  title: "Partager et grouper",
+  tagline: "Distribuer en parts égales, faire des paquets — et parfois, il en reste.",
+  prereqs: ["numbers.preschool.first-problems"],
+  intuition:
+    "Six gâteaux pour deux poupées, et chacune doit avoir **pareil**. Le geste sûr : distribuer **un à un** — un pour toi, un pour moi, un pour toi… À la fin : trois chacune. C'est le **partage équitable**.\n\nL'autre sens existe aussi : ranger dix images **deux par enveloppe** et compter les enveloppes. Ça, c'est **grouper**.",
+  depths: {
+    discovery:
+      "**Avec les mains** : pour partager équitablement, je distribue un à un, comme on distribue des cartes. À la fin, chacun a autant — et je peux le vérifier en comptant les parts.",
+    standard:
+      "**En image** : parfois ça ne tombe pas juste. Sept billes pour deux enfants : trois chacun… et il en **reste une**. Le reste n'est la part de personne. Grouper, c'est l'autre sens : 10 images, 2 par enveloppe → je dessine des paquets de 2 → **5** enveloppes.",
+    advanced:
+      "**Dans la tête** : « combien chacun ? » (partage) et « combien de paquets ? » (groupement) sont les **deux visages d'une même idée** — celle qu'on appellera un jour la division. À l'éveil, on la vit avec les mains et les dessins, sans aucun symbole : le sens d'abord, l'écriture bien plus tard.",
+  },
+  keyIdea: "Partager = distribuer **un à un**. Grouper = faire des **paquets de même taille**. Ce qui dépasse, c'est le **reste**.",
+  why:
+    "Pourquoi distribuer un à un garantit-il l'équité ? Parce qu'à chaque tour, **chacun reçoit exactement un** : personne ne prend d'avance. Et quand il n'y a plus de quoi faire un tour complet, ce qui reste… reste. Toute la justice du partage tient dans ce petit geste.",
+  examples: [
+    { title: "6 gâteaux, 2 poupées", steps: [
+      { p: "Un pour la première, un pour la deuxième ; encore un, encore un ; encore un, encore un." },
+      { p: "Chaque poupée a **3** gâteaux — parts égales, rien ne reste." },
+    ] },
+    { title: "7 billes, 2 enfants", steps: [
+      { p: "Je distribue un à un : 3 pour chacun." },
+      { p: "Il **reste 1** bille : plus assez pour un tour complet." },
+    ] },
+    { title: "10 images, 2 par enveloppe", steps: [
+      { p: "Je fais des paquets de 2, et je compte les paquets." },
+      { p: "**5** enveloppes." },
+    ] },
+  ],
+  exercises: [
+    { tier: "discovery", prompt: "Pour partager des cartes équitablement entre 2 enfants, quel est le geste sûr ?", solution: "Distribuer **un à un**, à tour de rôle, jusqu'au bout." },
+    { tier: "warmup", prompt: "6 gâteaux à partager également entre 2 poupées. Combien chacune ?", solution: "**3** : un à un, trois tours complets." },
+    { tier: "application", prompt: "10 images, 2 par enveloppe. Combien d'enveloppes ?", solution: "Des paquets de 2 : **5** enveloppes." },
+    { tier: "challenge", prompt: "7 billes à partager entre 2 enfants. Combien chacun, et combien en reste-t-il ?", solution: "**3** chacun et il **reste 1** : plus assez pour un tour complet." },
+    { tier: "exam", prompt: "4 assiettes, et je veux 2 gâteaux par assiette. Combien de gâteaux dois-je aller chercher, en un seul voyage ?", solution: "2 et 2 et 2 et 2 → **8** gâteaux." },
+  ],
+  practice: [
+    { tier: "application", label: "Combien d'enveloppes ?", make: (r) => {
+      const k = randint(r, 2, 5); const n = k + k;
+      return { prompt: `J'ai ${n} images et je range 2 images par enveloppe. Combien d'enveloppes ?`, answer: k, solution: `Je fais des paquets de 2 : **${k}** enveloppes.` };
+    } },
+  ],
+};
+
 export default [
-  recognizeQuantities, numberSequence, countObjects, digits, compareNumbers, orderNumbers,
-  decompose, addSubtract, complements, tensAndOnes, crossingTen, doubles,
-  columnAddition,
+  recognizeQuantities, numberSequence, countObjects, digits, compareNumbers, orderNumbers, rank, numberStrip,
+  decompose, addSubtract, complements, firstProblems, share, tensAndOnes, crossingTen, doubles,
 ];

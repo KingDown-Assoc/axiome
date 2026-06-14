@@ -4,9 +4,11 @@ import { LESSONS } from "./content/index.js";
 import { buildIndex } from "./core/registry.js";
 import { nextSuggestions } from "./core/prereq.js";
 import { LEVELS } from "./core/levels.js";
-import { DOMAINS } from "./core/domains.js";
+import { DOMAINS, DOMAIN_BY_ID } from "./core/domains.js";
+import { yearGroupsOfLevel, groupByDomain } from "./core/curriculum.js";
 import Nav from "./components/Nav.jsx";
 import Lesson from "./components/Lesson.jsx";
+import Progress from "./components/Progress.jsx";
 import Icon from "./components/Icon.jsx";
 
 const STORE = "maths:completed";
@@ -26,9 +28,31 @@ function loadTheme() {
   return "dark";
 }
 
-function Home({ index, level, suggestions, completed, onOpen }) {
-  const present = index.byLevelDomain[level] || {};
-  const domains = DOMAINS.filter((d) => present[d.id]);
+export function Home({ index, level, suggestions, completed, onOpen }) {
+  const groups = yearGroupsOfLevel(index.byLevel[level] || [], level);
+  const showYears = groups.length > 1;
+  const doneIn = (ls) => ls.reduce((n, l) => n + (completed.has(l.id) ? 1 : 0), 0);
+  const domainSections = (ls) =>
+    groupByDomain(ls).map(({ domain, lessons }) => {
+      const d = DOMAIN_BY_ID[domain];
+      return (
+        <div key={domain} className="ov-domain" style={{ "--domain": d ? d.color : undefined }}>
+          <h3 className="ov-domain-h"><Icon name={d ? d.icon : "Circle"} size={15} /> {d ? d.label : domain}</h3>
+          <div className="ov-cards">
+            {lessons.map((l) => {
+              const done = completed.has(l.id);
+              return (
+                <button key={l.id} className={"ov-card" + (done ? " is-done" : "")} onClick={() => onOpen(l.id)}>
+                  <span className="ov-card-t">{l.title}</span>
+                  {l.tagline && <span className="ov-card-s">{l.tagline}</span>}
+                  {done && <span className="ov-done"><Icon name="CheckCircle2" size={13} /> terminé</span>}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      );
+    });
   return (
     <div className="home">
       <section className="hero">
@@ -60,25 +84,19 @@ function Home({ index, level, suggestions, completed, onOpen }) {
 
       <section className="level-overview">
         <h2 className="block-title">{(LEVELS.find((v) => v.id === level) || {}).label} — les leçons disponibles</h2>
-        {domains.length === 0 && (
+        {groups.length === 0 && (
           <p className="nav-empty">Ce niveau est encore une case à remplir. Le squelette accepte un nouveau champ ou une
              nouvelle leçon à tout moment : il suffit d'ajouter un fichier dans <code>content/</code>.</p>
         )}
-        {domains.map((d) => (
-          <div key={d.id} className="ov-domain" style={{ "--domain": d.color }}>
-            <h3 className="ov-domain-h"><Icon name={d.icon} size={15} /> {d.label}</h3>
-            <div className="ov-cards">
-              {present[d.id].map((l) => {
-                const done = completed.has(l.id);
-                return (
-                  <button key={l.id} className={"ov-card" + (done ? " is-done" : "")} onClick={() => onOpen(l.id)}>
-                    <span className="ov-card-t">{l.title}</span>
-                    {l.tagline && <span className="ov-card-s">{l.tagline}</span>}
-                    {done && <span className="ov-done"><Icon name="CheckCircle2" size={13} /> terminé</span>}
-                  </button>
-                );
-              })}
+        {!showYears && groups[0] && domainSections(groups[0].lessons)}
+        {showYears && groups.map((g) => (
+          <div key={g.year ? g.year.id : "rest"} className="ov-year">
+            <div className="ov-year-head">
+              <h3 className="ov-year-t">{g.year ? g.year.label : "Autres leçons"}</h3>
+              {g.year && g.year.sub && <span className="pg-sub">{g.year.sub}</span>}
+              <span className="pg-count">{doneIn(g.lessons)}/{g.lessons.length}</span>
             </div>
+            {domainSections(g.lessons)}
           </div>
         ))}
       </section>
@@ -94,6 +112,7 @@ export default function App() {
   const [completed, setCompleted] = useState(loadCompleted);
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState(loadTheme);
+  const [showProgress, setShowProgress] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -111,18 +130,21 @@ export default function App() {
 
   const lesson = selectedId ? index.byId[selectedId] : null;
   const toggle = (id) => setCompleted((s) => { const x = new Set(s); x.has(id) ? x.delete(id) : x.add(id); return x; });
-  const open = (id) => { setSelectedId(id); setMenuOpen(false); if (typeof window !== "undefined") window.scrollTo(0, 0); };
-  const goLevel = (id) => { setLevel(id); setSelectedId(null); };
+  const completeMany = (ids) => setCompleted((s) => { const x = new Set(s); for (const id of ids) x.add(id); return x; });
+  const resetMany = (ids) => setCompleted((s) => { const x = new Set(s); for (const id of ids) x.delete(id); return x; });
+  const resetAll = () => setCompleted(new Set());
+  const open = (id) => { setSelectedId(id); setMenuOpen(false); setShowProgress(false); if (typeof window !== "undefined") window.scrollTo(0, 0); };
+  const goLevel = (id) => { setLevel(id); setSelectedId(null); setShowProgress(false); };
 
   return (
     <div className="app">
       <header className="topbar">
         <button className="burger" onClick={() => setMenuOpen((o) => !o)} aria-label="Ouvrir le menu"><Icon name="Menu" size={20} /></button>
-        <div className="brand" onClick={() => setSelectedId(null)} role="button" tabIndex={0}>
+        <div className="brand" onClick={() => { setSelectedId(null); setShowProgress(false); }} role="button" tabIndex={0}>
           <span className="brand-mark">∑</span>
           <span className="brand-text"><b>Axiome</b><i>de la préparation au CP au doctorat</i></span>
         </div>
-        <div className="prog" title="Leçons terminées"><Icon name="GraduationCap" size={16} /> {completed.size}/{index.lessons.length}</div>
+        <button className="prog" onClick={() => { setSelectedId(null); setShowProgress(true); }} title="Progression & validation — valider ou réinitialiser des blocs entiers"><Icon name="GraduationCap" size={16} /> {completed.size}/{index.lessons.length}</button>
         <button
           className="theme-toggle"
           onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
@@ -144,6 +166,8 @@ export default function App() {
               <button className="back" onClick={() => setSelectedId(null)}><Icon name="ArrowLeft" size={15} /> Retour</button>
               <Lesson lesson={lesson} byId={index.byId} completed={completed} onComplete={toggle} />
             </>
+          ) : showProgress ? (
+            <Progress lessons={index.lessons} completed={completed} onCompleteMany={completeMany} onResetMany={resetMany} onResetAll={resetAll} />
           ) : (
             <Home index={index} level={level} suggestions={suggestions} completed={completed} onOpen={open} />
           )}
