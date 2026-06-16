@@ -13,7 +13,7 @@ const coefficient = {
   id: "applied.middle.coefficient",
   level: "middle", domain: "applied",
   title: "Le coefficient de proportionnalité",
-  tagline: "Un seul nombre fait toute la table — et le graphique l'avoue : aligné avec l'origine.",
+  tagline: "Le coefficient de proportionnalité, et son graphique : des points alignés avec l'origine.",
   prereqs: ["applied.middle.proportionality-unit"],
   intuition:
     "Tes procédures de 6e (retour à l'unité, linéarité) se condensent en **un nombre** : le **coefficient de proportionnalité** — celui qui fait passer de toute valeur de la première ligne à la seconde, par une seule multiplication.\n\nTu le connais déjà sous trois déguisements : le **prix unitaire** (2,40 €/kg), la **vitesse moyenne** (80 km/h), l'**échelle** d'une carte (1/100 000) — chacun dit « multiplie par moi ».",

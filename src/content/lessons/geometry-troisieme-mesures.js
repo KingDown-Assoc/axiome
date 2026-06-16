@@ -12,7 +12,7 @@ const sphere = {
   id: "geometry.middle.sphere",
   level: "middle", domain: "geometry",
   title: "Sphère, boule et sections",
-  tagline: "V = 4/3 πr³ — les deux tiers du cylindre, la fierté d'Archimède.",
+  tagline: "V = 4/3 πr³ : le volume de la sphère, deux tiers de celui du cylindre.",
   prereqs: ["geometry.middle.pyramide-cone"],
   intuition:
     "La **sphère** de centre O et de rayon $r$ : tous les points à distance **exactement** $r$ de O — la peau. La **boule** : tous les points à distance **au plus** $r$ — le fruit entier.\n\nSon volume couronne le cycle : $V = \\dfrac{4}{3} \\pi r^3$ — le rayon au **cube** : la sphère est l'objet le plus rond, et le plus efficace, de la géométrie.",

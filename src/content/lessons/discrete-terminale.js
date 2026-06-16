@@ -17,7 +17,7 @@ const denombrement = {
   id: "discrete.high.denombrement",
   level: "high", domain: "discrete",
   title: "Compter sans énumérer",
-  tagline: "Additionner les cas disjoints, multiplier les étapes — et 2ⁿ parties tombent.",
+  tagline: "Principes additif et multiplicatif du dénombrement, et les 2ⁿ parties d'un ensemble.",
   prereqs: ["probability.high.bernoulli", "logic.high.listes"],
   intuition:
     "Combien de codes à 4 chiffres ? Tu ne vas pas les lister : tu **comptes sans énumérer** — 10 choix, puis 10, puis 10, puis 10 : $10^4$.\n\nDeux principes suffisent : l'**additif** (des cas disjoints s'additionnent) et le **multiplicatif** (des étapes successives se multiplient) — toute la combinatoire en deux verbes.",
@@ -71,7 +71,7 @@ const combinaisons = {
   id: "discrete.high.combinaisons",
   level: "high", domain: "discrete",
   title: "Combinaisons et triangle de Pascal",
-  tagline: "k parmi n — l'ordre oublié, et le triangle qui additionne ses épaules.",
+  tagline: "Combinaisons « k parmi n », et la règle de Pascal.",
   prereqs: ["discrete.high.denombrement"],
   intuition:
     "Choisir une **équipe** de 2 parmi 10 : l'ordre n'importe pas — Alice-Bob et Bob-Alice sont la même équipe. C'est la **combinaison** $\\binom{n}{k}$ : le nombre de **parties** à $k$ éléments d'un ensemble à $n$.\n\nLa formule corrige le sur-comptage : $\\binom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!}$ — les arrangements, divisés par les $k!$ ordres internes.",

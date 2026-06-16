@@ -69,7 +69,7 @@ const alKashi = {
   id: "geometry.high.al-kashi",
   level: "high", domain: "geometry",
   title: "Le théorème d'Al-Kashi",
-  tagline: "Pythagore généralisé — le triangle quelconque livre enfin ses longueurs.",
+  tagline: "La loi d'Al-Kashi : Pythagore généralisé au triangle quelconque.",
   prereqs: ["geometry.high.produit-scalaire"],
   intuition:
     "Pythagore exigeait l'angle droit. **Al-Kashi** libère le triangle quelconque : $a^2 = b^2 + c^2 - 2bc\\cos\\widehat{A}$ — le carré du côté opposé, corrigé par l'angle.\n\nSi $\\widehat{A} = \\dfrac{\\pi}{2}$, le cosinus s'annule : Pythagore réapparaît — il n'était qu'un cas particulier.",

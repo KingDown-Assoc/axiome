@@ -98,7 +98,7 @@ const cauchyLipschitz = {
   id: "analysis.bachelor.cauchy-lipschitz",
   level: "bachelor", domain: "analysis",
   title: "Cauchy-Lipschitz : une équation, une trajectoire",
-  tagline: "Une condition initiale, un futur — le déterminisme démontré par le point fixe de Banach.",
+  tagline: "Cauchy-Lipschitz : existence et unicité de la solution d'une EDO, via le point fixe de Banach.",
   prereqs: ["analysis.bachelor.metriques-completude", "analysis.bachelor.systemes-differentiels"],
   intuition:
     "Tes systèmes différentiels de L2 se **résolvaient** : exponentielles de matrices, formules closes. Mais le cas général $y' = f(t, y)$ ne se résout presque jamais — alors que peut-on garantir sans résoudre ?\n\nLe théorème fondateur répond : si la pente $f$ est assez régulière, par chaque condition initiale passe **une** trajectoire et une seule. Le déterminisme est un théorème — et sa preuve est ton point fixe de Banach, au sommet de son art.",
@@ -160,7 +160,7 @@ const convergencesTcl = {
   id: "probability.bachelor.convergences-tcl",
   level: "bachelor", domain: "probability",
   title: "Convergences et TCL : l'ordre né du hasard",
-  tagline: "La moyenne converge — et ses fluctuations ont une forme universelle : la cloche.",
+  tagline: "Loi des grands nombres et théorème central limite : les fluctuations suivent la loi normale.",
   prereqs: ["probability.bachelor.probabilites-densite", "analysis.bachelor.espaces-lp"],
   intuition:
     "Chaque lancer de pièce est imprévisible. Mille lancers, et la fréquence de pile devient d'une régularité d'horloge. D'où vient cet ordre ?\n\nDeux théorèmes empilés répondent : la **loi des grands nombres** — la moyenne converge vers l'espérance (l'ordre) — et le **théorème central limite** — l'erreur résiduelle, grossie à la loupe $\\sqrt{n}$, a toujours la même forme : la cloche de Gauss, quelle que soit la pièce (la forme du désordre).",

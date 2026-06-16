@@ -23,7 +23,7 @@ const groupesCycliques = {
   id: "algebra.bachelor.groupes-cycliques",
   level: "bachelor", domain: "algebra",
   title: "Groupes cycliques et ℤ/nℤ",
-  tagline: "Un seul élément engendre tout — et l'horloge devient la machine d'Euler, Fermat et RSA.",
+  tagline: "Groupes cycliques et arithmétique modulaire : théorèmes d'Euler et Fermat, application à RSA.",
   prereqs: ["algebra.bachelor.structures-algebriques", "numbers.high.bezout-gauss"],
   intuition:
     "L'an dernier, l'horloge $\\mathbb{Z}/12\\mathbb{Z}$ était un exemple de groupe ; cette année elle devient un **théorème de classification** : tout groupe engendré par un seul élément est une copie de $\\mathbb{Z}$ ou d'une horloge.\n\nEt en superposant la multiplication, $\\mathbb{Z}/n\\mathbb{Z}$ devient un **anneau** dont les inversibles obéissent au théorème d'**Euler** — la clé mathématique de RSA.",

@@ -13,7 +13,7 @@ const pythagore = {
   id: "geometry.middle.pythagore",
   level: "middle", domain: "geometry",
   title: "Le théorème de Pythagore",
-  tagline: "Le carré de l'hypoténuse — 2 500 ans de service, toujours exact.",
+  tagline: "Le théorème de Pythagore : la relation des carrés dans un triangle rectangle.",
   prereqs: ["numbers.middle.racine-carree", "geometry.middle.triangle-droites"],
   intuition:
     "Dans un triangle **rectangle**, les trois côtés sont liés par une égalité d'aires : **le carré de l'hypoténuse égale la somme des carrés des deux autres côtés** — $BC^2 = AB^2 + AC^2$ (l'hypoténuse : le côté opposé à l'angle droit, le plus long).\n\nCôtés 3 et 4 ? Hypoténuse : $\\sqrt{9 + 16} = \\sqrt{25} = 5$ — le triangle 3-4-5, le plus célèbre du monde.",
@@ -62,7 +62,7 @@ const pythagoreReciproque = {
   id: "geometry.middle.pythagore-reciproque",
   level: "middle", domain: "geometry",
   title: "Réciproque et contraposée",
-  tagline: "Si A alors B : trois énoncés pour un théorème — la logique entre en scène.",
+  tagline: "Réciproque et contraposée : trois énoncés autour du théorème de Pythagore.",
   prereqs: ["geometry.middle.pythagore"],
   intuition:
     "Un théorème « si A alors B » cache deux frères : la **réciproque** (« si B alors A » — vraie ou fausse, à démontrer à part !) et la **contraposée** (« si non-B alors non-A » — toujours **aussi vraie** que l'original).\n\nPour Pythagore : la réciproque est vraie — si $c^2 = a^2 + b^2$, alors le triangle **est** rectangle. C'est le détecteur d'angles droits.",

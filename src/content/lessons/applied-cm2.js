@@ -61,7 +61,7 @@ const degrees = {
   id: "applied.primary.degrees",
   level: "primary", domain: "applied",
   title: "Le degré : 90 pour commencer",
-  tagline: "L'angle droit reçoit son nombre — et toute la famille suit par pliages et sommes.",
+  tagline: "L'angle droit vaut 90°, et on en déduit les autres par pliage et addition.",
   prereqs: ["applied.primary.angle-size"],
   intuition:
     "L'angle gagne enfin son unité : le **degré**. Point d'ancrage unique : **l'angle droit mesure 90°**. Tout le reste s'en déduit — sans rapporteur (il attendra le collège) !\n\nPlie un angle droit en deux : chaque moitié fait **45°**. Accole un droit et sa moitié : **135°**. Deux droits : 180° — le demi-tour, l'angle plat.",
@@ -113,7 +113,7 @@ const seconds = {
   id: "applied.primary.seconds",
   level: "primary", domain: "applied",
   title: "Les secondes",
-  tagline: "La base 60 descend d'un étage — et la trotteuse entre dans la danse.",
+  tagline: "Les secondes : la base 60 d'un cran plus bas, avec la trotteuse.",
   prereqs: ["applied.primary.time-minutes"],
   intuition:
     "La minute se découpe à son tour : **1 min = 60 s** — la même base 60 qui liait l'heure à la minute. Trois étages désormais : $1$ h $= 60$ min $= 3\\,600$ s.\n\nSur l'horloge, la **trotteuse** fait un tour par minute — l'aiguille la plus rapide, la seule qu'on voit vraiment bouger.",

@@ -15,7 +15,7 @@ const ajustementsModeles = {
   id: "probability.high.ajustements-modeles",
   level: "high", domain: "probability",
   title: "Ajuster un modèle aux données",
-  tagline: "Quand le nuage se courbe, la droite démissionne — l'exponentielle prend le relais.",
+  tagline: "Quand un nuage de points n'est pas linéaire, passer à un modèle exponentiel.",
   prereqs: ["probability.high.nuage-ajustement", "analysis.high.exponentielles-log-decimal"],
   intuition:
     "Le nombre d'utilisateurs d'une appli interne : 50, 110, 240, 530, 1 160 — trace le nuage : il **se courbe** vers le haut, la droite passe à côté de tout.\n\nRegarde autrement : chaque valeur fait environ **×2,2** la précédente — le bon modèle n'est pas affine mais **exponentiel** : $y = 50 \\times 2{,}2^x$ — choisir le modèle, c'est d'abord regarder la forme du nuage.",

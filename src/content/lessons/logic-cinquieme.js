@@ -12,7 +12,7 @@ const programmes = {
   id: "logic.middle.programmes",
   level: "middle", domain: "logic",
   title: "Programmer : variables et boucles",
-  tagline: "Prévoir la sortie avant d'appuyer sur exécuter — la machine dans la tête.",
+  tagline: "Prévoir ce qu'affiche un programme avant de l'exécuter.",
   prereqs: ["logic.middle.sequences"],
   intuition:
     "Tes programmes de calcul rencontrent la machine : dans un langage par **blocs** (Scratch), la **variable** est une boîte étiquetée qu'on **consulte** — « demander un nombre, le ranger dans $n$, afficher $n \\times 2 + 1$ ».\n\nLa formule devient expression informatique, et le programme a des **entrées** (ce qu'on saisit) et des **sorties** (ce qu'il affiche).",

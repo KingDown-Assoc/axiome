@@ -14,7 +14,7 @@ const fonctionSecondDegre = {
   id: "algebra.high.fonction-second-degre",
   level: "high", domain: "algebra",
   title: "La fonction du second degré",
-  tagline: "ax² + bx + c — trois costumes pour une parabole.",
+  tagline: "ax² + bx + c : les trois formes (développée, canonique, factorisée) d'une parabole.",
   prereqs: ["analysis.high.fonctions-reference", "algebra.high.calcul-algebrique"],
   intuition:
     "Ta parabole de 3e généralise : $f(x) = ax^2 + bx + c$ ($a \\neq 0$) — un U déformé, déplacé, parfois renversé.\n\nTrois écritures du même polynôme, chacune avec son talent : la **développée** ($ax^2 + bx + c$ : lire $c$, calculer les images), la **canonique** ($a(x - \\alpha)^2 + \\beta$ : lire le **sommet**), la **factorisée** ($a(x - x_1)(x - x_2)$ : lire les **racines**).",
@@ -69,7 +69,7 @@ const equationSecondDegre = {
   id: "algebra.high.equation-second-degre",
   level: "high", domain: "algebra",
   title: "L'équation du second degré",
-  tagline: "Δ = b² − 4ac — le juge qui compte les racines, démonstration comprise.",
+  tagline: "Δ = b² − 4ac détermine le nombre de racines (avec démonstration).",
   prereqs: ["algebra.high.fonction-second-degre", "algebra.high.inequations-signes"],
   intuition:
     "Résoudre $ax^2 + bx + c = 0$ dans **tous** les cas — fini les racines évidentes : la machinerie générale.\n\nLe **discriminant** $\\Delta = b^2 - 4ac$ rend le verdict : $\\Delta > 0$, deux racines $x = \\dfrac{-b \\pm \\sqrt{\\Delta}}{2a}$ ; $\\Delta = 0$, une racine double $-\\dfrac{b}{2a}$ ; $\\Delta < 0$, aucune racine réelle.",

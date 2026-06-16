@@ -25,7 +25,7 @@ const theoremeSpectral = {
   id: "geometry.bachelor.theoreme-spectral",
   level: "bachelor", domain: "geometry",
   title: "Le théorème spectral",
-  tagline: "Symétrique ⟹ des axes propres perpendiculaires — la plus belle promesse de l'algèbre linéaire.",
+  tagline: "Théorème spectral : toute matrice symétrique admet une base orthonormée de vecteurs propres.",
   prereqs: ["algebra.bachelor.reduction-diagonalisation", "geometry.bachelor.prehilbertiens"],
   intuition:
     "La réduction générale a ses échecs (cisaillements, rotations) ; le cadre euclidien offre un miracle : tout endomorphisme **symétrique** se diagonalise — et mieux : dans une base **orthonormée**.\n\nLes axes propres d'une matrice symétrique sont **perpendiculaires** : la géométrie du produit scalaire répare tous les accidents de la réduction.",

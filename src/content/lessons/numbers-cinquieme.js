@@ -12,7 +12,7 @@ const relatifs = {
   id: "numbers.middle.relatifs",
   level: "middle", domain: "numbers",
   title: "Les nombres relatifs",
-  tagline: "Sous le zéro, des nombres — la température l'a toujours su.",
+  tagline: "Les nombres négatifs : sous le zéro, comme sur un thermomètre.",
   prereqs: ["numbers.primary.thousandths"],
   intuition:
     "−7 °C, le 3e sous-sol, 200 m sous la mer : le monde compte **sous zéro** depuis toujours. Les **nombres relatifs** donnent un statut officiel à ces quantités : un **signe** (+ ou −) et une **distance à zéro**.\n\nLa droite graduée s'étend vers la gauche : chaque nombre y a son **abscisse**, et chaque nombre a son **opposé** — son reflet de l'autre côté du zéro : l'opposé de $5$ est $-5$, l'opposé de $-3$ est $3$.",

@@ -16,7 +16,7 @@ const figuresSolides = {
   id: "geometry.high.figures-solides",
   level: "high", domain: "geometry",
   title: "Figures et solides du métier",
-  tagline: "Pythagore vérifie l'équerre, Thalès mesure l'inaccessible — le plan devient chantier.",
+  tagline: "Pythagore et Thalès appliqués au tracé et à la mesure sur un chantier.",
   prereqs: ["geometry.middle.thales", "geometry.middle.sphere"],
   intuition:
     "Le maçon vérifie son angle droit avec la corde **3-4-5**, le charpentier calcule sa diagonale, le couvreur mesure une hauteur sans y monter — la géométrie du collège est l'outillage silencieux de tous les métiers.\n\nCette leçon la remet en main : **Pythagore** (l'angle droit et les diagonales), **Thalès** (l'agrandissement et l'inaccessible), et les **solides usuels** qui composent les objets réels.",

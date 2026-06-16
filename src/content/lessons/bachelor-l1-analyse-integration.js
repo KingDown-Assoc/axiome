@@ -74,7 +74,7 @@ const seriesFamilles = {
   id: "analysis.bachelor.series-familles",
   level: "bachelor", domain: "analysis",
   title: "Séries et familles sommables",
-  tagline: "Additionner l'infini : parfois un nombre, parfois un gouffre — apprends à trancher.",
+  tagline: "Séries : quand une somme infinie converge, et comment le décider.",
   prereqs: ["analysis.bachelor.reels-suites", "algebra.high.suites-sommes"],
   intuition:
     "Coupe une tarte en deux, mange une moitié ; coupe le reste en deux, mange encore : $\\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\cdots$ — une infinité de bouchées, une seule tarte.\n\nMais $1 + \\frac{1}{2} + \\frac{1}{3} + \\cdots$ déborde de toute assiette. Une **série** rend ce tri rigoureux : sommer l'infini, c'est prendre la **limite des sommes partielles** — et les **familles sommables** libèreront même la somme de l'ordre des termes.",
@@ -127,7 +127,7 @@ const fonctionsDeuxVariables = {
   id: "analysis.bachelor.fonctions-deux-variables",
   level: "bachelor", domain: "analysis",
   title: "Fonctions de deux variables",
-  tagline: "Quand f dépend de deux nombres, sa courbe devient paysage — apprends à lire la carte.",
+  tagline: "Fonctions de deux variables : surfaces, lignes de niveau et dérivées partielles.",
   prereqs: ["analysis.bachelor.continuite-derivabilite", "geometry.high.vecteurs-coordonnees"],
   intuition:
     "Température d'une plaque, altitude d'un terrain, profit selon deux leviers : $f(x, y)$ associe un nombre à un **point du plan** — son graphe est une **surface**, un paysage au-dessus de la carte.\n\nLa dérivée éclate alors en deux **dérivées partielles** (la pente vers l'est, la pente vers le nord), et un vecteur les rassemble : le **gradient**, boussole de la plus forte pente.",

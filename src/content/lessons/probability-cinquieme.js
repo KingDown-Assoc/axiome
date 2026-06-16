@@ -12,7 +12,7 @@ const vocabulaire = {
   id: "probability.middle.vocabulaire",
   level: "middle", domain: "probability",
   title: "Expérience, issue, événement",
-  tagline: "Le hasard reçoit son vocabulaire officiel — et le dé lancé mille fois rejoint la théorie.",
+  tagline: "Le vocabulaire des probabilités, et la fréquence qui se rapproche de la théorie sur de nombreux lancers.",
   prereqs: ["probability.middle.proba-number"],
   intuition:
     "Ton nombre de 6e gagne sa grammaire : une **expérience aléatoire** (lancer un dé), ses **issues** (1, 2, 3, 4, 5, 6 — les résultats possibles), et un **événement** (« obtenir un nombre pair » : un paquet d'issues — ici 2, 4, 6).\n\nQuand les issues sont **équiprobables** (dé équilibré !), la règle tombe : $P(\\text{événement}) = \\dfrac{\\text{issues favorables}}{\\text{issues possibles}}$ — pair : $\\frac{3}{6} = \\frac{1}{2}$.",

@@ -66,7 +66,7 @@ const racineCarree = {
   id: "numbers.middle.racine-carree",
   level: "middle", domain: "numbers",
   title: "La racine carrée",
-  tagline: "Le carré à l'envers — et √2, le nombre qui a brisé les fractions.",
+  tagline: "La racine carrée, opération inverse du carré, et l'irrationalité de √2.",
   prereqs: ["numbers.middle.puissances"],
   intuition:
     "Quel nombre positif, élevé au carré, donne 49 ? La **racine carrée** répond : $\\sqrt{49} = 7$ — la machine qui remonte le carré.\n\nDéfinition : $\\sqrt{a}$ est le nombre **positif** dont le carré vaut $a$ : $\\sqrt{a} \\times \\sqrt{a} = a$. Géométriquement, c'est le **côté** du carré d'aire $a$.",

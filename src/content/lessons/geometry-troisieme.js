@@ -113,7 +113,7 @@ const vecteurs = {
   id: "geometry.middle.vecteurs",
   level: "middle", domain: "geometry",
   title: "Vecteurs et relation de Chasles",
-  tagline: "La flèche devient un objet — et AB + BC = AC, toujours.",
+  tagline: "Le vecteur comme objet, et la relation de Chasles AB + BC = AC.",
   prereqs: ["geometry.middle.translation"],
   intuition:
     "Ta translation de 4e avait une flèche : direction, sens, longueur. Cette flèche devient un objet à part entière — le **vecteur** $\\vec{AB}$ : la translation qui amène A sur B.\n\nDeux vecteurs sont **égaux** s'ils portent la même translation (ABDC parallélogramme ⟺ $\\vec{AB} = \\vec{CD}$) — peu importe d'où part la flèche : seul compte le déplacement.",

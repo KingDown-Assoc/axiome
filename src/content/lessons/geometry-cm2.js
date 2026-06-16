@@ -10,7 +10,7 @@ const polygonsCm2 = {
   id: "geometry.primary.polygons-cm2",
   level: "primary", domain: "geometry",
   title: "Trapèzes, pentagones, hexagones",
-  tagline: "La galerie s'agrandit — et c'est toi qui écris les programmes de construction.",
+  tagline: "De nouveaux polygones, et des programmes de construction à écrire soi-même.",
   prereqs: ["geometry.primary.perp-parallel"],
   intuition:
     "Trois figures rejoignent la galerie : le **trapèze** (un quadrilatère avec **au moins une paire de côtés parallèles**), le **pentagone** (5 côtés) et l'**hexagone** (6 côtés). Le trapèze **rectangle** ajoute deux angles droits.\n\nEt un renversement : au CM1 tu **suivais** les programmes de construction ; au CM2 tu les **écris** — dire une figure assez précisément pour qu'un camarade la trace sans la voir.",
@@ -104,7 +104,7 @@ const cubeNets = {
   id: "geometry.primary.cube-nets",
   level: "primary", domain: "geometry",
   title: "Les patrons du cube",
-  tagline: "Six carrés à plat qui rêvent de devenir un cube — encore faut-il bien les coudre.",
+  tagline: "Quels assemblages de six carrés se replient bien en cube ?",
   prereqs: ["geometry.primary.solids-nets"],
   intuition:
     "Un **patron** de cube : six carrés attachés, posés à plat, qui se replient en cube sans trou ni recouvrement. Tu sais déjà les reconnaître — au CM2, tu les **construis**.\n\nMais attention : six carrés collés ne font pas toujours un patron ! Le carré 2×3 (six carrés en rectangle) se replie… en écrasant deux faces l'une sur l'autre. La forme des six compte autant que leur nombre.",

@@ -130,7 +130,7 @@ const resolubiliteConstructions = {
   id: "algebra.master.resolubilite-constructions",
   level: "master", domain: "algebra",
   title: "Résolubilité et constructions : le verdict du groupe",
-  tagline: "Doubler le cube, trisecter l'angle, résoudre la quintique — trois échecs millénaires, une seule cause.",
+  tagline: "Constructibilité et résolubilité : duplication du cube, trisection, quintique, expliquées par la théorie de Galois.",
   prereqs: ["algebra.master.correspondance-galois", "algebra.bachelor.actions-groupes-sylow"],
   intuition:
     "Trois questions hantent les mathématiques depuis l'Antiquité. Peut-on **doubler le cube** à la règle et au compas ? **Trisecter** un angle quelconque ? Existe-t-il une **formule par radicaux** pour l'équation du cinquième degré, comme il en existe pour le second ?\n\nGalois répond aux trois avec la même machine : on regarde un groupe, et le groupe tranche. Pour les constructions, le degré (puissance de $2$ ou non) ; pour les équations, la **résolubilité** du groupe de Galois. L'abstraction des deux chapitres précédents va payer sa dette d'un seul coup.",

@@ -10,7 +10,7 @@ const countChances = {
   id: "probability.primary.count-chances",
   level: "primary", domain: "probability",
   title: "a chances sur b",
-  tagline: "Le hasard reçoit des nombres — et le dé n'a aucune mémoire.",
+  tagline: "Compter les issues pour mesurer le hasard — et le dé n'a pas de mémoire.",
   prereqs: ["probability.primary.chance"],
   intuition:
     "Au CM1, des mots (probable, peu probable). Au CM2, des **nombres** : quand les issues sont équiprobables, la probabilité d'un événement se dit « **a chances sur b** » — a issues favorables, b issues en tout.\n\n« Obtenir un nombre pair » au dé : 3 issues favorables (2, 4, 6) sur 6 → **3 chances sur 6**. « Tirer un as » dans 52 cartes : **4 chances sur 52**. Compter, c'est quantifier.",

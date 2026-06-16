@@ -34,7 +34,7 @@ const fonctionsHolomorphes = {
   id: "analysis.bachelor.fonctions-holomorphes",
   level: "bachelor", domain: "analysis",
   title: "Fonctions holomorphes : la rigidité complexe",
-  tagline: "Une seule dérivée complexe, et la fonction devient analytique, rigide — et d'Alembert tombe.",
+  tagline: "Fonctions holomorphes : la dérivabilité complexe entraîne l'analyticité (et le théorème de d'Alembert-Gauss).",
   prereqs: ["analysis.bachelor.series-entieres", "analysis.bachelor.calcul-differentiel"],
   intuition:
     "Dériver sur $\\mathbb{R}$, c'est approcher par une droite — une exigence faible : les fonctions $\\mathcal{C}^1$ pullulent. Dériver sur $\\mathbb{C}$, c'est exiger que le taux $\\frac{f(z+h) - f(z)}{h}$ converge quand $h$ s'approche de zéro **par toutes les directions du plan** à la fois.\n\nCette exigence-là est exorbitante — et ses conséquences aussi : dérivable une fois $\\Rightarrow$ développable en série entière partout. Le monde complexe est rigide.",
@@ -95,7 +95,7 @@ const theoremeResidus = {
   id: "analysis.bachelor.theoreme-residus",
   level: "bachelor", domain: "analysis",
   title: "Résidus : intégrer en comptant les pôles",
-  tagline: "Une intégrale sur un contour = la somme de ce que chaque pôle laisse derrière lui.",
+  tagline: "Théorème des résidus : une intégrale de contour comme somme des résidus aux pôles.",
   prereqs: ["analysis.bachelor.fonctions-holomorphes", "analysis.bachelor.integrales-generalisees"],
   intuition:
     "Certaines intégrales réelles résistent à toutes tes primitives : $\\int_{-\\infty}^{+\\infty} \\frac{dx}{(1+x^2)^2}$, $\\int_0^\\infty \\frac{\\sin x}{x}\\, dx$ — celle-là même que ton chapitre d'intégrales généralisées a déclarée convergente sans pouvoir la calculer.\n\nLe détour gagnant passe par le plan complexe : referme le chemin d'intégration, et l'intégrale ne dépend plus que des **singularités** enfermées — chacune paie son résidu.",

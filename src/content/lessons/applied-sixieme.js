@@ -109,7 +109,7 @@ const volume = {
   id: "applied.middle.volume",
   level: "middle", domain: "applied",
   title: "Le volume : compter en cubes",
-  tagline: "Le cm³ entre en scène — et les assemblages se comptent par couches.",
+  tagline: "Le cm³, et le volume d'un assemblage compté couche par couche.",
   prereqs: ["applied.primary.area-units"],
   intuition:
     "Après la longueur (le trait) et l'aire (la surface), la **troisième dimension** : le **volume** — la place dans l'espace. Son unité : le **centimètre cube** (cm³), un cube de 1 cm d'arête.\n\nDéterminer un volume, c'est **compter des cubes** — et le truc des grands assemblages : compter une **couche**, puis multiplier par le nombre de couches.",

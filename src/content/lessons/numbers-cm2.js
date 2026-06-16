@@ -11,7 +11,7 @@ const toBillion = {
   id: "numbers.primary.to-billion",
   level: "primary", domain: "numbers",
   title: "Les nombres jusqu'à 999 999 999",
-  tagline: "La classe des millions ouvre — neuf chiffres, trois classes, une seule machine.",
+  tagline: "La classe des millions : neuf chiffres, trois classes, un même principe.",
   prereqs: ["numbers.primary.to-999999"],
   intuition:
     "Trois rangs nouveaux d'un coup : les **millions**, les dizaines de millions, les centaines de millions. Neuf chiffres au total — et toujours le même secret : les classes de trois.\n\n47 258 396 se lit classe par classe : 47 (millions) 258 (mille) 396 — « quarante-sept-millions-deux-cent-cinquante-huit-mille-trois-cent-quatre-vingt-seize ».",

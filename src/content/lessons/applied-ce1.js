@@ -101,7 +101,7 @@ const timeDurations = {
   id: "applied.primary.time-durations",
   level: "primary", domain: "applied",
   title: "Heures, demi-heures, quarts d'heure",
-  tagline: "Les fractions montent sur l'horloge — et l'après-midi compte au-delà de douze.",
+  tagline: "Des fractions d'heure, et les heures de l'après-midi au-delà de midi.",
   prereqs: ["applied.primary.time-hours", "numbers.primary.fractions"],
   intuition:
     "La grande aiguille fait **un tour** en une heure : $1$ h $= 60$ min. Un **demi**-tour ? 30 minutes : « et demie ». Un **quart** de tour ? 15 minutes : « et quart » — tes fractions toutes neuves, en chair et en aiguilles !\n\nEt la journée dépasse douze : « trois heures de l'après-midi », c'est aussi **15 h** — l'horloge digitale affiche 15:00.",

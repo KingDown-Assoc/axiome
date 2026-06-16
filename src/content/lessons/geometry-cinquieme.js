@@ -63,7 +63,7 @@ const symetrieCentrale = {
   id: "geometry.middle.symetrie-centrale",
   level: "middle", domain: "geometry",
   title: "La symétrie centrale",
-  tagline: "Un demi-tour autour d'un point — et la figure retombe à l'envers, intacte.",
+  tagline: "La symétrie centrale : un demi-tour autour d'un point, la figure à l'envers.",
   prereqs: ["geometry.middle.distances"],
   intuition:
     "Après le pli (symétrie axiale), le **pivot** : la **symétrie centrale** de centre O est le **demi-tour** autour de O — pique un compas en O, tourne la feuille de 180°.\n\nLa définition tient en une phrase : M' est le symétrique de M par rapport à O lorsque **O est le milieu de [MM']** — aligné, à égale distance, de l'autre côté.",
@@ -112,7 +112,7 @@ const anglesParalleles = {
   id: "geometry.middle.angles-paralleles",
   level: "middle", domain: "geometry",
   title: "Angles alternes-internes",
-  tagline: "Le Z qui détecte les parallèles — et qui démontre enfin les 180° du triangle.",
+  tagline: "Les angles alternes-internes (le « Z »), et la preuve des 180° du triangle.",
   prereqs: ["geometry.middle.angles-measure", "geometry.middle.triangles"],
   intuition:
     "Une sécante coupe deux droites : huit angles naissent. Deux familles comptent — les **alternes-internes** (de part et d'autre de la sécante, entre les deux droites : ils dessinent un **Z**) et les **correspondants** (même côté, même position : un **F**).\n\nLe théorème : les droites sont **parallèles si et seulement si** les alternes-internes sont **égaux** — l'angle devient un détecteur de parallélisme.",
@@ -161,7 +161,7 @@ const parallelogramme = {
   id: "geometry.middle.parallelogramme",
   level: "middle", domain: "geometry",
   title: "Le parallélogramme",
-  tagline: "Un quadrilatère bâti sur un centre de symétrie — ses diagonales avouent tout.",
+  tagline: "Le parallélogramme et son centre de symétrie : tout se lit sur les diagonales.",
   prereqs: ["geometry.middle.symetrie-centrale"],
   intuition:
     "Le **parallélogramme** : un quadrilatère dont les côtés opposés sont **parallèles** deux à deux. Son secret : il possède un **centre de symétrie** — le point où ses diagonales se croisent.\n\nDe ce centre découle tout : les côtés opposés sont **égaux**, et les diagonales **se coupent en leur milieu** — chaque moitié est le demi-tour de l'autre.",

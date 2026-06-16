@@ -62,7 +62,7 @@ const multiplyColumn = {
   id: "numbers.primary.multiply-column",
   level: "primary", domain: "numbers",
   title: "La multiplication posée",
-  tagline: "La distributivité s'organise en colonnes — et 16 × 548 devient possible.",
+  tagline: "La multiplication posée : la distributivité en colonnes, pour 16 × 548.",
   prereqs: ["numbers.primary.tables", "numbers.primary.mental-1000"],
   intuition:
     "Tu sais déjà que $13 \\times 7 = 10 \\times 7 + 3 \\times 7$. La **multiplication posée** range exactement ce découpage en colonnes — et soudain $16 \\times 548$ ne fait plus peur.\n\nAu passage, le vocabulaire s'installe : dans $3 \\times 25 = 75$, les nombres 3 et 25 sont les **facteurs**, 75 est le **produit** — et 75 est un **multiple** de 25 (et de 3).",
@@ -114,7 +114,7 @@ const divisionSign = {
   id: "numbers.primary.division",
   level: "primary", domain: "numbers",
   title: "La division : le signe ÷",
-  tagline: "La quatrième opération gagne son symbole — c'est la multiplication à l'envers.",
+  tagline: "La division : son symbole, et l'opération inverse de la multiplication.",
   prereqs: ["numbers.primary.tables", "numbers.primary.problems-1000"],
   intuition:
     "Les partages, tu les fais depuis le CP. Voici leur écriture : le signe **÷**. « 72 partagé en 6 » s'écrit $72 \\div 6$.\n\nEt le secret de la division : c'est la **multiplication à l'envers**. Puisque $7 \\times 13 = 91$, alors $91 \\div 7 = 13$… et $91 \\div 13 = 7$. Une multiplication sue, deux divisions offertes.",

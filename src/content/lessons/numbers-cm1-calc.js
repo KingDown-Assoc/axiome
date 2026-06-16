@@ -64,7 +64,7 @@ const divisionColumn = {
   id: "numbers.primary.division-column",
   level: "primary", domain: "numbers",
   title: "La division posée",
-  tagline: "La potence, le quotient, le reste — et la vérification qui ne ment jamais.",
+  tagline: "La division posée : potence, quotient, reste, et la preuve par la multiplication.",
   prereqs: ["numbers.primary.division", "numbers.primary.multiply-column"],
   intuition:
     "Le signe ÷ du CE2 gagne sa technique : la **division posée** (la « potence »). On partage 845 en 7 : combien de fois 7 dans 8 ? Une fois, **reste** 1 — qui s'accroche au chiffre suivant : 14, puis 25…\n\nQuatre mots officiels : le **dividende** (845) divisé par le **diviseur** (7) donne le **quotient** (120) et le **reste** (5). Et le reste obéit à une loi de fer : il est toujours **plus petit que le diviseur**.",
@@ -167,7 +167,7 @@ const problemsSense = {
   id: "numbers.primary.problems-sense",
   level: "primary", domain: "numbers",
   title: "Problèmes : pièges de mots et bon sens",
-  tagline: "« Plus » ne veut pas dire additionner — et 800 km Paris–New York, c'est louche.",
+  tagline: "« Plus » ne veut pas toujours dire additionner, et repérer un résultat invraisemblable.",
   prereqs: ["numbers.primary.problems-10000", "numbers.primary.decimals"],
   intuition:
     "Un mot ne commande pas une opération. « Léo a 53 billes, c'est 8 de **plus** que Zoé » — combien a Zoé ? Le mot « plus » est là… et c'est une **soustraction** : $53 - 8 = 45$. Lire l'**histoire**, jamais les mots-déclencheurs.\n\nEt à la fin, le **bon sens** inspecte : « 4,5 m pour une voiture ? » plausible. « 800 km entre Paris et New York ? » impossible — c'est presque 6 000 km.",

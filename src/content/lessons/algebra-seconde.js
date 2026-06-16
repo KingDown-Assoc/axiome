@@ -14,7 +14,7 @@ const calculAlgebrique = {
   id: "algebra.high.calcul-algebrique",
   level: "high", domain: "algebra",
   title: "Puissances, racines et formules",
-  tagline: "√(ab) = √a √b — démontré — et l'art d'isoler une variable.",
+  tagline: "√(ab) = √a·√b (démontré), et l'isolement d'une variable.",
   prereqs: ["numbers.middle.exposants-negatifs", "algebra.middle.identites"],
   intuition:
     "Tes règles de calcul passent l'inspection du lycée : les puissances d'exposants **relatifs** ($a^m a^n = a^{m+n}$, $a^{-n} = \\frac{1}{a^n}$…) et les racines gagnent les leurs — $\\sqrt{ab} = \\sqrt{a}\\,\\sqrt{b}$ pour $a, b \\geq 0$.\n\nEt cette règle-là ne se décrète plus : elle se **démontre** — bienvenue dans un monde où chaque formule doit montrer ses papiers.",
@@ -67,7 +67,7 @@ const inequationsSignes = {
   id: "algebra.high.inequations-signes",
   level: "high", domain: "algebra",
   title: "Inégalités et tableaux de signes",
-  tagline: "Le signe de chaque facteur, ligne par ligne — et le produit avoue le sien.",
+  tagline: "Le tableau de signes : le signe de chaque facteur donne celui du produit.",
   prereqs: ["algebra.middle.inequations", "algebra.middle.equation-produit"],
   intuition:
     "Le signe de $ax + b$ se résume en une phrase : nul en $-\\frac{b}{a}$, du signe de $a$ **après**, du signe contraire **avant**. Une droite qui monte ($a > 0$) passe du − au + ; une qui descend, l'inverse.\n\nEt pour un **produit** $A(x)B(x)$ ou un **quotient** $\\frac{A(x)}{B(x)}$ : le **tableau de signes** — chaque facteur sa ligne, la règle des signes conclut colonne par colonne.",

@@ -67,7 +67,7 @@ const lineaireAffine = {
   id: "analysis.middle.lineaire-affine",
   level: "middle", domain: "analysis",
   title: "Fonctions linéaires et affines",
-  tagline: "f(x) = ax + b — une pente, un décalage : toutes les droites du monde.",
+  tagline: "f(x) = ax + b : une pente et une ordonnée à l'origine décrivent toute droite.",
   prereqs: ["analysis.middle.fonctions-notation", "applied.middle.coefficient"],
   intuition:
     "La **fonction linéaire** $f(x) = ax$ est la proportionnalité devenue fonction : sa courbe est la **droite par l'origine**, et $a$ est ton coefficient de 5e.\n\nLa **fonction affine** $f(x) = ax + b$ la décale : même pente $a$, mais elle démarre à $b$ — l'**ordonnée à l'origine** : ton taxi $2x + 3$ en était une.",
@@ -120,7 +120,7 @@ const fonctionCarre = {
   id: "analysis.middle.fonction-carre",
   level: "middle", domain: "analysis",
   title: "La fonction carré",
-  tagline: "La parabole — symétrique, jamais négative, et les antennes la connaissent par cœur.",
+  tagline: "La fonction carré et sa parabole : symétrique, toujours positive, utile aux antennes.",
   prereqs: ["analysis.middle.fonctions-notation", "numbers.middle.equation-carre"],
   intuition:
     "Première fonction **courbe** du parcours : $f(x) = x^2$. Sa table de valeurs surprend — $f(-3) = 9 = f(3)$ : les opposés ont la **même image**.\n\nSa courbe est la **parabole** : un U parfait, symétrique par rapport à l'axe vertical, sommet en l'origine — et jamais sous l'axe : un carré n'est pas négatif.",

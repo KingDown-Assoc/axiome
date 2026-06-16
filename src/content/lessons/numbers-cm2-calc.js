@@ -170,7 +170,7 @@ const problemsCm2 = {
   id: "numbers.primary.problems-cm2",
   level: "primary", domain: "numbers",
   title: "Problèmes : étapes en série, algorithmes en germe",
-  tagline: "Des procédures qui se répètent — le problème devient une machine.",
+  tagline: "Reconnaître les procédures qui reviennent dans les problèmes à étapes.",
   prereqs: ["numbers.primary.problems-sense", "numbers.primary.division-decimal"],
   intuition:
     "Les structures du CM1 tiennent toujours — mots-pièges, vraisemblance, dénombrement, optimisation — mais les étapes s'allongent et le champ s'élargit (jusqu'à 999 999 999, décimaux, fractions).\n\nUne famille nouvelle entre : les problèmes **préparant aux algorithmes** — ceux où une même procédure se **répète** : « un bambou de 1 m double chaque semaine ; quand dépasse-t-il 10 m ? » Semaine après semaine, le même geste, jusqu'à la condition d'arrêt.",

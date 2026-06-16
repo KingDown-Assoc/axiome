@@ -71,7 +71,7 @@ const fluctuationEchantillons = {
   id: "probability.high.fluctuation-echantillons",
   level: "high", domain: "probability",
   title: "Fluctuation et probabilités",
-  tagline: "Chaque échantillon varie — mais la fréquence se pose, et la probabilité l'attend.",
+  tagline: "Fluctuation d'échantillonnage : la fréquence se stabilise autour de la probabilité.",
   prereqs: ["probability.middle.union-intersection", "probability.high.stat-une-variable"],
   intuition:
     "Contrôle qualité : tu prélèves 50 pièces — 3 défectueuses (6 %) ; ton collègue en prélève 50 autres — 5 défectueuses (10 %). Qui a raison ? **Les deux** : la fréquence **fluctue** d'un échantillon à l'autre.\n\nMais grossis l'échantillon : sur 5 000 pièces, la fréquence se **stabilise** — vers un nombre que le hasard respecte : la **probabilité**.",

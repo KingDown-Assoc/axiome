@@ -17,7 +17,7 @@ const recurrence = {
   id: "analysis.high.recurrence",
   level: "high", domain: "analysis",
   title: "Le raisonnement par récurrence",
-  tagline: "Le premier domino tombe, chaque domino pousse le suivant — l'infini démontré en deux temps.",
+  tagline: "Le principe de récurrence : un premier domino, puis chacun pousse le suivant.",
   prereqs: ["algebra.high.suites", "logic.high.ensembles-logique"],
   intuition:
     "Comment prouver qu'une propriété est vraie pour **tous** les entiers — une infinité de cas ? Deux gestes suffisent : montrer qu'elle est vraie au départ (**initialisation**), et que si elle tient à un rang, elle tient au suivant (**hérédité**).\n\nC'est la **récurrence** : le premier domino tombe, chaque domino pousse le suivant — la rangée entière s'effondre.",
@@ -70,7 +70,7 @@ const suitesLimites = {
   id: "analysis.high.suites-limites",
   level: "high", domain: "analysis",
   title: "Limites de suites",
-  tagline: "Tout intervalle finit par tout contenir — et qⁿ choisit son destin sur la raison.",
+  tagline: "Limite d'une suite, et le comportement de qⁿ selon la valeur de q.",
   prereqs: ["analysis.high.recurrence", "algebra.high.suites-sommes"],
   intuition:
     "Tes limites intuitives de première reçoivent leur **définition** : $(u_n)$ converge vers $\\ell$ si **tout intervalle ouvert** contenant $\\ell$ contient tous les $u_n$ à partir d'un certain rang — aussi serré soit le piège, la suite finit dedans et n'en sort plus.\n\nVers $+\\infty$ : tout intervalle $[A\\,;\\,+\\infty[$ finit par tout contenir — aucun plafond ne résiste.",
@@ -124,7 +124,7 @@ const limitesFonctions = {
   id: "analysis.high.limites-fonctions",
   level: "high", domain: "analysis",
   title: "Limites de fonctions et asymptotes",
-  tagline: "La courbe qui longe une droite sans la toucher — et l'exponentielle qui écrase tout.",
+  tagline: "Limites et asymptotes, et la croissance comparée de l'exponentielle.",
   prereqs: ["analysis.high.suites-limites", "analysis.high.exponentielle"],
   intuition:
     "Les limites passent au continu : $f(x)$ peut tendre vers $\\ell$ ou $\\pm\\infty$, quand $x \\to \\pm\\infty$ ou vers **un point** — six combinaisons, un seul langage.\n\nEt la géométrie suit : une limite finie en $\\pm\\infty$ dessine une **asymptote horizontale**, une limite infinie en un point une **asymptote verticale** — la courbe longe sa droite sans jamais l'atteindre.",

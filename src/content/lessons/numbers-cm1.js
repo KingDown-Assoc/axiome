@@ -64,7 +64,7 @@ const multiples = {
   id: "numbers.primary.multiples",
   level: "primary", domain: "numbers",
   title: "Multiples et diviseurs",
-  tagline: "Le mot « diviseur » entre en scène — et trois critères lisent la divisibilité d'un coup d'œil.",
+  tagline: "Le mot « diviseur », et trois critères pour reconnaître vite la divisibilité.",
   prereqs: ["numbers.primary.multiply-column", "numbers.primary.division"],
   intuition:
     "Tu connais les **multiples** : 84 est un multiple de 7 car $7 \\times 12 = 84$. Voici le mot miroir : 7 est un **diviseur** de 84. Multiple et diviseur disent la même chose, vue des deux bouts.\n\nEt trois rangs se lisent d'un coup d'œil : un nombre est multiple de **2** si son chiffre des unités est pair, de **5** s'il finit par 0 ou 5, de **10** s'il finit par 0.",
@@ -109,7 +109,7 @@ const fractionsMixed = {
   id: "numbers.primary.fractions-mixed",
   level: "primary", domain: "numbers",
   title: "Les fractions dépassent 1",
-  tagline: "Sept tiers, c'est deux unités et un tiers — les fractions deviennent des nombres.",
+  tagline: "Fractions et nombres mixtes : sept tiers, c'est deux unités et un tiers.",
   prereqs: ["numbers.primary.fraction-ruler"],
   intuition:
     "Jusqu'ici, tes fractions restaient sous 1. Libération : $\\frac{7}{3}$ existe — sept parts d'un tiers chacune.\n\nEt ce nombre se range : $\\frac{7}{3} = \\frac{3}{3} + \\frac{3}{3} + \\frac{1}{3} = 2 + \\frac{1}{3}$. Une fraction plus grande que 1, c'est **un entier plus une fraction plus petite que 1** — et elle habite la demi-droite, entre 2 et 3, comme un nombre à part entière.",
@@ -162,7 +162,7 @@ const fractionOf = {
   id: "numbers.primary.fraction-of",
   level: "primary", domain: "numbers",
   title: "La fraction de quelque chose",
-  tagline: "Un tiers de 12 billes, un quart de 100 mètres — la fraction devient une action.",
+  tagline: "Prendre une fraction d'une quantité : un tiers de 12, un quart de 100.",
   prereqs: ["numbers.primary.division", "numbers.primary.fractions-mixed"],
   intuition:
     "Nouveau pouvoir des fractions : elles **agissent** sur les quantités. « Un tiers de 12 billes », c'est partager 12 en trois parts égales et en prendre une : $12 \\div 3 = 4$ billes.\n\nLa fraction unitaire devient un **opérateur** : prendre $\\frac{1}{4}$ de 100 mètres, c'est calculer $100 \\div 4 = 25$ mètres.",

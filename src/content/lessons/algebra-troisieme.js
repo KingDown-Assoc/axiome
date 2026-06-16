@@ -12,7 +12,7 @@ const identites = {
   id: "algebra.middle.identites",
   level: "middle", domain: "algebra",
   title: "Les identités remarquables",
-  tagline: "(a + b)² = a² + 2ab + b² — le rectangle découpé l'avait toujours su.",
+  tagline: "(a + b)² = a² + 2ab + b², lu sur un rectangle découpé.",
   prereqs: ["algebra.middle.calcul-litteral", "algebra.middle.demonstrations"],
   intuition:
     "La distributivité **double** : $(a + b)(c + d) = ac + ad + bc + bd$ — chaque terme du premier facteur visite chaque terme du second : quatre produits.\n\nAppliquée à des carrés, elle livre trois égalités si utiles qu'on les sait par cœur — les **identités remarquables** : $(a+b)^2 = a^2 + 2ab + b^2$, $(a-b)^2 = a^2 - 2ab + b^2$, et $(a-b)(a+b) = a^2 - b^2$.",
@@ -65,7 +65,7 @@ const equationProduit = {
   id: "algebra.middle.equation-produit",
   level: "middle", domain: "algebra",
   title: "L'équation produit nul",
-  tagline: "Un produit nul a forcément un facteur nul — factoriser, c'est résoudre.",
+  tagline: "Un produit est nul si l'un de ses facteurs l'est : factoriser pour résoudre.",
   prereqs: ["algebra.middle.identites", "algebra.middle.equations-degre1"],
   intuition:
     "Le théorème le plus simple et le plus puissant du chapitre : **un produit est nul si et seulement si l'un de ses facteurs est nul**.\n\nD'où une méthode : $(x - 3)(x + 5) = 0$ se casse en deux mini-équations — $x - 3 = 0$ **ou** $x + 5 = 0$ : solutions $3$ et $-5$. Une équation de degré 2, résolue avec les outils du degré 1.",

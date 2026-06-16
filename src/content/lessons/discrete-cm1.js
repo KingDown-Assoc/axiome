@@ -9,7 +9,7 @@ const curves = {
   id: "discrete.primary.curves",
   level: "primary", domain: "discrete",
   title: "Courbes et points dans un repère",
-  tagline: "Quand la grandeur change au fil du temps, la courbe raconte l'histoire.",
+  tagline: "Lire une courbe : comment une grandeur évolue au fil du temps.",
   prereqs: ["discrete.primary.data-gaps"],
   intuition:
     "Tes tableaux et diagrammes comptaient des **catégories** (couleurs, sports). Voici les caractères **quantitatifs** : la hauteur d'une plante, la température, la masse d'un animal — des grandeurs qui **évoluent**.\n\nPour les raconter : le **repère** — deux axes (le temps en bas, la grandeur sur le côté), un **point** par mesure, et la ligne qui les relie devient une **courbe**. D'un coup d'œil : ça monte, ça descend, ça accélère.",

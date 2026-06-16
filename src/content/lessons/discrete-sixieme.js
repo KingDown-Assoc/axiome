@@ -10,7 +10,7 @@ const survey = {
   id: "discrete.middle.survey",
   level: "middle", domain: "discrete",
   title: "Mener l'enquête",
-  tagline: "De la question au tableau filtré — la statistique, c'est toi qui la fabriques.",
+  tagline: "De la question au tableau de données : produire soi-même une statistique.",
   prereqs: ["discrete.primary.circular"],
   intuition:
     "Jusqu'ici tu **lisais** des tableaux et des diagrammes fabriqués par d'autres. En 6e, tu changes de côté : tu **mènes** l'enquête — poser la question, choisir qui interroger, recueillir, consigner, présenter.\n\nEt un geste nouveau : **filtrer** — extraire d'un tableau les seules lignes qui vérifient un critère (« les élèves qui viennent à vélo », « les jours au-dessus de 25 °C »).",

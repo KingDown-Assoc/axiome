@@ -89,7 +89,7 @@ const anneauxQuotients = {
   id: "algebra.bachelor.anneaux-quotients",
   level: "bachelor", domain: "algebra",
   title: "Anneaux quotients : décréter des égalités",
-  tagline: "Écraser un idéal sur zéro — et fabriquer des mondes neufs, dont les corps.",
+  tagline: "Anneaux quotients : quotienter par un idéal pour construire de nouveaux anneaux, dont des corps.",
   prereqs: ["algebra.bachelor.ideaux-divisibilite", "algebra.bachelor.groupes-cycliques"],
   intuition:
     "Tu as construit $\\mathbb{Z}/n\\mathbb{Z}$ en décrétant $n = 0$ : l'horloge. La construction n'a jamais utilisé que deux choses — la stabilité par somme et l'absorption du produit.\n\nOr ces deux propriétés, ce sont exactement les **idéaux**. Donc la machine marche dans tout anneau : choisis un idéal, décrète-le nul — un monde neuf apparaît. Et le plus beau des mondes neufs s'appelle $\\mathbb{C}$.",

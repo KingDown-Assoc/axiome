@@ -17,7 +17,7 @@ const nombreDerive = {
   id: "analysis.high.nombre-derive",
   level: "high", domain: "analysis",
   title: "Le nombre dérivé",
-  tagline: "La pente des sécantes converge — et la tangente naît à la limite.",
+  tagline: "Le nombre dérivé : la pente des sécantes tend vers celle de la tangente.",
   prereqs: ["analysis.high.variations", "geometry.high.droites-equations"],
   intuition:
     "Quelle est la pente d'une **courbe** en un point ? Une courbe n'est pas droite… mais zoome : entre $a$ et $a + h$, le **taux de variation** $\\dfrac{f(a+h) - f(a)}{h}$ est la pente de la **sécante**.\n\nFais fondre $h$ vers 0 : les sécantes pivotent vers une position limite — la **tangente** — et leur pente converge vers le **nombre dérivé** $f'(a)$.",
@@ -70,7 +70,7 @@ const fonctionDerivee = {
   id: "analysis.high.fonction-derivee",
   level: "high", domain: "analysis",
   title: "Calculer les dérivées",
-  tagline: "(x²)′ = 2x, (uv)′ = u′v + uv′ — l'usine à pentes et ses règles démontrées.",
+  tagline: "Les règles de dérivation, démontrées : (x²)′ = 2x, (uv)′ = u′v + uv′.",
   prereqs: ["analysis.high.nombre-derive"],
   intuition:
     "Calculer $f'(a)$ point par point serait l'enfer : on dérive **la fonction entière** — la **fonction dérivée** $f'$ associe à chaque $x$ la pente en $x$.\n\nUn répertoire ($x^2 \\to 2x$, $x^3 \\to 3x^2$, $\\frac{1}{x} \\to -\\frac{1}{x^2}$, $\\sqrt{x} \\to \\frac{1}{2\\sqrt{x}}$) et quatre règles d'assemblage : somme, produit, inverse, quotient — l'usine à pentes.",

@@ -25,7 +25,7 @@ const determinants = {
   id: "algebra.bachelor.determinants",
   level: "bachelor", domain: "algebra",
   title: "Déterminants",
-  tagline: "Un seul nombre dit si ta matrice écrase l'espace — et de combien elle dilate les volumes.",
+  tagline: "Le déterminant : inversibilité d'une matrice et facteur de dilatation des volumes.",
   prereqs: ["algebra.bachelor.matrices-representations"],
   intuition:
     "Deux vecteurs du plan dessinent un parallélogramme ; son **aire orientée** vaut $ad - bc$ — le déterminant que tu connais.\n\nCette année, la formule devient théorie : le déterminant est l'unique façon de **mesurer les volumes orientés** en dimension $n$, et il répond d'un seul nombre à la grande question : ma matrice est-elle inversible, ou écrase-t-elle l'espace ?",

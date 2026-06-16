@@ -15,7 +15,7 @@ const independance = {
   id: "probability.high.independance",
   level: "high", domain: "probability",
   title: "Indépendance et probabilités totales",
-  tagline: "Savoir A ne change rien à B — et l'univers se découpe en morceaux qui somment.",
+  tagline: "Indépendance : A n'influe pas sur B, et la formule des probabilités totales.",
   prereqs: ["probability.high.conditionnelles"],
   intuition:
     "Deux événements sont **indépendants** quand savoir l'un ne renseigne en rien sur l'autre : $P_A(B) = P(B)$ — l'information A laisse B de marbre.\n\nEn multipliant par $P(A)$, la définition devient symétrique : $P(A \\cap B) = P(A) \\times P(B)$ — l'intersection se calcule par le produit, **si et seulement si** indépendance.",
@@ -70,7 +70,7 @@ const bernoulli = {
   id: "probability.high.bernoulli",
   level: "high", domain: "probability",
   title: "Épreuves répétées et Monte-Carlo",
-  tagline: "Succès ou échec, n fois de suite — l'arbre 2ⁿ et le hasard qui calcule π.",
+  tagline: "Épreuves de Bernoulli répétées, l'arbre à 2ⁿ issues (et l'estimation de π par simulation).",
   prereqs: ["probability.high.independance"],
   intuition:
     "L'expérience la plus simple du monde : **deux issues** — succès (probabilité $p$) ou échec ($1 - p$). C'est l'**épreuve de Bernoulli** : pile/face, gagné/perdu, défectueux/conforme.\n\nRépète-la $n$ fois, **à l'identique et indépendamment** : l'arbre à $2^n$ chemins déploie tout l'univers — et l'indépendance fait de chaque chemin un simple produit.",
