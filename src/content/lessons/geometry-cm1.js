@@ -9,7 +9,7 @@ const perpParallel = {
   id: "geometry.primary.perp-parallel",
   level: "primary", domain: "geometry",
   title: "Perpendiculaires et parallèles",
-  tagline: "Les droites entrent en relation — et le cercle révèle sa vraie définition.",
+  tagline: "Droites perpendiculaires et parallèles, et la vraie définition du cercle.",
   prereqs: ["geometry.primary.plane-figures"],
   intuition:
     "Deux droites peuvent se rencontrer en formant un angle droit : elles sont **perpendiculaires** (l'équerre en juge). Ou ne jamais se rencontrer, gardant partout le même écart : elles sont **parallèles** — les rails du train.\n\nEt le cercle gagne sa définition de grand : c'est l'**ensemble de tous les points** situés à une même distance (le rayon) d'un point donné (le centre). Le compas ne dessine pas un rond — il **fabrique** cette définition.",

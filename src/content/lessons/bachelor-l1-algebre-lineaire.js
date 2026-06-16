@@ -71,7 +71,7 @@ const applicationsLineaires = {
   id: "algebra.bachelor.applications-lineaires",
   level: "bachelor", domain: "algebra",
   title: "Applications linéaires et théorème du rang",
-  tagline: "Noyau, image — ce que la machine écrase, ce qu'elle atteint : le rang compte tout.",
+  tagline: "Noyau et image d'une application linéaire, et le théorème du rang.",
   prereqs: ["algebra.bachelor.espaces-vectoriels"],
   intuition:
     "Une application **linéaire** respecte les combinaisons : $f(\\lambda u + \\mu v) = \\lambda f(u) + \\mu f(v)$ — rotations, projections, dérivation des polynômes : des machines qui transportent la structure.\n\nDeux sous-espaces racontent toute la machine : le **noyau** (ce qu'elle écrase sur zéro) et l'**image** (ce qu'elle atteint) — et le **théorème du rang** les lie par un comptage exact.",

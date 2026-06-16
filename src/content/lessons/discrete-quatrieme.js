@@ -12,7 +12,7 @@ const mediane = {
   id: "discrete.middle.mediane",
   level: "middle", domain: "discrete",
   title: "Moyenne pondérée, médiane, étendue",
-  tagline: "La moyenne plie sous une valeur extrême — la médiane, elle, tient bon.",
+  tagline: "La médiane résiste aux valeurs extrêmes, là où la moyenne est sensible.",
   prereqs: ["discrete.middle.moyenne"],
   intuition:
     "Ta moyenne de 5e gagne des **poids** : un devoir coefficient 3 compte trois fois — la **moyenne pondérée** multiplie chaque valeur par son coefficient avant de diviser par le **total des coefficients**.\n\nEt deux nouveaux indicateurs entrent : la **médiane** (la valeur du milieu, une fois la série rangée — autant de valeurs avant qu'après) et l'**étendue** (max $-$ min : la largeur de la série).",

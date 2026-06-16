@@ -124,7 +124,7 @@ const trigonometrieSignal = {
   id: "geometry.high.trigonometrie-signal",
   level: "high", domain: "geometry",
   title: "Le cercle trigonométrique et les signaux",
-  tagline: "Un point qui tourne, une hauteur qui ondule — le sinus est né, le signal aussi.",
+  tagline: "Du point qui tourne au sinus : l'origine des signaux périodiques.",
   prereqs: ["geometry.middle.trigonometrie", "analysis.high.fonctions-affines"],
   intuition:
     "Ton cosinus de 3e vivait dans un triangle rectangle — il déménage : sur un **cercle de rayon 1**, un point tourne depuis (1 ; 0), et pour un angle $x$, ses coordonnées **sont** $(\\cos x\\,;\\,\\sin x)$.\n\nLaisse tourner et note la hauteur du point au fil du temps : elle monte, descend, remonte — une **onde** : le courant alternatif, la vibration, le son — tout signal périodique sort de ce cercle.",

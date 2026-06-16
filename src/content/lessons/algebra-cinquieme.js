@@ -12,7 +12,7 @@ const calculLitteral = {
   id: "algebra.middle.calcul-litteral",
   level: "middle", domain: "algebra",
   title: "Le calcul littéral",
-  tagline: "3x + 5x = 8x — et une lettre suffit à démontrer pour toujours.",
+  tagline: "3x + 5x = 8x : une lettre permet de calculer et de démontrer en général.",
   prereqs: ["applied.middle.formulas", "algebra.middle.pre-algebra"],
   intuition:
     "La lettre quitte les formules toutes faites : tu vas en **produire** ($n + 1$ : le successeur de $n$ ; $4c$ : le périmètre du carré) et **calculer avec elle**.\n\nDeux gestes fondateurs : **réduire** — $3x + 5x = 8x$ (trois x et cinq x font huit x, comme des pommes) — et **distribuer** — $k(a + b) = ka + kb$, ta distributivité numérique promue en règle universelle, qui **développe** vers la somme ou **factorise** vers le produit.",
@@ -65,7 +65,7 @@ const equations = {
   id: "algebra.middle.equations",
   level: "middle", domain: "algebra",
   title: "Les premières équations",
-  tagline: "x + 19 = 52 — remonter la machine par l'opération inverse.",
+  tagline: "x + 19 = 52 — remonter par l'opération inverse.",
   prereqs: ["algebra.middle.calcul-litteral", "numbers.middle.fraction-quotient"],
   intuition:
     "La lettre prend son statut le plus célèbre : l'**inconnue** — un nombre précis, caché, à débusquer. Une **équation** est une égalité qui le tient prisonnier : $x + 19 = 52$.\n\nLa clé : l'**opération inverse** — on a ajouté 19 ? On retire 19 : $x = 52 - 19 = 33$. On a multiplié par 4 ($4x = 60$) ? On divise : $x = 60 \\div 4 = 15$. Résoudre, c'est remonter la machine.",

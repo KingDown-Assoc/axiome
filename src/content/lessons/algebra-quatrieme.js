@@ -67,7 +67,7 @@ const demonstrations = {
   id: "algebra.middle.demonstrations",
   level: "middle", domain: "algebra",
   title: "Démontrer avec l'algèbre",
-  tagline: "Pair = 2n, impair = 2n + 1 — et les vérités générales tombent en deux lignes.",
+  tagline: "Pair = 2n, impair = 2n + 1 : démontrer une propriété vraie pour tous les nombres.",
   prereqs: ["algebra.middle.calcul-litteral", "numbers.middle.divisibilite"],
   intuition:
     "Le calcul littéral de 5e devient une **usine à théorèmes** — il suffit de savoir nommer : un nombre **pair** s'écrit $2n$ (un double), un **impair** $2n + 1$ (un double plus un), trois **consécutifs** : $n$, $n+1$, $n+2$.\n\nAvec ces costumes, les conjectures se démontrent : « la somme de deux impairs est paire » devient un calcul de deux lignes.",

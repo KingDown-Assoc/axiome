@@ -72,7 +72,7 @@ const resolutionGraphique = {
   id: "analysis.high.resolution-graphique",
   level: "high", domain: "analysis",
   title: "Résoudre par le graphique",
-  tagline: "La courbe répond avant la formule — f(x) = c se lit à la règle horizontale.",
+  tagline: "Résoudre graphiquement f(x) = c à l'aide d'une droite horizontale.",
   prereqs: ["analysis.high.fonctions-affines", "algebra.high.systemes"],
   intuition:
     "La courbe de consommation d'une machine est affichée au mur de l'atelier — question du chef : « à quel régime consomme-t-on 12 L/h ? »\n\nPas besoin de formule : trace la **droite horizontale** $y = 12$ — elle coupe la courbe : les abscisses des intersections **sont** les solutions de $f(x) = 12$ — la courbe répond, big idea *Diagrams*.",
@@ -126,7 +126,7 @@ const deriveePente = {
   id: "analysis.high.derivee-pente",
   level: "high", domain: "analysis",
   title: "La dérivée : la pente en chaque point",
-  tagline: "Coller une droite à la courbe — f′ lit la vitesse, son signe lit le sens.",
+  tagline: "La dérivée, pente de la tangente : sa valeur et son signe.",
   prereqs: ["analysis.high.resolution-graphique", "analysis.high.fonctions-affines"],
   intuition:
     "Sur une droite de tarif, la pente disait le prix unitaire — partout la même. Mais la courbe de consommation, elle, **change de pente** : raide ici, plate là.\n\nL'idée de la dérivée : en chaque point, coller la **tangente** — la droite qui épouse la courbe localement — et sa pente est le **nombre dérivé** $f'(a)$ : la pente de la courbe EN ce point.",

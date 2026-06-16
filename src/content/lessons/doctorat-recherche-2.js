@@ -9,7 +9,7 @@ const infiniCategories = {
   id: "categories.phd.infini-categories-fondements",
   level: "phd", domain: "categories",
   title: "∞-catégories et fondements homotopiques",
-  tagline: "Quand deux objets ne sont pas égaux mais « les mêmes à déformation continue près », et que les déformations elles-mêmes comptent : un langage qui suit ces strates de ressemblance jusqu'au bout.",
+  tagline: "Les ∞-catégories : un langage qui suit non seulement les équivalences entre objets, mais aussi les équivalences entre ces équivalences.",
   prereqs: ["topology.master.groupe-fondamental", "topology.master.homologie"],
   vulgarisation:
     "Les mathématiques regorgent de situations où deux choses ne sont pas **égales**, mais « les mêmes à **déformation continue** près » : deux chemins entre deux points, deux preuves d'un même théorème, deux constructions équivalentes. Les fondements classiques (les ensembles, l'égalité) gèrent bien « égal / pas égal », mais peinent à exprimer « le même à déformation près — et les déformations elles-mêmes portent de l'information ».\n\nLa **théorie des catégories supérieures** (les ∞-catégories) et la **théorie homotopique des types** sont des langages modernes conçus pour suivre non seulement les objets et leurs relations, mais les **relations entre relations**, et ainsi de suite, indéfiniment. Elles capturent l'idée de « ressemblance » avec toute sa structure, et reconfigurent aujourd'hui les fondements des mathématiques et la façon d'organiser les théories les plus profondes. L'idée centrale — « comment deux choses sont-elles les mêmes ? » devient une donnée — reste accessible à l'intuition.",

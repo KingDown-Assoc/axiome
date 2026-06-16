@@ -18,7 +18,7 @@ const exponentielle = {
   id: "analysis.high.exponentielle",
   level: "high", domain: "analysis",
   title: "La fonction exponentielle",
-  tagline: "L'unique fonction égale à sa dérivée — la croissance qui se nourrit d'elle-même.",
+  tagline: "L'exponentielle : l'unique fonction égale à sa dérivée.",
   prereqs: ["algebra.high.suites", "analysis.high.fonction-derivee"],
   intuition:
     "Une population croît d'autant plus vite qu'elle est nombreuse : sa **vitesse égale sa valeur** — en langage dérivé : $f' = f$.\n\nIl existe **une unique** fonction dérivable sur $\\mathbb{R}$ vérifiant $f' = f$ et $f(0) = 1$ : l'**exponentielle**, $\\exp$ — et $\\exp(1) = e \\approx 2{,}718$, le nombre qui rejoint $\\pi$ au panthéon.",

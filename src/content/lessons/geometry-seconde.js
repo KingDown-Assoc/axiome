@@ -71,7 +71,7 @@ const colinearite = {
   id: "geometry.high.colinearite",
   level: "high", domain: "geometry",
   title: "Colinéarité et déterminant",
-  tagline: "xy′ − yx′ = 0 — le nombre qui détecte l'alignement.",
+  tagline: "Le déterminant xy′ − yx′, et le test de colinéarité.",
   prereqs: ["geometry.high.vecteurs-coordonnees"],
   intuition:
     "Deux vecteurs sont **colinéaires** quand l'un est un multiple de l'autre : $\\vec{v} = k\\vec{u}$ — mêmes direction, flèches parallèles.\n\nLe **déterminant** les juge d'un calcul : $\\det(\\vec{u}, \\vec{v}) = xy' - yx'$ — **nul si et seulement si** $\\vec{u}$ et $\\vec{v}$ sont colinéaires : quatre nombres, une multiplication croisée, le verdict.",

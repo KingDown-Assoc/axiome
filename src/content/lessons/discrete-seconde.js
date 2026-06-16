@@ -13,7 +13,7 @@ const ecartType = {
   id: "discrete.high.ecart-type",
   level: "high", domain: "discrete",
   title: "L'écart type",
-  tagline: "La dispersion enfin mesurée — deux classes, même moyenne, deux mondes.",
+  tagline: "L'écart-type mesure la dispersion : même moyenne, séries très différentes.",
   prereqs: ["discrete.middle.quartiles"],
   intuition:
     "Deux classes à 12 de moyenne : l'une groupée entre 10 et 14, l'autre écartelée de 2 à 20 — la moyenne ne voit rien. L'**écart type** $\\sigma$ mesure ce qu'elle ignore : la dispersion **autour** de la moyenne.\n\nPetit $\\sigma$ : valeurs serrées ; grand $\\sigma$ : valeurs éparpillées — le second indicateur que toute moyenne devrait porter en bandoulière.",

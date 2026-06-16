@@ -70,7 +70,7 @@ const echantillonnage = {
   id: "probability.high.echantillonnage",
   level: "high", domain: "probability",
   title: "Échantillonnage et estimation",
-  tagline: "La moyenne observée vise l'espérance — et √n resserre le tir.",
+  tagline: "La moyenne d'un échantillon approche l'espérance, avec une précision en 1/√n.",
   prereqs: ["probability.high.variables-aleatoires", "logic.high.listes"],
   intuition:
     "L'espérance prédit le long terme — mais en pratique, on observe un **échantillon** : $n$ réalisations de $X$, et leur **moyenne** $m$.\n\nLa simulation montre le miracle : $m$ **vise** $E(X)$, d'autant plus précisément que $n$ grandit — c'est le principe de l'**estimation** : observer un échantillon pour deviner l'espérance cachée.",

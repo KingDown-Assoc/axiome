@@ -34,7 +34,7 @@ const ideauxDivisibilite = {
   id: "algebra.bachelor.ideaux-divisibilite",
   level: "bachelor", domain: "algebra",
   title: "Idéaux : la divisibilité vue de haut",
-  tagline: "Tous les multiples d'un coup — et Bézout devient une évidence de structure.",
+  tagline: "Idéaux et divisibilité dans un anneau, et une relecture de Bézout.",
   prereqs: ["algebra.bachelor.structures-algebriques", "algebra.bachelor.polynomes-fractions"],
   intuition:
     "Tu connais Bézout : il existe $u, v$ tels que $au + bv = a \\wedge b$ — démontré en remontant l'algorithme d'Euclide, division après division.\n\nVoici la version **structurelle** : au lieu de chercher UN couple $(u, v)$, considère TOUS les nombres $au + bv$ d'un seul coup. Cet ensemble a une forme remarquable — et sa forme EST le théorème.",

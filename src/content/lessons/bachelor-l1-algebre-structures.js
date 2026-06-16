@@ -74,7 +74,7 @@ const matricesSystemes = {
   id: "algebra.bachelor.matrices-systemes",
   level: "bachelor", domain: "algebra",
   title: "Calcul matriciel et pivot de Gauss",
-  tagline: "L'escalier du pivot — un algorithme, et tous les systèmes linéaires se rendent.",
+  tagline: "Le pivot de Gauss : un algorithme pour résoudre tout système linéaire.",
   prereqs: ["algebra.high.matrices", "algebra.high.systemes"],
   intuition:
     "Tes systèmes 2×2 se résolvaient à la main ; la licence affronte le $n \\times n$ — et il faut un **algorithme** : le **pivot de Gauss**, qui transforme tout système en escalier par trois opérations élémentaires.\n\nDerrière l'algorithme, une structure : le système EST une équation matricielle $AX = B$, et le pivot dialogue avec l'**inversibilité** de $A$.",
@@ -127,7 +127,7 @@ const polynomesFractions = {
   id: "algebra.bachelor.polynomes-fractions",
   level: "bachelor", domain: "algebra",
   title: "Polynômes : l'arithmétique de K[X]",
-  tagline: "Diviser, factoriser, interpoler — les polynômes rejouent ℤ avec des racines en prime.",
+  tagline: "Division, factorisation, interpolation : les polynômes, un anneau analogue à ℤ.",
   prereqs: ["algebra.high.equations-polynomiales", "numbers.high.nombres-premiers"],
   intuition:
     "Les entiers ont une division euclidienne, un pgcd, des nombres premiers, une factorisation unique — et les **polynômes ont exactement la même arithmétique** : $K[X]$ rejoue $\\mathbb{Z}$, le degré remplaçant la valeur absolue.\n\nAvec un bonus que $\\mathbb{Z}$ n'a pas : les **racines** — l'arithmétique de $K[X]$ dialogue avec la géométrie des graphes.",

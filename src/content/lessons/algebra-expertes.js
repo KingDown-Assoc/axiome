@@ -17,7 +17,7 @@ const equationsPolynomiales = {
   id: "algebra.high.equations-polynomiales",
   level: "high", domain: "algebra",
   title: "Équations polynomiales dans ℂ",
-  tagline: "Δ négatif livre ses racines conjuguées — et un degré n plafonne à n racines.",
+  tagline: "Discriminant négatif et racines complexes conjuguées ; un polynôme de degré n a au plus n racines.",
   prereqs: ["algebra.high.equation-second-degre", "numbers.high.complexes"],
   intuition:
     "Ton discriminant de première butait sur $\\Delta < 0$ : « pas de solution réelle ». Dans $\\mathbb{C}$, le verdict change : $\\sqrt{\\Delta}$ devient $i\\sqrt{-\\Delta}$, et **deux racines complexes conjuguées** apparaissent : $z = \\dfrac{-b \\pm i\\sqrt{-\\Delta}}{2a}$.\n\nPlus aucune équation du second degré n'est muette — et le phénomène est général : tout polynôme se factorise par ses racines.",
@@ -72,7 +72,7 @@ const matrices = {
   id: "algebra.high.matrices",
   level: "high", domain: "algebra",
   title: "Le calcul matriciel",
-  tagline: "Des tableaux qui se multiplient — et les systèmes tombent en une inversion.",
+  tagline: "Le calcul matriciel, et la résolution d'un système par inversion.",
   prereqs: ["geometry.high.vecteurs-espace", "algebra.high.suites"],
   intuition:
     "Une **matrice** est un tableau de nombres — $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ : deux lignes, deux colonnes — et l'idée de Cayley : en faire un **objet de calcul**, qu'on additionne, qu'on multiplie, qu'on inverse.\n\nLe produit a sa règle propre : **ligne contre colonne** — et il encode d'un coup les systèmes, les transformations et les évolutions couplées.",

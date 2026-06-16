@@ -10,7 +10,7 @@ const evolutions = {
   id: "applied.middle.evolutions",
   level: "middle", domain: "applied",
   title: "Traduire les évolutions",
-  tagline: "×0,72 avoue −28 % — et le graphique de proportionnalité cache un Thalès.",
+  tagline: "×0,72 correspond à −28 %, et le graphique de proportionnalité relève de Thalès.",
   prereqs: ["applied.middle.coefficient-multiplicateur"],
   intuition:
     "La 4e traduisait les % en coefficients ; la 3e lit **dans l'autre sens** : un prix multiplié par $1{,}15$ a augmenté de **15 %** ($1{,}15 = 1 + 0{,}15$) ; multiplié par $0{,}72$, il a baissé de **28 %** ($0{,}72 = 1 - 0{,}28$).\n\nLe coefficient avoue toujours : son écart à 1 **est** la variation.",

@@ -11,7 +11,7 @@ const moyenne = {
   id: "discrete.middle.moyenne",
   level: "middle", domain: "discrete",
   title: "Effectifs, fréquences, moyenne",
-  tagline: "La moyenne égalise tout le monde — et un bon diagramme a sauvé des milliers de soldats.",
+  tagline: "La moyenne, la valeur qui égaliserait la série — et le diagramme de Nightingale.",
   prereqs: ["discrete.middle.survey"],
   intuition:
     "Ton enquête de 6e gagne deux instruments de précision. La **fréquence** d'abord : la part d'un effectif dans le total, en **trois écritures** — fraction, décimal, pourcentage ($\\frac{6}{24} = 0{,}25 = 25\\,\\%$ : tes habits d'un même nombre).\n\nPuis la **moyenne** : la somme des valeurs divisée par l'effectif total — la valeur que tout le monde aurait si on **égalisait** le partage.",

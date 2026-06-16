@@ -130,7 +130,7 @@ const continuiteLineaire = {
   id: "analysis.bachelor.continuite-lineaire",
   level: "bachelor", domain: "analysis",
   title: "Applications linéaires continues",
-  tagline: "Linéaire n'implique plus continue — un critère, une norme d'opérateur, et un monstre.",
+  tagline: "Applications linéaires continues : critère, norme d'opérateur, contre-exemple en dimension infinie.",
   prereqs: ["analysis.bachelor.normes-topologie", "algebra.bachelor.applications-lineaires"],
   intuition:
     "Surprise de la dimension infinie : une application **linéaire** peut être **discontinue** — la dérivation, oui, ta dérivation, est un monstre qui amplifie sans borne.\n\nLe critère qui départage tient en une inégalité : $\\|u(x)\\| \\leq C\\|x\\|$ — et la meilleure constante $C$ devient une norme sur les opérateurs eux-mêmes.",

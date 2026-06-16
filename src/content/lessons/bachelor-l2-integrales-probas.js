@@ -99,7 +99,7 @@ const convergenceDominee = {
   id: "analysis.bachelor.convergence-dominee",
   level: "bachelor", domain: "analysis",
   title: "Convergence dominée et intégrales à paramètre",
-  tagline: "Échanger limite et intégrale est illégal sans permis — la domination est le permis.",
+  tagline: "Théorème de convergence dominée : sous quelle hypothèse échanger limite et intégrale.",
   prereqs: ["analysis.bachelor.integrales-generalisees", "analysis.bachelor.suites-series-fonctions"],
   intuition:
     "La question la plus naturelle du monde : si $f_n \\to f$, a-t-on $\\int f_n \\to \\int f$ ? Tu as déjà vu la réponse pour la convergence uniforme sur un segment. Mais sur un intervalle infini, l'uniforme ne suffit même plus — et exiger l'uniforme est souvent trop cher.\n\nLe théorème de convergence dominée donne un permis bien plus maniable : il suffit que toutes les $f_n$ tiennent sous un même **parapluie** intégrable. Une seule hypothèse à vérifier, et l'échange $\\lim \\int = \\int \\lim$ devient légal — c'est l'outil le plus utilisé de toute l'analyse de deuxième année.",
@@ -172,7 +172,7 @@ const variablesDiscretes = {
   id: "probability.bachelor.variables-discretes",
   level: "bachelor", domain: "probability",
   title: "Variables aléatoires discrètes",
-  tagline: "Le hasard sort du fini : on lance jusqu'au premier pile, et l'infini devient probabilisable.",
+  tagline: "Variables aléatoires discrètes infinies : par exemple le rang du premier pile.",
   prereqs: ["probability.bachelor.probabilites-finies", "analysis.bachelor.series-familles"],
   intuition:
     "En L1, l'univers était fini : on listait, on comptait, on divisait. Mais la question la plus simple du monde — « combien de lancers jusqu'au premier pile ? » — fait exploser le cadre : la réponse peut être $1, 2, 3, \\ldots$ sans aucune borne. Il faut un univers **infini dénombrable**.\n\nLa bonne nouvelle : tout ton outillage de séries et de familles sommables est exactement ce qu'il faut. Les probabilités deviennent des sommes de séries, les espérances des séries à étudier — les deux mondes de L1, hasard fini et sommes infinies, fusionnent.",

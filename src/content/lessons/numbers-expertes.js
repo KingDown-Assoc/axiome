@@ -16,7 +16,7 @@ const complexes = {
   id: "numbers.high.complexes",
   level: "high", domain: "numbers",
   title: "Les nombres complexes",
-  tagline: "i² = −1 — le nombre impossible qui complète enfin la maison.",
+  tagline: "Le nombre impossible",
   prereqs: ["numbers.high.ensembles-nombres", "algebra.high.calcul-algebrique"],
   intuition:
     "Ton récit des ensembles s'achève : $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$… et chaque étage réparait une impossibilité. Il en restait une : $x^2 = -1$.\n\nDécrète un nombre $i$ tel que $i^2 = -1$ : l'ensemble $\\mathbb{C}$ des $z = a + bi$ ($a, b$ réels) naît — **partie réelle** $a$, **partie imaginaire** $b$ — et plus aucune équation polynomiale ne restera sans racine.",

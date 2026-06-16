@@ -12,7 +12,7 @@ const deuxEpreuves = {
   id: "probability.middle.deux-epreuves",
   level: "middle", domain: "probability",
   title: "Contraire et deux épreuves",
-  tagline: "P(contraire) = 1 − P — et l'arbre qui a piégé d'Alembert.",
+  tagline: "P(contraire) = 1 − P, et l'arbre des deux épreuves (l'erreur de d'Alembert).",
   prereqs: ["probability.middle.vocabulaire"],
   intuition:
     "Ton vocabulaire de 5e gagne ses **notations** : un événement est un **ensemble d'issues** — son **contraire** $\\bar{A}$ rassemble toutes les autres, et leurs probabilités se complètent : $P(\\bar{A}) = 1 - P(A)$.\n\nPuis le hasard se met à **enchaîner** : lancer **deux** pièces, c'est une expérience à deux épreuves — et l'arbre des possibles en dresse la carte.",

@@ -10,7 +10,7 @@ const unionIntersection = {
   id: "probability.middle.union-intersection",
   level: "middle", domain: "probability",
   title: "P(A∪B) : la formule du ou",
-  tagline: "Le double comptage corrigé — et mille lancers qui se rangent.",
+  tagline: "Corriger le double comptage : la formule du crible sur des séries de lancers.",
   prereqs: ["probability.middle.deux-epreuves"],
   intuition:
     "Additionner $P(A)$ et $P(B)$ pour avoir le « ou » ? Piège : les issues communes sont comptées **deux fois**.\n\nLa formule rend la monnaie : $P(A \\cup B) + P(A \\cap B) = P(A) + P(B)$ — autrement dit, $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ : on additionne, puis on **rembourse** le doublon.",

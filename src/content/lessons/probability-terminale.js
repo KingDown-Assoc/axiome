@@ -22,7 +22,7 @@ const binomiale = {
   id: "probability.high.binomiale",
   level: "high", domain: "probability",
   title: "La loi binomiale",
-  tagline: "n épreuves, k succès — le triangle de Pascal pèse chaque destin.",
+  tagline: "La loi binomiale : n épreuves, k succès, pondérés par les coefficients de Pascal.",
   prereqs: ["probability.high.bernoulli", "discrete.high.combinaisons"],
   intuition:
     "Répète $n$ fois la même épreuve de Bernoulli, indépendamment : c'est le **schéma de Bernoulli** — et compte les succès : la variable $X$ suit la **loi binomiale** $\\mathcal{B}(n, p)$.\n\nLa formule complète ce que ta première comptait à la main : $P(X = k) = \\dbinom{n}{k} p^k (1-p)^{n-k}$ — le nombre de chemins, fois le poids de chacun.",
@@ -76,7 +76,7 @@ const sommesVariables = {
   id: "probability.high.sommes-variables",
   level: "high", domain: "probability",
   title: "Sommes de variables aléatoires",
-  tagline: "Les espérances s'additionnent toujours — les variances, seulement si l'indépendance signe.",
+  tagline: "L'espérance est toujours additive ; la variance l'est sous indépendance.",
   prereqs: ["probability.high.binomiale", "probability.high.variables-aleatoires"],
   intuition:
     "Additionne deux variables aléatoires — deux dés, deux actifs, deux mesures : que deviennent espérance et variance ?\n\nL'espérance est **linéaire**, sans condition : $E(X + Y) = E(X) + E(Y)$ et $E(aX) = aE(X)$ ; la variance exige l'**indépendance** : $V(X + Y) = V(X) + V(Y)$ **si** $X$ et $Y$ sont indépendantes.",

@@ -12,7 +12,7 @@ const decimalProduct = {
   id: "numbers.middle.decimal-product",
   level: "middle", domain: "numbers",
   title: "Multiplier deux décimaux",
-  tagline: "0,5 × 0,3 = 0,15 — multiplier peut rapetisser, et l'aire explique pourquoi.",
+  tagline: "0,5 × 0,3 = 0,15 : multiplier peut diminuer, et l'aire explique pourquoi.",
   prereqs: ["numbers.primary.decimal-times", "applied.primary.area-units"],
   intuition:
     "Jusqu'ici, multiplier répétait : $3 \\times 2{,}4$ = trois fois 2,4. Mais $0{,}5 \\times 0{,}3$ — une demi-fois 0,3 ?! L'addition itérée rend l'âme.\n\nLe nouveau sens vient de l'**aire** : $0{,}5 \\times 0{,}3$ est l'aire d'un rectangle de 0,5 sur 0,3 — un coin du carré unité quadrillé en centièmes : **15 carreaux sur 100** : $0{,}15$. Multiplier deux nombres plus petits que 1 donne plus petit encore.",
@@ -62,7 +62,7 @@ const timesTenth = {
   id: "numbers.middle.times-tenth",
   level: "middle", domain: "numbers",
   title: "Multiplier par 0,1 — c'est diviser par 10",
-  tagline: "Le pont secret entre deux opérations que tout opposait.",
+  tagline: "Le lien entre multiplier par 0,1 et diviser par 10.",
   prereqs: ["numbers.middle.decimal-product"],
   intuition:
     "$\\times\\ 0{,}1$ : prendre **un dixième de** — exactement ce que fait $\\div\\ 10$. Deux écritures, un seul geste : $47 \\times 0{,}1 = 47 \\div 10 = 4{,}7$.\n\nLa famille au complet : $\\times\\ 0{,}01 = \\div\\ 100$ ; $\\times\\ 0{,}001 = \\div\\ 1\\,000$ — multiplier par un petit, c'est diviser par son inverse.",
@@ -107,7 +107,7 @@ const divisionLarge = {
   id: "numbers.middle.division-large",
   level: "middle", domain: "numbers",
   title: "Diviser par un nombre à deux chiffres",
-  tagline: "La potence affronte les grands diviseurs — et convertit les secondes en heures.",
+  tagline: "La division posée par un grand diviseur, et la conversion des secondes en heures.",
   prereqs: ["numbers.primary.division-decimal"],
   intuition:
     "Le diviseur grandit : $3\\,847 \\div 64$. La potence tient, mais chaque chiffre du quotient demande une **estimation** : combien de fois 64 dans 384 ? Penser « combien de fois 6 dans 38 » → essayer 6 : $64 \\times 6 = 384$ — pile.\n\nEt deux **sens** à distinguer : la division-**partition** (84 € pour 12 personnes → la valeur d'une part) et la division-**quotition** (84 € en parts de 12 € → le nombre de parts). Même calcul, deux questions.",

@@ -55,7 +55,7 @@ const planeFigures = {
   id: "geometry.primary.plane-figures",
   level: "primary", domain: "geometry",
   title: "Polygones, losange, cercle",
-  tagline: "Le vocabulaire s'élargit, les figures se codent — et la symétrie se plie.",
+  tagline: "Plus de vocabulaire, le codage des figures, et la symétrie par pliage.",
   prereqs: ["geometry.primary.angles"],
   intuition:
     "La famille s'agrandit : **quadrilatère** (4 côtés), **pentagone** (5), **hexagone** (6) — et un nouveau venu, le **losange** : quatre côtés de même longueur.\n\nLe cercle se précise aussi : son **rayon** (du centre au bord) et son **diamètre** (qui traverse par le centre — le double du rayon). Et les figures apprennent à porter leurs propriétés sur elles : c'est le **codage**.",

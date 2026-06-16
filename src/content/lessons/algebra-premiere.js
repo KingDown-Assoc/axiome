@@ -15,7 +15,7 @@ const suites = {
   id: "algebra.high.suites",
   level: "high", domain: "algebra",
   title: "Suites arithmétiques et géométriques",
-  tagline: "+r ou ×q à chaque pas — les deux moteurs de toute évolution discrète.",
+  tagline: "Suites arithmétiques (+r) et géométriques (×q) : deux modèles d'évolution.",
   prereqs: ["applied.high.evolutions-successives", "logic.high.python"],
   intuition:
     "Une **suite** est une liste infinie de nombres indexée par $\\mathbb{N}$ : $u_0, u_1, u_2, \\ldots$ — une fonction sur les entiers, notée $u_n$ ou $u(n)$.\n\nDeux familles dominent le monde : les **arithmétiques** (on **ajoute** la raison $r$ à chaque pas) et les **géométriques** (on **multiplie** par la raison $q$) — la croissance linéaire et la croissance exponentielle, en version discrète.",
@@ -70,7 +70,7 @@ const suitesSommes = {
   id: "algebra.high.suites-sommes",
   level: "high", domain: "algebra",
   title: "Sommes, seuils et limites",
-  tagline: "Gauss plie la somme en deux — et le télescope avale la géométrique.",
+  tagline: "Sommes de suites : l'astuce de Gauss, et la somme d'une suite géométrique.",
   prereqs: ["algebra.high.suites"],
   intuition:
     "Additionner les cent premiers entiers ? Le petit Gauss, dit-on, répondit en quelques secondes : **plier la somme** — $1 + 100 = 101$, $2 + 99 = 101$… cinquante paires : $5\\,050$.\n\nDeux formules couronnent les suites : $1 + 2 + \\cdots + n = \\dfrac{n(n+1)}{2}$ et $1 + q + \\cdots + q^n = \\dfrac{1 - q^{n+1}}{1 - q}$ — toutes deux **démontrables en quatre lignes**.",

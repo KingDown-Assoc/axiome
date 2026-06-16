@@ -7,7 +7,7 @@ const chartsTables = {
   id: "discrete.primary.charts-tables",
   level: "primary", domain: "discrete",
   title: "Diagrammes gradués et tableaux à totaux",
-  tagline: "Lire des données qu'on n'a pas recueillies — et faire parler les marges.",
+  tagline: "Lire un tableau de données, et exploiter les totaux en marge.",
   prereqs: ["discrete.primary.data-survey"],
   intuition:
     "L'enquête grandit : jusqu'à **cent** personnes interrogées ! Pour lire les barres sans compter les cases, le diagramme gagne un **axe vertical gradué** de un en un.\n\nEt le tableau à double entrée gagne ses **totaux** : une ligne et une colonne « Total » qui additionnent tout. Filles et garçons, à pied, en vélo, en voiture ou en bus : 282 élèves dans un seul tableau.",

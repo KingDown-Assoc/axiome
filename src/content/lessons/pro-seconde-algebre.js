@@ -16,7 +16,7 @@ const premierDegre = {
   id: "algebra.high.premier-degre",
   level: "high", domain: "algebra",
   title: "Résoudre un problème du premier degré",
-  tagline: "Dessiner la barre, poser l'équation — l'inconnue du chantier se rend.",
+  tagline: "Modéliser par une équation du premier degré et la résoudre (contexte professionnel).",
   prereqs: ["algebra.middle.inequations", "analysis.middle.lineaire-affine"],
   intuition:
     "Un devis : la pose coûte 40 € fixes plus 15 € par mètre — budget 190 € : combien de mètres ? Le problème du métier se **traduit** : $15x + 40 = 190$.\n\nLa méthode Singapour donne le geste avant la lettre : **dessine la barre** — le total 190 d'un côté ; en face, un bloc « 40 » et $x$ blocs « 15 » : l'équation se *voit* avant de s'écrire.",

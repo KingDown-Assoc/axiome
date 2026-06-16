@@ -107,7 +107,7 @@ const timesSign = {
   id: "numbers.primary.times-sign",
   level: "primary", domain: "numbers",
   title: "Le signe ×",
-  tagline: "« Fois » gagne son symbole — et l'ordre des facteurs ne compte pas.",
+  tagline: "Le signe « × », et l'ordre des facteurs qui ne change rien.",
   prereqs: ["numbers.primary.times-fois"],
   intuition:
     "Le mot « fois » du CP reçoit enfin son écriture : Jan a sept paquets de vingt biscuits → « sept fois vingt » → $7 \\times 20 = 140$ biscuits.\n\nL'écriture multiplicative est **plus courte** que $20 + 20 + 20 + 20 + 20 + 20 + 20$ — et elle cache une propriété magique : **l'ordre des facteurs ne compte pas**.",

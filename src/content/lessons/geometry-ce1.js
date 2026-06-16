@@ -7,7 +7,7 @@ const solidsEdges = {
   id: "geometry.primary.solids-edges",
   level: "primary", domain: "geometry",
   title: "Faces, arêtes, sommets",
-  tagline: "Trois mots pour décrire n'importe quel polyèdre — et la pyramide entre en scène.",
+  tagline: "Faces, arêtes, sommets : décrire un polyèdre, et découvrir la pyramide.",
   prereqs: ["geometry.primary.solids-faces"],
   intuition:
     "Aux **faces** du CP s'ajoutent deux mots : les **arêtes** (les bords où deux faces se rencontrent) et les **sommets** (les pointes où les arêtes se rejoignent).\n\nCompte sur un dé : **6 faces, 12 arêtes, 8 sommets**. Et la **pyramide** rejoint officiellement la bande — celle à base carrée porte un carré et quatre triangles.",
@@ -54,7 +54,7 @@ const rightAngle = {
   id: "geometry.primary.angles",
   level: "primary", domain: "geometry",
   title: "L'angle droit (et les autres)",
-  tagline: "L'équerre entre en scène : vérifier, tracer, et décrire les figures par leurs angles.",
+  tagline: "Utiliser l'équerre pour vérifier, tracer et décrire les figures par leurs angles.",
   prereqs: ["geometry.primary.figures"],
   intuition:
     "Regarde le coin d'une feuille : voilà un **angle droit** — l'angle de référence. Plus **fermé** que lui : un angle **aigu**. Plus **ouvert** : un angle **obtus**.\n\nL'outil qui ne se trompe jamais : l'**équerre**. On la pose dans le coin — ça coïncide ? Angle droit. Et un triangle qui possède un angle droit gagne un nom : le **triangle rectangle**.",

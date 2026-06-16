@@ -7,7 +7,7 @@ const dataGaps = {
   id: "discrete.primary.data-gaps",
   level: "primary", domain: "discrete",
   title: "Tableaux à trous, échelles adaptées",
-  tagline: "Reconstruire l'information manquante — les données deviennent des problèmes.",
+  tagline: "Retrouver une information manquante dans un tableau de données.",
   prereqs: ["discrete.primary.charts-tables"],
   intuition:
     "Nouveauté double. D'abord, on n'enquête plus seulement sur des couleurs ou des transports : les caractères peuvent être des **nombres** — l'âge, le nombre de frères et sœurs.\n\nEnsuite, les tableaux et diagrammes arrivent **incomplets** : des cases vides, une barre manquante. À toi de reconstruire — chaque ligne, chaque colonne est un problème parties-tout qui s'ignore.",

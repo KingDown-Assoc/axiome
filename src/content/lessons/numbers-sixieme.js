@@ -11,7 +11,7 @@ const billion = {
   id: "numbers.middle.billion",
   level: "middle", domain: "numbers",
   title: "Le milliard",
-  tagline: "Une quatrième classe — et les nombres rejoignent la démographie et les étoiles.",
+  tagline: "Une quatrième classe de chiffres, les milliards : démographie et distances dans l'espace.",
   prereqs: ["numbers.primary.to-billion"],
   intuition:
     "Au-dessus des millions, une quatrième classe ouvre : les **milliards**. Mille millions font un milliard ($1\\,000\\,000\\,000$) — et la Terre porte environ **8 milliards** d'humains.\n\nLa machine ne change pas : quatre classes de trois chiffres — milliards | millions | mille | unités — et la lecture coule : 8 217 463 905 se lit « huit-milliards-deux-cent-dix-sept-millions-quatre-cent-soixante-trois-mille-neuf-cent-cinq ».",
@@ -62,7 +62,7 @@ const fractionQuotient = {
   id: "numbers.middle.fraction-quotient",
   level: "middle", domain: "numbers",
   title: "La fraction est un quotient",
-  tagline: "Trois quarts, c'est aussi le quart de trois — et 1/3 est un nombre qui ne finit jamais.",
+  tagline: "La fraction-quotient : 3/4, c'est aussi le quart de trois, et le cas illimité de 1/3.",
   prereqs: ["numbers.primary.fraction-times", "numbers.primary.division-decimal"],
   intuition:
     "Renversement de perspective : $\\frac{3}{4}$ ne dit pas seulement « trois quarts d'une unité » — c'est aussi **le quart de 3** : trois bandes entières, partagées en quatre. Autrement dit : $\\frac{3}{4} = 3 \\div 4$.\n\nLa définition officielle : $\\frac{a}{b}$ est **le nombre** qui, multiplié par $b$, donne $a$ — la réponse exacte à l'égalité à trous $? \\times 4 = 3$.",
@@ -111,7 +111,7 @@ const fractionOps = {
   id: "numbers.middle.fraction-ops",
   level: "middle", domain: "numbers",
   title: "Fractions : simplifier, comparer, opérer",
-  tagline: "12/18 = 2/3 — les diviseurs communs taillent les fractions à l'os.",
+  tagline: "12/18 = 2/3 : simplifier une fraction par ses diviseurs communs.",
   prereqs: ["numbers.primary.fractions-common", "numbers.middle.fraction-quotient"],
   intuition:
     "Tes diviseurs communs du CM2 trouvent leur destination : **simplifier**. $\\frac{12}{18}$ — 6 divise les deux : $\\frac{12}{18} = \\frac{2}{3}$. Même nombre, habit minimal.\n\nEt l'atelier tourne à plein régime : comparer, encadrer, **ordonner** des listes mêlant fractions et nombres mixtes, additionner, soustraire, multiplier par un entier — toutes les techniques convergent.",

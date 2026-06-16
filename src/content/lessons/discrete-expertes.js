@@ -15,7 +15,7 @@ const graphesMarkov = {
   id: "discrete.high.graphes-markov",
   level: "high", domain: "discrete",
   title: "Graphes et chaînes de Markov",
-  tagline: "Des points, des flèches, une matrice — et l'avenir qui ne dépend que du présent.",
+  tagline: "Graphes et matrices de transition : l'avenir ne dépend que de l'état présent.",
   prereqs: ["algebra.high.matrices", "probability.high.conditionnelles"],
   intuition:
     "Un **graphe** : des **sommets** reliés par des **arêtes** — le réseau social, le plan de métro, la molécule : tout ce qui connecte se dessine ainsi.\n\nEt sa carte d'identité calculable : la **matrice d'adjacence** $A$ — un 1 en ligne $i$, colonne $j$ si l'arête existe — le dessin devenu tableau, prêt pour tes puissances de matrices.",
